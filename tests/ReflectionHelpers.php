@@ -11,7 +11,6 @@ trait ReflectionHelpers
     {
         $class = new ReflectionClass($object);
         $method = $class->getMethod($name);
-        $method->setAccessible(true);
 
         return $method->invokeArgs($object, $args);
     }
@@ -20,7 +19,6 @@ trait ReflectionHelpers
     {
         $class = new ReflectionObject($object);
         $property = $class->getProperty($name);
-        $property->setAccessible(true);
 
         return $property->getValue($object);
     }
@@ -29,7 +27,6 @@ trait ReflectionHelpers
     {
         $reflection = new ReflectionClass($object);
         $reflectionProperty = $reflection->getProperty($property);
-        $reflectionProperty->setAccessible(true);
         $reflectionProperty->setValue($object, $value);
     }
 }
