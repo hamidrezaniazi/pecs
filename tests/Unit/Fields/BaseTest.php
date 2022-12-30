@@ -24,7 +24,7 @@ class BaseTest extends TestCase
     public function testItShouldGenerateItsBody(): void
     {
         Carbon::setTestNow('02-02-2022 22:22:22 UTC');
-        $datetime = Carbon::now();
+        $timestamp = Carbon::now();
         $labels = $this->createMock(PairList::class);
         $message = 'this is just a message';
         $tags = $this->createMock(ValueList::class);
@@ -35,6 +35,13 @@ class BaseTest extends TestCase
         $tagsList = ['buz'];
         $tags->expects($this->once())->method('toArray')->willReturn($tagsList);
 
+        $base = new Base(
+            timestamp: $timestamp,
+            labels: $labels,
+            message: $message,
+            tags: $tags,
+        );
+
         $this->assertEquals(
             [
                 '@timestamp' => '2022-02-02T22:22:22Z',
@@ -42,12 +49,7 @@ class BaseTest extends TestCase
                 'message' => $message,
                 'tags' => $tagsList,
             ],
-            (new Base(
-                timestamp: $datetime,
-                labels: $labels,
-                message: $message,
-                tags: $tags,
-            ))->toArray(),
+            $base->toArray(),
         );
     }
 }
