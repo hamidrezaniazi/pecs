@@ -13,4 +13,9 @@ class Percent
             throw new Exception('invalid percentage value! it should be between 0 to 100');
         }
     }
+
+    public function scale(): float
+    {
+        return $this->value / 100;
+    }
 }

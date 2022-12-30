@@ -22,4 +22,12 @@ class PercentTest extends TestCase
 
         $this->assertEquals($value, $percent->value);
     }
+
+    public function testItCanCalculateScale(): void
+    {
+        $value = rand(0, 100);
+        $percent = new Percent($value);
+
+        $this->assertEquals($value / 100, $percent->scale());
+    }
 }
