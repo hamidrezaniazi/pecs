@@ -11,11 +11,13 @@ use Hamidrezaniazi\Pecs\Properties\EventOutcome;
 use Hamidrezaniazi\Pecs\Properties\EventType;
 use Hamidrezaniazi\Pecs\Properties\Percent;
 use Hamidrezaniazi\Pecs\Tests\ReflectionHelpers;
+use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 
 class EventTest extends TestCase
 {
     use ReflectionHelpers;
+    use UnitTestHelper;
 
     public function testItShouldHaveItsKey(): void
     {
@@ -152,10 +154,5 @@ class EventTest extends TestCase
             ['ingested'],
             ['start'],
         ];
-    }
-
-    private function random(array $cases): mixed
-    {
-        return $cases[array_rand($cases)];
     }
 }
