@@ -18,12 +18,14 @@ class PropertyTest extends TestCase
         $cast = 'string';
         $fieldName = 'field_name';
         $default = 'default_value';
+        $isEnum = (bool) rand(0,1);
 
         $property = Property::parse([
             'types' => $types,
             'name' => $name,
             'cast' => $cast,
             'default' => $default,
+            'is_enum' => $isEnum,
         ], $fieldName);
 
         $this->assertSame($types, $property->types);
@@ -31,6 +33,7 @@ class PropertyTest extends TestCase
         $this->assertSame($fieldName, $property->name);
         $this->assertSame($cast, $property->cast);
         $this->assertSame($default, $property->default);
+        $this->assertSame($isEnum, $property->isEnum);
     }
 
     public function testItCanParsePropertySchemaWhenNameIsNotPresent(): void
@@ -90,5 +93,20 @@ class PropertyTest extends TestCase
         $this->assertSame($fieldName, $property->key);
         $this->assertSame($fieldName, $property->name);
         $this->assertNull($property->default);
+    }
+
+    public function testItCanNotParsePropertySchemaIfIsEnumIsNotPresent(): void
+    {
+        $types = ['string'];
+        $fieldName = 'field_name';
+
+        $property = Property::parse([
+            'types' => $types,
+        ], $fieldName);
+
+        $this->assertSame($types, $property->types);
+        $this->assertSame($fieldName, $property->key);
+        $this->assertSame($fieldName, $property->name);
+        $this->assertFalse($property->isEnum);
     }
 }

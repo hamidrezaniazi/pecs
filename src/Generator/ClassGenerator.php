@@ -76,7 +76,7 @@ class ClassGenerator
         });
 
         $properties = implode(PHP_EOL, array_map(function (Property $properties) {
-            $cast = $properties->cast ? "?->{$properties->cast}()" : '';
+            $cast = $properties->cast ? "?->{$properties->cast}()" : ($properties->isEnum ? '?->value' : '');
             return "'{$properties->key}' => \$this->{$this->toCamelCase($properties->name)}{$cast},";
         }, $field->properties));
 

@@ -10,6 +10,7 @@ use InvalidArgumentException;
  *     "name"?: string,
  *     "cast"?: string,
  *     "default"?: string,
+ *     "is_enum"?: boolean
  * }
  */
 class Property
@@ -23,6 +24,7 @@ class Property
         public readonly string $name,
         public readonly ?string $cast = null,
         public readonly ?string $default = null,
+        public readonly bool $isEnum = false,
     ) {}
 
     /**
@@ -42,6 +44,7 @@ class Property
             $name,
             $property['cast'] ?? null,
             $property['default'] ?? null,
+            $property['is_enum'] ?? false,
         );
     }
 }

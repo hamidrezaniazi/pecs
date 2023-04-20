@@ -5,6 +5,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 use Illuminate\Support\Collection;
 use NameSpaces\ClassType;
 use NameSpaces\ClassTypeWithCase;
+use Namespaces\EnumType;
 use OtherNameSpaces\NewClassTypeWithCase;
 
 /** @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html */
@@ -17,6 +18,7 @@ class DefaultClass extends AbstractEcsField
         public readonly ClassType $duplicateClassType,
         public readonly ClassTypeWithCase $classTypeWithCase,
         public readonly string|int|NewClassTypeWithCase $multipleTypes,
+        public readonly EnumType $isEnum,
         public readonly ?string $simpleNullable = null,
         public readonly ?string $multiDimension = null,
         public readonly ?string $withDefault = 'default_value',
@@ -41,6 +43,7 @@ class DefaultClass extends AbstractEcsField
             'multiple_types' => $this->multipleTypes,
             'multi.dimension' => $this->multiDimension,
             'with_default' => $this->withDefault,
+            'is_enum' => $this->isEnum?->value,
         ]);
     }
 }

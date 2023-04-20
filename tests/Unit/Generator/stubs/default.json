@@ -55,6 +55,12 @@
         "string"
       ],
       "default": "default_value"
+    },
+    "is_enum": {
+      "types": [
+        "Namespaces\\EnumType"
+      ],
+      "is_enum": true
     }
   }
 }
