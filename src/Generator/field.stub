@@ -1,0 +1,28 @@
+<?php
+
+{{ $namespace }}
+
+{{ $imports }}
+use Illuminate\Support\Collection;
+
+/** @link {{ $document_link }} */
+class {{ $class }} extends AbstractEcsField
+{
+    public function __construct(
+        {{ $constructor }}
+    ) {
+        parent::__construct();
+    }
+
+    protected function key(): ?string
+    {
+        return {{ $key }};
+    }
+
+    protected function body(): Collection
+    {
+        return collect([
+            {{ $properties }}
+        ]);
+    }
+}

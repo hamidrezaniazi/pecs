@@ -1,0 +1,42 @@
+{
+  "class":"DefaultClass",
+  "document_link": "https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html",
+  "key":"default",
+  "properties":{
+    "simple":{
+      "types": [
+        "string"
+      ]
+    },
+    "simple_nullable":{
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "with_name":{
+      "types": [
+        "array"
+      ],
+      "name": "different_name"
+    },
+    "class_type":{
+      "types": [
+        "NameSpaces\\ClassType"
+      ]
+    },
+    "class_type_with_case":{
+      "types": [
+        "NameSpaces\\ClassTypeWithCase"
+      ],
+      "cast": "toSomething"
+    },
+    "multiple_types":{
+      "types": [
+        "string",
+        "int",
+        "OtherNameSpaces\\NewClassTypeWithCase"
+      ]
+    }
+  }
+}
