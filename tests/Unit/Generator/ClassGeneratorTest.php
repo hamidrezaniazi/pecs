@@ -11,16 +11,22 @@ use PHPUnit\Framework\TestCase;
  */
 class ClassGeneratorTest extends TestCase
 {
+    private string $storingPath = __DIR__ . '/Fields';
+
+    protected function tearDown(): void
+    {
+        $this->removeDirectoryRecursive($this->storingPath);
+    }
+
     /**
      * @throws JsonException
      */
     public function testItCanGenerateClasses(): void
     {
         $namespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator';
-        $storingPath = __DIR__ . '/Fields';
         $generator = new ClassGenerator(
             __DIR__ . '/stubs',
-            $storingPath,
+            $this->storingPath,
             $namespace,
         );
 
@@ -28,7 +34,18 @@ class ClassGeneratorTest extends TestCase
 
         $this->assertEquals(
             file_get_contents(__DIR__ . '/stubs/default.stub.php'),
-            file_get_contents($storingPath . '/DefaultClass.php'),
+            file_get_contents($this->storingPath . '/DefaultClass.php'),
         );
+    }
+
+    private function removeDirectoryRecursive(string $storingPath): void
+    {
+        $files = glob($storingPath . '/*');
+        if ($files !== false) {
+            foreach ($files as $file) {
+                is_dir($file) ? $this->removeDirectoryRecursive($file) : unlink($file);
+            }
+            rmdir($storingPath);
+        }
     }
 }
