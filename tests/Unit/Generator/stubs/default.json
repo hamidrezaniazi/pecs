@@ -25,6 +25,11 @@
         "NameSpaces\\ClassType"
       ]
     },
+    "duplicate_class_type": {
+      "types": [
+        "NameSpaces\\ClassType"
+      ]
+    },
     "class_type_with_case": {
       "types": [
         "NameSpaces\\ClassTypeWithCase"

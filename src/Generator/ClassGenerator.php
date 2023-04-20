@@ -82,7 +82,7 @@ class ClassGenerator
 
         $importsCode = implode(PHP_EOL, array_map(function ($import) {
             return "use {$import};";
-        }, $imports));
+        }, array_unique($imports)));
 
         return str_replace(
             [
