@@ -54,7 +54,7 @@ class ClassGenerator
             $cast = implode('|', array_diff($castTypes, ['nullable']));
             $nullable = in_array('nullable', $properties->types, true) ? '?' : '';
             $default = $nullable === '?' ? ' = null' : '';
-            $constructor[] = "public readonly {$nullable}{$cast} \${$properties->name}{$default},";
+            $constructor[] = "public readonly {$nullable}{$cast} \${$this->toCamelCase($properties->name)}{$default},";
 
             $importableTypes  = array_diff($properties->types, $this->nativeTypes, ['nullable', '']);
             foreach ($importableTypes as $importableType) {
@@ -77,7 +77,7 @@ class ClassGenerator
 
         $properties = implode(PHP_EOL, array_map(function (Property $properties) {
             $cast = $properties->cast ? "?->{$properties->cast}()" : '';
-            return "'{$properties->key}' => \$this->{$properties->name}{$cast},";
+            return "'{$properties->key}' => \$this->{$this->toCamelCase($properties->name)}{$cast},";
         }, $field->properties));
 
         $importsCode = implode(PHP_EOL, array_map(function ($import) {
@@ -160,5 +160,12 @@ class ClassGenerator
         }
 
         return $paths;
+    }
+
+    private function toCamelCase(string $string): string
+    {
+        $result = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
+
+        return lcfirst($result);
     }
 }

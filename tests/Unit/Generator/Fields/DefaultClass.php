@@ -12,11 +12,11 @@ class DefaultClass extends AbstractEcsField
 {
     public function __construct(
         public readonly string $simple,
-        public readonly array $with_name,
-        public readonly ClassType $class_type,
-        public readonly ClassTypeWithCase $class_type_with_case,
-        public readonly string|int|NewClassTypeWithCase $multiple_types,
-        public readonly ?string $simple_nullable = null,
+        public readonly array $withName,
+        public readonly ClassType $classType,
+        public readonly ClassTypeWithCase $classTypeWithCase,
+        public readonly string|int|NewClassTypeWithCase $multipleTypes,
+        public readonly ?string $simpleNullable = null,
     ) {
         parent::__construct();
     }
@@ -30,11 +30,11 @@ class DefaultClass extends AbstractEcsField
     {
         return collect([
             'simple' => $this->simple,
-            'simple_nullable' => $this->simple_nullable,
-            'different_name' => $this->with_name,
-            'class_type' => $this->class_type,
-            'class_type_with_case' => $this->class_type_with_case?->toSomething(),
-            'multiple_types' => $this->multiple_types,
+            'simple_nullable' => $this->simpleNullable,
+            'different_name' => $this->withName,
+            'class_type' => $this->classType,
+            'class_type_with_case' => $this->classTypeWithCase?->toSomething(),
+            'multiple_types' => $this->multipleTypes,
         ]);
     }
 }
