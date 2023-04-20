@@ -17,16 +17,20 @@ class PropertyTest extends TestCase
         $name = 'name';
         $cast = 'string';
         $fieldName = 'field_name';
+        $default = 'default_value';
+
         $property = Property::parse([
             'types' => $types,
             'name' => $name,
             'cast' => $cast,
+            'default' => $default,
         ], $fieldName);
 
         $this->assertSame($types, $property->types);
         $this->assertSame($name, $property->key);
         $this->assertSame($fieldName, $property->name);
         $this->assertSame($cast, $property->cast);
+        $this->assertSame($default, $property->default);
     }
 
     public function testItCanParsePropertySchemaWhenNameIsNotPresent(): void
@@ -34,6 +38,7 @@ class PropertyTest extends TestCase
         $types = ['string'];
         $cast = 'string';
         $fieldName = 'field_name';
+
         $property = Property::parse([
             'types' => $types,
             'cast' => $cast,
@@ -69,5 +74,21 @@ class PropertyTest extends TestCase
        Property::parse([
             'types' => [],
         ], 'field_name');
+    }
+
+    public function testItCanNotParsePropertySchemaIfDefaultIsNotPresent(): void
+    {
+        $types = ['string'];
+        $fieldName = 'field_name';
+
+        $property = Property::parse([
+            'types' => $types,
+        ], $fieldName);
+
+
+        $this->assertSame($types, $property->types);
+        $this->assertSame($fieldName, $property->key);
+        $this->assertSame($fieldName, $property->name);
+        $this->assertNull($property->default);
     }
 }

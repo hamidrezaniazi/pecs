@@ -9,6 +9,7 @@ use InvalidArgumentException;
  *     "types": array<int, string>,
  *     "name"?: string,
  *     "cast"?: string,
+ *     "default"?: string,
  * }
  */
 class Property
@@ -21,6 +22,7 @@ class Property
         public readonly string $key,
         public readonly string $name,
         public readonly ?string $cast = null,
+        public readonly ?string $default = null,
     ) {}
 
     /**
@@ -38,7 +40,8 @@ class Property
             $property['types'],
             $property['name'] ?? $name,
             $name,
-            $property['cast'] ?? null
+            $property['cast'] ?? null,
+            $property['default'] ?? null,
         );
     }
 }

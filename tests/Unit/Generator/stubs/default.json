@@ -48,6 +48,13 @@
         "nullable",
         "string"
       ]
+    },
+    "with_default": {
+      "types": [
+        "nullable",
+        "string"
+      ],
+      "default": "default_value"
     }
   }
 }

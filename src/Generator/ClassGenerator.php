@@ -53,7 +53,7 @@ class ClassGenerator
             $castTypes = array_map(fn (string $type) =>  basename(str_replace('\\', '/', $type)), $properties->types);
             $cast = implode('|', array_diff($castTypes, ['nullable']));
             $nullable = in_array('nullable', $properties->types, true) ? '?' : '';
-            $default = $nullable === '?' ? ' = null' : '';
+            $default = $properties->default ? " = '{$properties->default}'" : ($nullable ? ' = null' : '');
             $constructor[] = "public readonly {$nullable}{$cast} \${$this->toCamelCase($properties->name)}{$default},";
 
             $importableTypes  = array_diff($properties->types, $this->nativeTypes, ['nullable', '']);
@@ -64,8 +64,8 @@ class ClassGenerator
 
         // TODO change this to php-cs-fixer custom rule
         usort($constructor, function ($a, $b) {
-            $aNull = (str_contains($a, '= null'));
-            $bNull = (str_contains($b, '= null'));
+            $aNull = (str_contains($a, '='));
+            $bNull = (str_contains($b, '='));
             if ($aNull && !$bNull) {
                 return 1;
             } elseif (!$aNull && $bNull) {
