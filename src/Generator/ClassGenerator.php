@@ -26,7 +26,7 @@ class ClassGenerator
 
     public function __construct(
         private readonly string $configPath = __DIR__ . '/../../config/fields',
-        private readonly string $storingPath = __DIR__,
+        private readonly string $storingPath = __DIR__ . '/../../src/Fields',
         private readonly string $namespace = 'Hamidrezaniazi\Pecs\Fields',
     ) {}
 
