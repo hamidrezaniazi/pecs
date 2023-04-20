@@ -17,6 +17,7 @@ class DefaultClass extends AbstractEcsField
         public readonly ClassTypeWithCase $classTypeWithCase,
         public readonly string|int|NewClassTypeWithCase $multipleTypes,
         public readonly ?string $simpleNullable = null,
+        public readonly ?string $multiDimension = null,
     ) {
         parent::__construct();
     }
@@ -35,6 +36,7 @@ class DefaultClass extends AbstractEcsField
             'class_type' => $this->classType,
             'class_type_with_case' => $this->classTypeWithCase?->toSomething(),
             'multiple_types' => $this->multipleTypes,
+            'multi.dimension' => $this->multiDimension,
         ]);
     }
 }

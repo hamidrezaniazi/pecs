@@ -37,6 +37,12 @@
         "int",
         "OtherNameSpaces\\NewClassTypeWithCase"
       ]
+    },
+    "multi.dimension": {
+      "types": [
+        "nullable",
+        "string"
+      ]
     }
   }
 }

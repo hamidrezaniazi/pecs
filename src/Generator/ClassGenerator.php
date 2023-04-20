@@ -164,6 +164,7 @@ class ClassGenerator
 
     private function toCamelCase(string $string): string
     {
+        $string = str_replace('.', '_', $string);
         $result = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
 
         return lcfirst($result);
