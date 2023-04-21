@@ -6,6 +6,7 @@ use Illuminate\Support\Collection;
 use NameSpaces\ClassType;
 use NameSpaces\ClassTypeWithCase;
 use Namespaces\EnumType;
+use Namespaces\EnumTypeWithCast;
 use OtherNameSpaces\NewClassTypeWithCase;
 
 /** @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html */
@@ -19,6 +20,7 @@ class DefaultClass extends AbstractEcsField
         public readonly ClassTypeWithCase $classTypeWithCase,
         public readonly string|int|NewClassTypeWithCase $multipleTypes,
         public readonly EnumType $isEnum,
+        public readonly EnumTypeWithCast $isEnumWithCast,
         public readonly ?string $simpleNullable = null,
         public readonly ?string $multiDimension = null,
         public readonly ?string $withDefault = 'default_value',
@@ -44,6 +46,7 @@ class DefaultClass extends AbstractEcsField
             'multi.dimension' => $this->multiDimension,
             'with_default' => $this->withDefault,
             'is_enum' => $this->isEnum?->value,
+            'is_enum_with_cast' => $this->isEnumWithCast?->toSomething()?->value,
         ]);
     }
 }

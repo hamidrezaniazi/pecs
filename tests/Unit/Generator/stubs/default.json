@@ -60,7 +60,14 @@
       "types": [
         "Namespaces\\EnumType"
       ],
-      "is_enum": true
+      "extract": "value"
+    },
+    "is_enum_with_cast": {
+      "types": [
+        "Namespaces\\EnumTypeWithCast"
+      ],
+      "extract": "value",
+      "cast": "toSomething"
     }
   }
 }

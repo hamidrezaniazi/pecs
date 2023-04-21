@@ -75,9 +75,10 @@ class ClassGenerator
             }
         });
 
-        $properties = implode(PHP_EOL, array_map(function (Property $properties) {
-            $cast = $properties->cast ? "?->{$properties->cast}()" : ($properties->isEnum ? '?->value' : '');
-            return "'{$properties->key}' => \$this->{$this->toCamelCase($properties->name)}{$cast},";
+        $properties = implode(PHP_EOL, array_map(function (Property $property) {
+            $cast = $property->cast ? "?->{$property->cast}()" : '';
+            $cast = $property->extract ? $cast . "?->{$property->extract}" : $cast;
+            return "'{$property->key}' => \$this->{$this->toCamelCase($property->name)}{$cast},";
         }, $field->properties));
 
         $importsCode = implode(PHP_EOL, array_map(function ($import) {
