@@ -109,4 +109,24 @@ class PropertyTest extends TestCase
         $this->assertSame($fieldName, $property->name);
         $this->assertNull($property->extract);
     }
+
+    public function testItShouldDetectIfItIsNullable(): void
+    {
+        $types = ['string'];
+        $fieldName = 'field_name';
+
+        $property = Property::parse([
+            'types' => $types,
+        ], $fieldName);
+
+        $this->assertFalse($property->isNullable());
+
+        $types = ['string', 'nullable'];
+
+        $property = Property::parse([
+            'types' => $types,
+        ], $fieldName);
+
+        $this->assertTrue($property->isNullable());
+    }
 }

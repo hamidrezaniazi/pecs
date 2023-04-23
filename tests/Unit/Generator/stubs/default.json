@@ -68,6 +68,12 @@
       ],
       "extract": "value",
       "cast": "toSomething"
+    },
+    "required_but_cast": {
+      "types": [
+        "Namespaces\\RequiredButCast"
+      ],
+      "cast": "toSomething"
     }
   }
 }

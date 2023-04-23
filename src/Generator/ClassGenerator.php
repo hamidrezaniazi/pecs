@@ -52,7 +52,7 @@ class ClassGenerator
         foreach ($field->properties as $properties) {
             $castTypes = array_map(fn (string $type) =>  basename(str_replace('\\', '/', $type)), $properties->types);
             $cast = implode('|', array_diff($castTypes, ['nullable']));
-            $nullable = in_array('nullable', $properties->types, true) ? '?' : '';
+            $nullable = $properties->isNullable() ? '?' : '';
             $default = $properties->default ? " = '{$properties->default}'" : ($nullable ? ' = null' : '');
             $constructor[] = "public readonly {$nullable}{$cast} \${$this->toCamelCase($properties->name)}{$default},";
 
@@ -76,7 +76,8 @@ class ClassGenerator
         });
 
         $properties = implode(PHP_EOL, array_map(function (Property $property) {
-            $cast = $property->cast ? "?->{$property->cast}()" : '';
+            $nullable = $property->isNullable() ? '?' : '';
+            $cast = $property->cast ? "{$nullable}->{$property->cast}()" : '';
             $cast = $property->extract ? $cast . "?->{$property->extract}" : $cast;
             return "'{$property->key}' => \$this->{$this->toCamelCase($property->name)}{$cast},";
         }, $field->properties));

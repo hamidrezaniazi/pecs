@@ -47,4 +47,9 @@ class Property
             $property['extract'] ?? null,
         );
     }
+
+    public function isNullable(): bool
+    {
+        return in_array('nullable', $this->types, true);
+    }
 }
