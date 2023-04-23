@@ -4,11 +4,11 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
 use Illuminate\Support\Collection;
 use NameSpaces\ClassType;
-use NameSpaces\ClassTypeWithCase;
+use NameSpaces\ClassTypeWithCast;
 use Namespaces\EnumType;
 use Namespaces\EnumTypeWithCast;
 use Namespaces\RequiredButCast;
-use OtherNameSpaces\NewClassTypeWithCase;
+use OtherNameSpaces\NewClassType;
 
 /** @link https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html */
 class DefaultClass extends AbstractEcsField
@@ -18,8 +18,8 @@ class DefaultClass extends AbstractEcsField
         public readonly array $withName,
         public readonly ClassType $classType,
         public readonly ClassType $duplicateClassType,
-        public readonly ClassTypeWithCase $classTypeWithCase,
-        public readonly string|int|NewClassTypeWithCase $multipleTypes,
+        public readonly ClassTypeWithCast $classTypeWithCast,
+        public readonly string|int|NewClassType $multipleTypes,
         public readonly EnumType $isEnum,
         public readonly EnumTypeWithCast $isEnumWithCast,
         public readonly RequiredButCast $requiredButCast,
@@ -43,7 +43,7 @@ class DefaultClass extends AbstractEcsField
             'different_name' => $this->withName,
             'class_type' => $this->classType,
             'duplicate_class_type' => $this->duplicateClassType,
-            'class_type_with_case' => $this->classTypeWithCase->toSomething(),
+            'class_type_with_cast' => $this->classTypeWithCast->toSomething(),
             'multiple_types' => $this->multipleTypes,
             'multi.dimension' => $this->multiDimension,
             'with_default' => $this->withDefault,

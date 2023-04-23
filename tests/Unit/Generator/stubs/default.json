@@ -30,9 +30,9 @@
         "NameSpaces\\ClassType"
       ]
     },
-    "class_type_with_case": {
+    "class_type_with_cast": {
       "types": [
-        "NameSpaces\\ClassTypeWithCase"
+        "NameSpaces\\ClassTypeWithCast"
       ],
       "cast": "toSomething"
     },
@@ -40,7 +40,7 @@
       "types": [
         "string",
         "int",
-        "OtherNameSpaces\\NewClassTypeWithCase"
+        "OtherNameSpaces\\NewClassType"
       ]
     },
     "multi.dimension": {

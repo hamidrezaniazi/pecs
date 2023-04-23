@@ -49,14 +49,14 @@ class ClassGenerator
         $imports = [];
         $constructor = [];
 
-        foreach ($field->properties as $properties) {
-            $castTypes = array_map(fn (string $type) =>  basename(str_replace('\\', '/', $type)), $properties->types);
+        foreach ($field->properties as $property) {
+            $castTypes = array_map(fn (string $type) =>  basename(str_replace('\\', '/', $type)), $property->types);
             $cast = implode('|', array_diff($castTypes, ['nullable']));
-            $nullable = $properties->isNullable() ? '?' : '';
-            $default = $properties->default ? " = '{$properties->default}'" : ($nullable ? ' = null' : '');
-            $constructor[] = "public readonly {$nullable}{$cast} \${$this->toCamelCase($properties->name)}{$default},";
+            $nullable = $property->isNullable() ? '?' : '';
+            $default = $property->default ? " = '{$property->default}'" : ($nullable ? ' = null' : '');
+            $constructor[] = "public readonly {$nullable}{$cast} \${$this->toCamelCase($property->name)}{$default},";
 
-            $importableTypes  = array_diff($properties->types, $this->nativeTypes, ['nullable', '']);
+            $importableTypes  = array_diff($property->types, $this->nativeTypes, ['nullable', '']);
             foreach ($importableTypes as $importableType) {
                 $imports[] = $importableType;
             }
