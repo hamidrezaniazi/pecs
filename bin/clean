@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+
+<?php
+
+use Hamidrezaniazi\Pecs\Generator\ClassGenerator;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+try {
+    ClassGenerator::clean();
+} catch (Exception $e) {
+    echo $e->getMessage();
+}

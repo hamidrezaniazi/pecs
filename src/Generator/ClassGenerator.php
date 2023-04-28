@@ -33,6 +33,26 @@ class ClassGenerator
     /**
      * @throws JsonException
      */
+    public static function exec(): void
+    {
+        $generator = new self();
+        $generator->generate();
+    }
+
+    public static function clean(): void
+    {
+        $generator = new self();
+        $paths = $generator->getPaths();
+        foreach ($paths as $path) {
+            $config = $generator->getConfig($path);
+            $field = Field::parse($config);
+            $generator->deleteClass($field->class);
+        }
+    }
+
+    /**
+     * @throws JsonException
+     */
     public function generate(): void
     {
         $paths = $this->getPaths();
@@ -139,9 +159,10 @@ class ClassGenerator
         if (!is_dir($this->storingPath)) {
             mkdir($this->storingPath, 0755, true);
         }
-        $dir = $this->storingPath . "/{$class}.php";
+        $dir = $this->getStoringDir($class);
         file_put_contents($dir, $classCode);
-        exec("../vendor/bin/php-cs-fixer fix --config=.php_cs.dist.php --quiet {$dir}");
+        $phpcsConfig = __DIR__ . '/../../.php_cs.dist.php';
+        exec("../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
     }
 
     /**
@@ -170,5 +191,15 @@ class ClassGenerator
         $result = str_replace(' ', '', ucwords(str_replace('_', ' ', $string)));
 
         return lcfirst($result);
+    }
+
+    private function deleteClass(string $class): void
+    {
+        unlink($this->getStoringDir($class));
+    }
+
+    private function getStoringDir(string $class): string
+    {
+        return $this->storingPath . "/{$class}.php";
     }
 }

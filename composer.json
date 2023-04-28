@@ -41,11 +41,18 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "post-autoload-dump": ["bin/generate"],
+        "test": [
+            "bin/generate",
+            "vendor/bin/phpunit",
+            "bin/clean"
+        ],
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=1G"
-
     },
+    "bin": [
+        "bin/generate"
+    ],
     "config": {
         "sort-packages": true
     }
