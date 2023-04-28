@@ -20,9 +20,9 @@ class EcsFieldsCollectionTest extends TestCase
     /** @dataProvider nonEcsDataProvider */
     public function testItCanRejectNotEcsFields(mixed $nonEcsValue): void
     {
-        $this->expectNotToPerformAssertions();
+        $collection = new EcsFieldsCollection([$nonEcsValue]);
 
-        new EcsFieldsCollection([$nonEcsValue]);
+        $this->assertEmpty($collection->toArray());
     }
 
     public function testItCanLoadInitialFields(): void
@@ -120,7 +120,7 @@ class EcsFieldsCollectionTest extends TestCase
             [1],
             [[]],
             [new stdClass()],
-            [EcsFieldFactory::create(null, [], [], [new stdClass()])],
+            [EcsFieldFactory::create(null, [], [], [new stdClass()], false)],
         ];
     }
 

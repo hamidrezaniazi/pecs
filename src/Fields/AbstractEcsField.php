@@ -8,12 +8,15 @@ use Illuminate\Support\Collection;
 
 abstract class AbstractEcsField
 {
+    public readonly bool $rootable;
+
     /** @var Collection<int|string, string|int|bool> */
     protected Collection $log;
 
-    public function __construct()
+    public function __construct(bool $rootable = true)
     {
         $this->log = collect([]);
+        $this->rootable = $rootable;
     }
 
     abstract protected function key(): ?string;
