@@ -1,0 +1,43 @@
+{
+  "class": "Agent",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-agent.html",
+  "key": "agent",
+  "properties": {
+    "build.original": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "ephemeral_id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "version": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    }
+  }
+}

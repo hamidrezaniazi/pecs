@@ -1,0 +1,90 @@
+{
+  "class": "Container",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-container.html",
+  "key": "container",
+  "properties": {
+    "cpu.usage": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+      ],
+      "cast": "scale"
+    },
+    "disk.read.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "disk.write.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "image.hash.all": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "image.name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "image.tag": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "labels": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\PairList"
+      ],
+      "cast": "toArray"
+    },
+    "memory.usage": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+      ],
+      "cast": "scale"
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "network.egress.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "network.ingress.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "runtime": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    }
+  }
+}
