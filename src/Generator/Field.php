@@ -8,6 +8,7 @@ namespace Hamidrezaniazi\Pecs\Generator;
  *         "document_link": string,
  *         "class": string,
  *         "key"?: string,
+ *         "rootable"?: bool,
  *         "properties": array<string, PropertySchema>
  * }
  */
@@ -21,6 +22,7 @@ class Field
         public readonly array $properties,
         public readonly string $documentLink,
         public readonly ?string $key = null,
+        public readonly bool $rootable = false,
     ) {}
 
     /**
@@ -37,7 +39,8 @@ class Field
                 $field['properties']
             ),
             $field['document_link'],
-            $field['key'] ?? null
+            $field['key'] ?? null,
+            $field['rootable'] ?? true,
         );
     }
 }

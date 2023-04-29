@@ -2,6 +2,7 @@
 
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
+use Exception;
 use Hamidrezaniazi\Pecs\Generator\Field;
 use Hamidrezaniazi\Pecs\Generator\Property;
 use PHPUnit\Framework\TestCase;
@@ -11,6 +12,9 @@ use PHPUnit\Framework\TestCase;
  */
 class FieldTest extends TestCase
 {
+    /**
+     * @throws Exception
+     */
     public function testItCanParseFieldSchema(): void
     {
         $link = 'https://www.elastic.co/guide/en/elasticsearch/reference/current/field-caps.html';
@@ -28,11 +32,13 @@ class FieldTest extends TestCase
                 'cast' => 'array',
             ]
         ];
+        $rootable = (bool) random_int(0, 1);
 
         $field = Field::parse([
             'document_link' => $link,
             'class' => $class,
             'key' => $key,
+            'rootable' => $rootable,
             'properties' => [
                 ...$first,
                 ...$second,
@@ -46,6 +52,7 @@ class FieldTest extends TestCase
             Property::parse($first['fields'], 'fields'),
             Property::parse($second['indices'], 'indices'),
         ], $field->properties);
+        $this->assertSame($rootable, $field->rootable);
     }
 
     public function testItCanParseFieldSchemaWhenKeyIsNotPresent(): void
@@ -62,5 +69,21 @@ class FieldTest extends TestCase
         $this->assertSame($link, $field->documentLink);
         $this->assertSame($class, $field->class);
         $this->assertNull($field->key);
+    }
+
+    public function testItCanParseFieldSchemaWhenRootableIsNotPresent(): void
+    {
+        $link = 'https://www.elastic.co/guide/en/elasticsearch/reference/current/field-caps.html';
+        $class = 'FieldCaps';
+
+        $field = Field::parse([
+            'document_link' => $link,
+            'class' => $class,
+            'properties' => [],
+        ]);
+
+        $this->assertSame($link, $field->documentLink);
+        $this->assertSame($class, $field->class);
+        $this->assertTrue($field->rootable);
     }
 }

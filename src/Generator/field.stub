@@ -11,7 +11,7 @@ class {{ $class }} extends AbstractEcsField
     public function __construct(
         {{ $constructor }}
     ) {
-        parent::__construct();
+        parent::__construct({{ $rootable }});
     }
 
     protected function key(): ?string

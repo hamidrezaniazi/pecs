@@ -36,6 +36,11 @@ class ClassGeneratorTest extends TestCase
             file_get_contents(__DIR__ . '/stubs/default.stub.php'),
             file_get_contents($this->storingPath . '/DefaultClass.php'),
         );
+
+        $this->assertEquals(
+            file_get_contents(__DIR__ . '/stubs/nested.stub.php'),
+            file_get_contents($this->storingPath . '/NestedClass.php'),
+        );
     }
 
     private function removeDirectoryRecursive(string $storingPath): void
