@@ -1,0 +1,38 @@
+{
+  "class": "PeSection",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-pe.html#field-pe-sections",
+  "key": null,
+  "rootable": false,
+  "properties": {
+    "entropy": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "physical_size": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "var_entropy": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "virtual_size": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    }
+  }
+}
