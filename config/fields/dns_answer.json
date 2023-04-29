@@ -12,7 +12,6 @@
     },
     "data": {
       "types": [
-        "nullable",
         "string"
       ]
     },
