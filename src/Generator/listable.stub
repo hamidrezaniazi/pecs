@@ -1,0 +1,31 @@
+<?php
+
+{{ $namespace }}
+
+{{ $import }}
+use Illuminate\Support\Collection;
+
+/** @link {{ $document_link }} */
+class {{ $class }}List
+{
+    /** @var Collection<string, {{ $class }}> */
+        private Collection $list;
+
+        public function __construct()
+        {
+            $this->list = new Collection();
+        }
+
+        public function toArray(): array
+        {
+            return $this->list->map(fn({{ $class }} $item) => $item->toArray())->toArray();
+        }
+
+        public function put(string $key, {{ $class }} $value): self
+        {
+            $this->list->put($key, $value);
+
+            return $this;
+        }
+}
+

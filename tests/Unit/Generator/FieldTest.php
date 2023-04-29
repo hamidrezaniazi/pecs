@@ -33,12 +33,14 @@ class FieldTest extends TestCase
             ]
         ];
         $rootable = (bool) random_int(0, 1);
+        $listable = (bool) random_int(0, 1);
 
         $field = Field::parse([
             'document_link' => $link,
             'class' => $class,
             'key' => $key,
             'rootable' => $rootable,
+            'listable' => $listable,
             'properties' => [
                 ...$first,
                 ...$second,
@@ -53,6 +55,7 @@ class FieldTest extends TestCase
             Property::parse($second['indices'], 'indices'),
         ], $field->properties);
         $this->assertSame($rootable, $field->rootable);
+        $this->assertSame($listable, $field->listable);
     }
 
     public function testItCanParseFieldSchemaWhenKeyIsNotPresent(): void
@@ -85,5 +88,21 @@ class FieldTest extends TestCase
         $this->assertSame($link, $field->documentLink);
         $this->assertSame($class, $field->class);
         $this->assertTrue($field->rootable);
+    }
+
+    public function testItCanParseFieldSchemaWhenListableIsNotPresent(): void
+    {
+        $link = 'https://www.elastic.co/guide/en/elasticsearch/reference/current/field-caps.html';
+        $class = 'FieldCaps';
+
+        $field = Field::parse([
+            'document_link' => $link,
+            'class' => $class,
+            'properties' => [],
+        ]);
+
+        $this->assertSame($link, $field->documentLink);
+        $this->assertSame($class, $field->class);
+        $this->assertFalse($field->listable);
     }
 }

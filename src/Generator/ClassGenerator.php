@@ -26,8 +26,10 @@ class ClassGenerator
 
     public function __construct(
         private readonly string $configPath = __DIR__ . '/../../config/fields',
-        private readonly string $storingPath = __DIR__ . '/../../src/Fields',
-        private readonly string $namespace = 'Hamidrezaniazi\Pecs\Fields',
+        private readonly string $fieldsStoringPath = __DIR__ . '/../../src/Fields',
+        private readonly string $fieldsNamespace = 'Hamidrezaniazi\Pecs\Fields',
+        private readonly string $listablesStoringPath = __DIR__ . '/../../src/Properties/Listables',
+        private readonly string $listablesNamespace = 'Hamidrezaniazi\Pecs\Properties\Listables',
     ) {}
 
     /**
@@ -47,6 +49,10 @@ class ClassGenerator
             $config = $generator->getConfig($path);
             $field = Field::parse($config);
             $generator->deleteClass($field->class);
+
+            if ($field->listable) {
+                $generator->deleteListableClass($field->class);
+            }
         }
     }
 
@@ -61,6 +67,11 @@ class ClassGenerator
             $field = Field::parse($config);
             $classCode = $this->createClass($field);
             $this->storeClass($field->class, $classCode);
+
+            if ($field->listable) {
+                $listableClassCode = $this->createListableClass($field);
+                $this->storeListableClass($field->class, $listableClassCode);
+            }
         }
     }
 
@@ -118,7 +129,7 @@ class ClassGenerator
                 '{{ $properties }}',
             ],
             [
-                "namespace {$this->namespace};",
+                "namespace {$this->fieldsNamespace};",
                 $importsCode,
                 $field->documentLink,
                 $field->class,
@@ -127,7 +138,7 @@ class ClassGenerator
                 $field->key ? "'{$field->key}'" : 'null',
                 $properties,
             ],
-            $this->getStub()
+            $this->getFieldStub()
         );
     }
 
@@ -145,7 +156,7 @@ class ClassGenerator
         return json_decode($json, true, 512, JSON_THROW_ON_ERROR);
     }
 
-    private function getStub(): string
+    private function getFieldStub(): string
     {
         $stub = file_get_contents(__DIR__ . '/field.stub');
 
@@ -158,8 +169,8 @@ class ClassGenerator
 
     private function storeClass(string $class, string $classCode): void
     {
-        if (!is_dir($this->storingPath)) {
-            mkdir($this->storingPath, 0755, true);
+        if (!is_dir($this->fieldsStoringPath)) {
+            mkdir($this->fieldsStoringPath, 0755, true);
         }
         $dir = $this->getStoringDir($class);
         file_put_contents($dir, $classCode);
@@ -202,6 +213,52 @@ class ClassGenerator
 
     private function getStoringDir(string $class): string
     {
-        return $this->storingPath . "/{$class}.php";
+        return $this->fieldsStoringPath . "/{$class}.php";
+    }
+
+    private function createListableClass(Field $field): string
+    {
+        return str_replace(
+            [
+                '{{ $namespace }}',
+                '{{ $import }}',
+                '{{ $document_link }}',
+                '{{ $class }}',
+            ],
+            [
+                "namespace {$this->listablesNamespace};",
+                "use {$this->fieldsNamespace}\\{$field->class};",
+                $field->documentLink,
+                $field->class,
+            ],
+            $this->getListableStub()
+        );
+    }
+
+    private function getListableStub(): string
+    {
+        $stub = file_get_contents(__DIR__ . '/listable.stub');
+
+        if ($stub === false) {
+            throw new RuntimeException('Could not read stub');
+        }
+
+        return $stub;
+    }
+
+    private function storeListableClass(string $class, string $listableClassCode): void
+    {
+        if (!is_dir($this->listablesStoringPath)) {
+            mkdir($this->listablesStoringPath, 0755, true);
+        }
+        $dir = $this->listablesStoringPath . "/{$class}List.php";
+        file_put_contents($dir, $listableClassCode);
+        $phpcsConfig = __DIR__ . '/../../.php_cs.dist.php';
+        exec("../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
+    }
+
+    private function deleteListableClass(string $class): void
+    {
+        unlink($this->listablesStoringPath . "/{$class}List.php");
     }
 }

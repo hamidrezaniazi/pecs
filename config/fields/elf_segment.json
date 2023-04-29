@@ -3,6 +3,7 @@
   "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-elf.html#field-elf-segments",
   "key": null,
   "rootable": false,
+  "listable": true,
   "properties": {
     "sections": {
       "types": [

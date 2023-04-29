@@ -11,11 +11,14 @@ use PHPUnit\Framework\TestCase;
  */
 class ClassGeneratorTest extends TestCase
 {
-    private string $storingPath = __DIR__ . '/Fields';
+    private string $fieldsStoringPath = __DIR__ . '/Fields';
+
+    private string $listableStoringPath = __DIR__ . '/Properties/Listables';
 
     protected function tearDown(): void
     {
-        $this->removeDirectoryRecursive($this->storingPath);
+        $this->removeDirectoryRecursive($this->fieldsStoringPath);
+        $this->removeDirectoryRecursive($this->listableStoringPath);
     }
 
     /**
@@ -23,23 +26,36 @@ class ClassGeneratorTest extends TestCase
      */
     public function testItCanGenerateClasses(): void
     {
-        $namespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator';
+        $fieldsNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator';
+        $listablesNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator\Properties\Listables';
         $generator = new ClassGenerator(
             __DIR__ . '/stubs',
-            $this->storingPath,
-            $namespace,
+            $this->fieldsStoringPath,
+            $fieldsNamespace,
+            $this->listableStoringPath,
+            $listablesNamespace,
         );
 
         $generator->generate();
 
         $this->assertEquals(
             file_get_contents(__DIR__ . '/stubs/default.stub.php'),
-            file_get_contents($this->storingPath . '/DefaultClass.php'),
+            file_get_contents($this->fieldsStoringPath . '/DefaultClass.php'),
         );
 
         $this->assertEquals(
             file_get_contents(__DIR__ . '/stubs/nested.stub.php'),
-            file_get_contents($this->storingPath . '/NestedClass.php'),
+            file_get_contents($this->fieldsStoringPath . '/NestedClass.php'),
+        );
+
+        $this->assertEquals(
+            file_get_contents(__DIR__ . '/stubs/listable.stub.php'),
+            file_get_contents($this->fieldsStoringPath . '/ListableClass.php'),
+        );
+
+        $this->assertEquals(
+            file_get_contents(__DIR__ . '/stubs/listable_list.stub.php'),
+            file_get_contents($this->listableStoringPath . '/ListableClassList.php'),
         );
     }
 
@@ -48,9 +64,21 @@ class ClassGeneratorTest extends TestCase
         $files = glob($storingPath . '/*');
         if ($files !== false) {
             foreach ($files as $file) {
-                is_dir($file) ? $this->removeDirectoryRecursive($file) : unlink($file);
+                if (is_dir($file)) {
+                    $this->removeDirectoryRecursive($file);
+                } else {
+                    unlink($file);
+                }
             }
-            rmdir($storingPath);
+        }
+        rmdir($storingPath);
+
+        $parentDir = dirname($storingPath);
+        if ($parentDir !== '.') {
+            $parentFiles = glob($parentDir . '/*');
+            if ($parentFiles !== false && is_array($parentFiles) && count($parentFiles) === 0) {
+                rmdir($parentDir);
+            }
         }
     }
 }
