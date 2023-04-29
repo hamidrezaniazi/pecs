@@ -6,6 +6,9 @@ use Hamidrezaniazi\Pecs\Properties\ValueList;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
+/**
+ * @covers \Hamidrezaniazi\Pecs\Properties\ValueList
+ */
 class ValueListTest extends TestCase
 {
     /** @dataProvider valueDataProvider */

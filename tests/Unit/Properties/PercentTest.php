@@ -5,6 +5,9 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 use Hamidrezaniazi\Pecs\Properties\Percent;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers \Hamidrezaniazi\Pecs\Properties\Percent
+ */
 class PercentTest extends TestCase
 {
     public function testItShouldValidateInput(): void

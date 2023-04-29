@@ -5,6 +5,9 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Fields;
 use Hamidrezaniazi\Pecs\Tests\EcsFieldFactory;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers \Hamidrezaniazi\Pecs\Fields\AbstractField
+ */
 class AbstractFieldTest extends TestCase
 {
     /** @dataProvider fieldDataProvider */

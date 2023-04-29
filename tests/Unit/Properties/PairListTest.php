@@ -6,6 +6,9 @@ use Hamidrezaniazi\Pecs\Properties\PairList;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
 use stdClass;
 
+/**
+ * @covers \Hamidrezaniazi\Pecs\Properties\PairList
+ */
 class PairListTest extends TestCase
 {
     /** @dataProvider valueDataProvider */
