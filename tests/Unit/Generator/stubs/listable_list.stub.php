@@ -21,9 +21,9 @@ class ListableClassList
         return $this->list->map(fn (ListableClass $item) => $item->toArray())->toArray();
     }
 
-    public function put(string $key, ListableClass $value): self
+    public function push(ListableClass $value): self
     {
-        $this->list->put($key, $value);
+        $this->list->push($value);
 
         return $this;
     }

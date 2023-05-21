@@ -21,9 +21,9 @@ class {{ $class }}List
             return $this->list->map(fn({{ $class }} $item) => $item->toArray())->toArray();
         }
 
-        public function put(string $key, {{ $class }} $value): self
+        public function push({{ $class }} $value): self
         {
-            $this->list->put($key, $value);
+            $this->list->push($value);
 
             return $this;
         }
