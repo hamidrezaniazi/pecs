@@ -1,0 +1,180 @@
+{
+  "class": "File",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-file.html",
+  "key": "file",
+  "properties": {
+    "accessed": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "attributes": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\FileAttributeList"
+      ],
+      "cast": "toArray"
+    },
+    "created": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "ctime": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "device": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "drive_letter": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "extension": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "fork_name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "gid": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "group": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "inode": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "mime_type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "mode": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "mtime": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "owner": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "path": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "size": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "target_path": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "uid": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "code_signature": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\CodeSignature"
+      ],
+      "cast": "getBody"
+    },
+    "elf": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Elf"
+      ],
+      "cast": "getBody"
+    },
+    "hash": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Hash"
+      ],
+      "cast": "getBody"
+    },
+    "macho": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Macho"
+      ],
+      "cast": "getBody"
+    },
+    "pe": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Pe"
+      ],
+      "cast": "getBody"
+    },
+    "x509": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\X509"
+      ],
+      "cast": "getBody"
+    }
+  }
+}

@@ -1,69 +1,70 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Service",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html",
+  "key": "service",
   "properties": {
-    "account.id": {
+    "address": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "account.name": {
+    "environment": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "availability_zone": {
+    "ephemeral_id": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.id": {
+    "id": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.name": {
+    "name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "machine.type": {
+    "node.name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.id": {
+    "node.role": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.name": {
+    "node.roles": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "state": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "provider": {
+    "type": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "region": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "service.name": {
+    "version": {
       "types": [
         "nullable",
         "string"
@@ -72,14 +73,14 @@
     "origin": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Fields\\Service"
       ],
       "cast": "getBody"
     },
     "target": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Fields\\Service"
       ],
       "cast": "getBody"
     }

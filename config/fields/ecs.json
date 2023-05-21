@@ -1,0 +1,13 @@
+{
+  "class": "Ecs",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-ecs.html",
+  "key": "ecs",
+  "properties": {
+    "version": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    }
+  }
+}

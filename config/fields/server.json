@@ -1,85 +1,98 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Server",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-server.html",
+  "key": "server",
   "properties": {
-    "account.id": {
+    "address": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "account.name": {
+    "bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "domain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "availability_zone": {
+    "ip": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.id": {
+    "mac": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.name": {
+    "nat.ip": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "machine.type": {
+    "nat.port": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "packets": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "port": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "registered_domain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.id": {
+    "subdomain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.name": {
+    "top_level_domain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "provider": {
+    "as": {
       "types": [
         "nullable",
-        "string"
-      ]
-    },
-    "region": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "service.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origin": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
       ],
       "cast": "getBody"
     },
-    "target": {
+    "geo": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+      ],
+      "cast": "getBody"
+    },
+    "user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
       ],
       "cast": "getBody"
     }

@@ -1,0 +1,373 @@
+{
+  "class": "Process",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-process.html",
+  "key": "process",
+  "listable": true,
+  "properties": {
+    "args": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "args_count": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "command_line": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "end": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "entity_id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "entry_meta.type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "env_vars": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "executable": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "exit_code": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "interactive": {
+      "types": [
+        "nullable",
+        "bool"
+      ]
+    },
+    "io.bytes_skipped.length": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "io.bytes_skipped.offset": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "io.max_bytes_per_process_exceeded": {
+      "types": [
+        "nullable",
+        "bool"
+      ]
+    },
+    "io.text": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "io.total_bytes_captured": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "io.total_bytes_skipped": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "io.type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "pgid": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "pid": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "same_as_process": {
+      "types": [
+        "nullable",
+        "bool"
+      ]
+    },
+    "start": {
+      "types": [
+        "nullable",
+        "Carbon\\Carbon"
+      ],
+      "cast": "toIso8601ZuluString"
+    },
+    "thread.id": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "thread.name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "title": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "tty.char_device.major": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "tty.char_device.minor": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "tty.columns": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "tty.rows": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "uptime": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "working_directory": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "attested_groups": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\GroupList"
+      ],
+      "cast": "toArray"
+    },
+    "attested_user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
+      ],
+      "cast": "getBody"
+    },
+    "code_signature": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\CodeSignature"
+      ],
+      "cast": "getBody"
+    },
+    "elf": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Elf"
+      ],
+      "cast": "getBody"
+    },
+    "entry_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "entry_leader.parent": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "entry_leader.parent.session_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "entry_meta.source": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Source"
+      ],
+      "cast": "getBody"
+    },
+    "group": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Group"
+      ],
+      "cast": "getBody"
+    },
+    "group_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "hash": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Hash"
+      ],
+      "cast": "getBody"
+    },
+    "macho": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Macho"
+      ],
+      "cast": "getBody"
+    },
+    "parent": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "parent.group_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "pe": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Pe"
+      ],
+      "cast": "getBody"
+    },
+    "previous": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\ProcessList"
+      ],
+      "cast": "toArray"
+    },
+    "real_group": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Group"
+      ],
+      "cast": "getBody"
+    },
+    "real_user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
+      ],
+      "cast": "getBody"
+    },
+    "saved_group": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Group"
+      ],
+      "cast": "getBody"
+    },
+    "saved_user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
+      ],
+      "cast": "getBody"
+    },
+    "session_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "session_leader.parent": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "session_leader.parent.session_leader": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Process"
+      ],
+      "cast": "getBody"
+    },
+    "supplemental_groups": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\GroupList"
+      ],
+      "cast": "toArray"
+    },
+    "user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
+      ],
+      "cast": "getBody"
+    }
+  }
+}

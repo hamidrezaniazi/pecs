@@ -1,87 +1,91 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Url",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-url.html",
+  "key": "url",
   "properties": {
-    "account.id": {
+    "domain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "account.name": {
+    "extension": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "availability_zone": {
+    "fragment": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.id": {
+    "full": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.name": {
+    "original": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "machine.type": {
+    "password": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.id": {
+    "path": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.name": {
+    "port": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "query": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "provider": {
+    "registered_domain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "region": {
+    "scheme": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "service.name": {
+    "subdomain": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "origin": {
+    "top_level_domain": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+        "string"
+      ]
     },
-    "target": {
+    "username": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+        "string"
+      ]
     }
   }
 }

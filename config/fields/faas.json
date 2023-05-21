@@ -1,0 +1,50 @@
+{
+  "class": "Faas",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-faas.html",
+  "key": "faas",
+  "properties": {
+    "coldstart": {
+      "types": [
+        "nullable",
+        "bool"
+      ]
+    },
+    "execution": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "trigger.request_id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "trigger.type": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\FaasTriggerType"
+      ],
+      "extract": "value"
+    },
+    "version": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    }
+  }
+}

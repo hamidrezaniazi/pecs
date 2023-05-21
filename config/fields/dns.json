@@ -1,87 +1,88 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Dns",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-dns.html",
+  "key": "dns",
   "properties": {
-    "account.id": {
+    "answers": {
       "types": [
         "nullable",
-        "string"
-      ]
-    },
-    "account.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "availability_zone": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "instance.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "instance.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "machine.type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "project.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "project.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "provider": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "region": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "service.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origin": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\DnsAnswerList"
       ],
-      "cast": "getBody"
+      "cast": "toArray"
     },
-    "target": {
+    "header_flags": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Properties\\DnsHeaderFlagList"
       ],
-      "cast": "getBody"
+      "cast": "toArray"
+    },
+    "id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "op_code": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.class": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.registered_domain": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.subdomain": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.top_level_domain": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "question.type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "resolved_ip": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+        "cast": "toArray"
+    },
+    "response_code": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
     }
   }
 }

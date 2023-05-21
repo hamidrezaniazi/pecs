@@ -74,6 +74,27 @@
         "nullable",
         "string"
       ]
+    },
+    "as": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
+      ],
+      "cast": "getBody"
+    },
+    "geo": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+      ],
+      "cast": "getBody"
+    },
+    "user": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\User"
+      ],
+      "cast": "getBody"
     }
   }
 }

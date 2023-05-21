@@ -1,0 +1,138 @@
+{
+  "class": "Host",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-host.html",
+  "key": "host",
+  "properties": {
+    "architecture": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "boot.id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "cpu.usage": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+      ],
+      "cast": "scale"
+    },
+    "disk.read.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "disk.write.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "domain": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "hostname": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "id": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "ip": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "mac": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+      ],
+      "cast": "toArray"
+    },
+    "name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "network.egress.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "network.egress.packets": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "network.ingress.bytes": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "network.ingress.packets": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "pid_ns_ino": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "type": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "uptime": {
+      "types": [
+        "nullable",
+        "int"
+      ]
+    },
+    "geo": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+      ],
+      "cast": "getBody"
+    },
+    "os": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Os"
+      ],
+      "cast": "getBody"
+    },
+    "risk": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Fields\\Risk"
+      ],
+      "cast": "getBody"
+    }
+  }
+}

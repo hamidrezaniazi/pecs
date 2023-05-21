@@ -1,87 +1,85 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Orchestrator",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-orchestrator.html",
+  "key": "orchestrator",
   "properties": {
-    "account.id": {
+    "api_version": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "account.name": {
+    "cluster.id": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "availability_zone": {
+    "cluster.name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.id": {
+    "cluster.url": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.name": {
+    "cluster.version": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "machine.type": {
+    "namespace": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.id": {
+    "organization": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "project.name": {
+    "resource.id": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "provider": {
+    "resource.ip": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "region": {
+    "resource.name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "service.name": {
+    "resource.parent.type": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "origin": {
+    "resource.type": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+        "string"
+      ]
     },
-    "target": {
+    "type": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+        "string"
+      ]
     }
   }
 }

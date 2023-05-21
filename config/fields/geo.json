@@ -1,87 +1,75 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
+  "class": "Geo",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-geo.html",
+  "key": "geo",
+  "rootable": false,
   "properties": {
-    "account.id": {
+    "city_name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "account.name": {
+    "continent_code": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "availability_zone": {
+    "continent_name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.id": {
+    "country_iso_code": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "instance.name": {
+    "country_name": {
       "types": [
         "nullable",
         "string"
       ]
     },
-    "machine.type": {
+    "location": {
       "types": [
         "nullable",
-        "string"
-      ]
-    },
-    "project.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "project.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "provider": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "region": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "service.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origin": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+        "Hamidrezaniazi\\Pecs\\Properties\\GeoPoint"
       ],
-      "cast": "getBody"
+      "cast": "toArray"
     },
-    "target": {
+    "name": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+        "string"
+      ]
+    },
+    "postal_code": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "region_iso_code": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "region_name": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "timezone": {
+      "types": [
+        "nullable",
+        "Carbon\\CarbonTimeZone"
+      ]
     }
   }
 }

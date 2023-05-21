@@ -1,0 +1,46 @@
+{
+  "class": "Risk",
+  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-risk.html",
+  "key": "risk",
+  "rootable": false,
+  "properties": {
+    "calculated_level": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "calculated_score": {
+      "types": [
+        "nullable",
+        "float"
+      ]
+    },
+    "calculated_score_norm": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+      ],
+      "extract": "value"
+    },
+    "static_level": {
+      "types": [
+        "nullable",
+        "string"
+      ]
+    },
+    "static_score": {
+      "types": [
+        "nullable",
+        "float"
+      ]
+    },
+    "static_score_norm": {
+      "types": [
+        "nullable",
+        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+      ],
+      "extract": "value"
+    }
+  }
+}
