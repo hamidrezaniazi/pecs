@@ -8,15 +8,12 @@ use Illuminate\Support\Collection;
 
 abstract class AbstractEcsField
 {
-    private bool $rootable;
-
     /** @var Collection<int|string, string|int|bool> */
     protected Collection $log;
 
-    public function __construct(bool $rootable = true)
+    public function __construct(public readonly bool $rootable = true)
     {
         $this->log = collect([]);
-        $this->rootable = $rootable;
     }
 
     abstract protected function key(): ?string;
@@ -64,10 +61,5 @@ abstract class AbstractEcsField
     public function wrapper(): EcsFieldsCollection
     {
         return new EcsFieldsCollection();
-    }
-
-    public function isRootable(): bool
-    {
-        return $this->rootable;
     }
 }
