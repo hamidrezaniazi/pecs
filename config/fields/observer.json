@@ -12,7 +12,7 @@
     "egress.interface": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Interface"
+        "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
       ],
       "cast": "getBody"
     },
@@ -38,7 +38,7 @@
     "ingress.interface": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Interface"
+        "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
       ],
       "cast": "getBody"
     },
