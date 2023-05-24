@@ -1,0 +1,2698 @@
+{
+  "user": {
+    "domain": "string",
+    "email": "info@example.test",
+    "full_name": "string",
+    "hash": "aa11bb22cc33",
+    "id": "123-abc",
+    "name": "string",
+    "roles": [
+      "string"
+    ]
+  },
+  "url": {
+    "domain": "string",
+    "extension": ".tst",
+    "fragment": "string",
+    "full": "example.test",
+    "original": "example.test",
+    "password": "string",
+    "path": "string",
+    "port": 123456,
+    "query": "string",
+    "registered_domain": "string",
+    "scheme": "string",
+    "subdomain": "string",
+    "top_level_domain": "string",
+    "username": "string"
+  },
+  "span": {
+    "id": "string"
+  },
+  "trace": {
+    "id": "string"
+  },
+  "transaction": {
+    "id": "string"
+  },
+  "tls": {
+    "cipher": "string",
+    "client": {
+      "certificate": "string",
+      "certificate_chain": [
+        "string"
+      ],
+      "hash": {
+        "md5": "aa11bb22cc33",
+        "sha1": "11aa22bb33cc",
+        "sha256": "aa11bb22cc33dd44ee55"
+      },
+      "issuer": "string",
+      "ja3": "string",
+      "not_after": "2000-01-01T00:11:11Z",
+      "not_before": "2000-01-01T00:11:11Z",
+      "server_name": "string",
+      "subject": "string",
+      "supported_ciphers": [
+        "string"
+      ],
+      "x509": {
+        "alternative_name": "string",
+        "issuer": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "not_after": "2000-01-01T00:11:11Z",
+        "not_before": "2000-01-01T00:11:11Z",
+        "public_key_algorithm": "string",
+        "public_key_curve": "string",
+        "public_key_exponent": 123456,
+        "public_key_size": 123456,
+        "serial_number": "string",
+        "signature_algorithm": "string",
+        "subject": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "version_number": "123456"
+      }
+    },
+    "curve": "string",
+    "established": true,
+    "next_protocol": "string",
+    "resumed": true,
+    "server": {
+      "certificate": "string",
+      "certificate_chain": [
+        "string"
+      ],
+      "hash": {
+        "md5": "aa11bb22cc33",
+        "sha1": "11aa22bb33cc",
+        "sha256": "aa11bb22cc33dd44ee55"
+      },
+      "issuer": "string",
+      "ja3s": "string",
+      "not_after": "2000-01-01T00:11:11Z",
+      "not_before": "2000-01-01T00:11:11Z",
+      "subject": "string",
+      "x509": {
+        "alternative_name": "string",
+        "issuer": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "not_after": "2000-01-01T00:11:11Z",
+        "not_before": "2000-01-01T00:11:11Z",
+        "public_key_algorithm": "string",
+        "public_key_curve": "string",
+        "public_key_exponent": 123456,
+        "public_key_size": 123456,
+        "serial_number": "string",
+        "signature_algorithm": "string",
+        "subject": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "version_number": "123456"
+      }
+    },
+    "version": "string",
+    "version_protocol": "string"
+  },
+  "threat": {
+    "enrichments": [
+      {
+        "indicator": {
+          "confidence": "Not Specified",
+          "description": "this is string",
+          "email": {
+            "address": "info@example.test"
+          },
+          "first_seen": "2000-01-01T00:11:11Z",
+          "ip": "8.8.8.8",
+          "last_seen": "2000-01-01T00:11:11Z",
+          "marking": {
+            "tlp": "WHITE",
+            "tlp_version": "string",
+            "modified_at": "2000-01-01T00:11:11Z"
+          },
+          "name": "string",
+          "port": 123456,
+          "provider": "string",
+          "reference": "string",
+          "scanner_stats": 123456,
+          "sightings": 123456,
+          "type": "file",
+          "as": {
+            "number": 123456,
+            "organization": {
+              "name": "string"
+            }
+          },
+          "file": {
+            "accessed": "2000-01-01T00:11:11Z",
+            "attributes": [
+              "archive"
+            ],
+            "created": "2000-01-01T00:11:11Z",
+            "ctime": "2000-01-01T00:11:11Z",
+            "device": "string",
+            "drive_letter": "string",
+            "extension": "string",
+            "fork_name": "string",
+            "gid": "string",
+            "group": "string",
+            "inode": "string",
+            "mime_type": "string",
+            "mode": "string",
+            "mtime": "2000-01-01T00:11:11Z",
+            "name": "string",
+            "owner": "string",
+            "path": "string",
+            "size": 123456,
+            "target_path": "string",
+            "type": "string",
+            "uid": "string",
+            "code_signature": {
+              "digest_algorithm": "string",
+              "exists": true,
+              "signing_id": "string",
+              "status": "string",
+              "subject_name": "string",
+              "team_id": "string",
+              "timestamp": "2000-01-01T00:11:11Z",
+              "trusted": true,
+              "valid": true
+            },
+            "elf": {
+              "architecture": "string",
+              "byte_order": "string",
+              "cpu_type": "string",
+              "creation_date": "2000-01-01T00:11:11Z",
+              "exports": [
+                "string"
+              ],
+              "go_import_hash": "string",
+              "go_imports": [
+                "string"
+              ],
+              "go_imports_names_entropy": 1,
+              "go_imports_names_var_entropy": 1,
+              "go_stripped": true,
+              "header": {
+                "abi_version": "string",
+                "class": "string",
+                "data": "string",
+                "entrypoint": 123456,
+                "object_version": "string",
+                "os_abi": "string"
+              },
+              "import_hash": "string",
+              "imports": [
+                "string"
+              ],
+              "imports_names_entropy": 1,
+              "imports_names_var_entropy": 1,
+              "sections": [
+                {
+                  "chi2": 123456,
+                  "entropy": 123456,
+                  "flags": "string",
+                  "name": "string",
+                  "physical_offset": "123456",
+                  "physical_size": 123456,
+                  "type": "string",
+                  "var_entropy": 123456,
+                  "virtual_address": 123456,
+                  "virtual_size": 123456
+                }
+              ],
+              "segments": [
+                {
+                  "sections": "string",
+                  "type": "string"
+                }
+              ],
+              "shared_libraries": [
+                "string"
+              ],
+              "telfhash": "string"
+            },
+            "hash": {
+              "md5": "aa11bb22cc33",
+              "sha1": "11aa22bb33cc",
+              "sha256": "aa11bb22cc33dd44ee55",
+              "sha512": "string",
+              "ssdeep": "string",
+              "tlsh": "string"
+            },
+            "macho": {
+              "go_import_hash": "string",
+              "go_imports": [
+                "string"
+              ],
+              "go_imports_names_entropy": 1,
+              "go_imports_names_var_entropy": 1,
+              "go_stripped": true,
+              "import_hash": "string",
+              "imports": [
+                "string"
+              ],
+              "imports_names_entropy": 1,
+              "imports_names_var_entropy": 1,
+              "sections": [
+                {
+                  "entropy": 123456,
+                  "name": "string",
+                  "physical_size": 123456,
+                  "var_entropy": 123456,
+                  "virtual_size": 123456
+                }
+              ],
+              "symhash": "string"
+            },
+            "pe": {
+              "architecture": "string",
+              "company": "string",
+              "description": "string",
+              "file_version": "string",
+              "go_import_hash": "string",
+              "go_imports": [
+                "string"
+              ],
+              "go_imports_names_entropy": 1,
+              "go_imports_names_var_entropy": 1,
+              "go_stripped": true,
+              "imphash": "string",
+              "imports": [
+                "string"
+              ],
+              "imports_names_entropy": 1,
+              "imports_names_var_entropy": 1,
+              "original_file_name": "string",
+              "pehash": "string",
+              "product": "string",
+              "sections": [
+                {
+                  "entropy": 1,
+                  "name": "string",
+                  "physical_size": 123456,
+                  "var_entropy": 1,
+                  "virtual_size": 123456
+                }
+              ]
+            },
+            "x509": {
+              "alternative_name": "string",
+              "issuer": {
+                "common_name": "string",
+                "country": "Iran",
+                "distinguished_name": "string",
+                "locality": "string",
+                "organization": "string",
+                "organizational_unit": "string",
+                "state_or_province": "string"
+              },
+              "not_after": "2000-01-01T00:11:11Z",
+              "not_before": "2000-01-01T00:11:11Z",
+              "public_key_algorithm": "string",
+              "public_key_curve": "string",
+              "public_key_exponent": 123456,
+              "public_key_size": 123456,
+              "serial_number": "string",
+              "signature_algorithm": "string",
+              "subject": {
+                "common_name": "string",
+                "country": "Iran",
+                "distinguished_name": "string",
+                "locality": "string",
+                "organization": "string",
+                "organizational_unit": "string",
+                "state_or_province": "string"
+              },
+              "version_number": "123456"
+            }
+          },
+          "geo": {
+            "city_name": "Tehran",
+            "continent_code": "string",
+            "continent_name": "string",
+            "country_iso_code": "ir",
+            "country_name": "Iran",
+            "location": {
+              "lat": 12345678.9,
+              "lon": 98765432.099999994
+            },
+            "name": "string",
+            "postal_code": "1010 AA",
+            "region_iso_code": "ir",
+            "region_name": "Iran",
+            "timezone": "Asia\/Tehran"
+          },
+          "registry": {
+            "data": {
+              "bytes": "string",
+              "strings": [
+                "string"
+              ],
+              "type": "string"
+            },
+            "hive": "string",
+            "key": "string",
+            "path": "string",
+            "value": "string"
+          },
+          "url": {
+            "domain": "string",
+            "extension": ".tst",
+            "fragment": "string",
+            "full": "example.test",
+            "original": "example.test",
+            "password": "string",
+            "path": "string",
+            "port": 123456,
+            "query": "string",
+            "registered_domain": "string",
+            "scheme": "string",
+            "subdomain": "string",
+            "top_level_domain": "string",
+            "username": "string"
+          },
+          "x509": {
+            "alternative_name": "string",
+            "issuer": {
+              "common_name": "string",
+              "country": "Iran",
+              "distinguished_name": "string",
+              "locality": "string",
+              "organization": "string",
+              "organizational_unit": "string",
+              "state_or_province": "string"
+            },
+            "not_after": "2000-01-01T00:11:11Z",
+            "not_before": "2000-01-01T00:11:11Z",
+            "public_key_algorithm": "string",
+            "public_key_curve": "string",
+            "public_key_exponent": 123456,
+            "public_key_size": 123456,
+            "serial_number": "string",
+            "signature_algorithm": "string",
+            "subject": {
+              "common_name": "string",
+              "country": "Iran",
+              "distinguished_name": "string",
+              "locality": "string",
+              "organization": "string",
+              "organizational_unit": "string",
+              "state_or_province": "string"
+            },
+            "version_number": "123456"
+          }
+        },
+        "matched": {
+          "atomic": "string",
+          "field": "string",
+          "id": "string",
+          "occurred": "2000-01-01T00:11:11Z",
+          "type": "string"
+        }
+      }
+    ],
+    "feed": {
+      "dashboard_id": "string",
+      "description": "this is string",
+      "name": "string",
+      "reference": "string"
+    },
+    "framework": "string",
+    "group": {
+      "alias": [
+        "string"
+      ],
+      "id": "string",
+      "name": "string",
+      "reference": "string"
+    },
+    "indicator": {
+      "confidence": "Not Specified",
+      "description": "this is string",
+      "email": {
+        "address": "info@example.test"
+      },
+      "first_seen": "2000-01-01T00:11:11Z",
+      "ip": "8.8.8.8",
+      "last_seen": "2000-01-01T00:11:11Z",
+      "marking": {
+        "tlp": "WHITE",
+        "tlp_version": "string",
+        "modified_at": "2000-01-01T00:11:11Z"
+      },
+      "name": "string",
+      "port": 123456,
+      "provider": "string",
+      "reference": "string",
+      "scanner_stats": 123456,
+      "sightings": 123456,
+      "type": "artifact",
+      "as": {
+        "number": 123456,
+        "organization": {
+          "name": "string"
+        }
+      },
+      "file": {
+        "accessed": "2000-01-01T00:11:11Z",
+        "attributes": [
+          "archive"
+        ],
+        "created": "2000-01-01T00:11:11Z",
+        "ctime": "2000-01-01T00:11:11Z",
+        "device": "string",
+        "drive_letter": "string",
+        "extension": "string",
+        "fork_name": "string",
+        "gid": "string",
+        "group": "string",
+        "inode": "string",
+        "mime_type": "string",
+        "mode": "string",
+        "mtime": "2000-01-01T00:11:11Z",
+        "name": "string",
+        "owner": "string",
+        "path": "string",
+        "size": 123456,
+        "target_path": "string",
+        "type": "string",
+        "uid": "string",
+        "code_signature": {
+          "digest_algorithm": "string",
+          "exists": true,
+          "signing_id": "string",
+          "status": "string",
+          "subject_name": "string",
+          "team_id": "string",
+          "timestamp": "2000-01-01T00:11:11Z",
+          "trusted": true,
+          "valid": true
+        },
+        "elf": {
+          "architecture": "string",
+          "byte_order": "string",
+          "cpu_type": "string",
+          "creation_date": "2000-01-01T00:11:11Z",
+          "exports": [
+            "string"
+          ],
+          "go_import_hash": "string",
+          "go_imports": [
+            "string"
+          ],
+          "go_imports_names_entropy": 1,
+          "go_imports_names_var_entropy": 1,
+          "go_stripped": true,
+          "header": {
+            "abi_version": "string",
+            "class": "string",
+            "data": "string",
+            "entrypoint": 123456,
+            "object_version": "string",
+            "os_abi": "string"
+          },
+          "import_hash": "string",
+          "imports": [
+            "string"
+          ],
+          "imports_names_entropy": 1,
+          "imports_names_var_entropy": 1,
+          "sections": [
+            {
+              "chi2": 123456,
+              "entropy": 123456,
+              "flags": "string",
+              "name": "string",
+              "physical_offset": "123456",
+              "physical_size": 123456,
+              "type": "string",
+              "var_entropy": 123456,
+              "virtual_address": 123456,
+              "virtual_size": 123456
+            }
+          ],
+          "segments": [
+            {
+              "sections": "string",
+              "type": "string"
+            }
+          ],
+          "shared_libraries": [
+            "string"
+          ],
+          "telfhash": "string"
+        },
+        "hash": {
+          "md5": "aa11bb22cc33",
+          "sha1": "11aa22bb33cc",
+          "sha256": "aa11bb22cc33dd44ee55",
+          "sha512": "string",
+          "ssdeep": "string",
+          "tlsh": "string"
+        },
+        "macho": {
+          "go_import_hash": "string",
+          "go_imports": [
+            "string"
+          ],
+          "go_imports_names_entropy": 1,
+          "go_imports_names_var_entropy": 1,
+          "go_stripped": true,
+          "import_hash": "string",
+          "imports": [
+            "string"
+          ],
+          "imports_names_entropy": 1,
+          "imports_names_var_entropy": 1,
+          "sections": [
+            {
+              "entropy": 123456,
+              "name": "string",
+              "physical_size": 123456,
+              "var_entropy": 123456,
+              "virtual_size": 123456
+            }
+          ],
+          "symhash": "string"
+        },
+        "pe": {
+          "architecture": "string",
+          "company": "string",
+          "description": "string",
+          "file_version": "string",
+          "go_import_hash": "string",
+          "go_imports": [
+            "string"
+          ],
+          "go_imports_names_entropy": 1,
+          "go_imports_names_var_entropy": 1,
+          "go_stripped": true,
+          "imphash": "string",
+          "imports": [
+            "string"
+          ],
+          "imports_names_entropy": 1,
+          "imports_names_var_entropy": 1,
+          "original_file_name": "string",
+          "pehash": "string",
+          "product": "string",
+          "sections": [
+            {
+              "entropy": 1,
+              "name": "string",
+              "physical_size": 123456,
+              "var_entropy": 1,
+              "virtual_size": 123456
+            }
+          ]
+        },
+        "x509": {
+          "alternative_name": "string",
+          "issuer": {
+            "common_name": "string",
+            "country": "Iran",
+            "distinguished_name": "string",
+            "locality": "string",
+            "organization": "string",
+            "organizational_unit": "string",
+            "state_or_province": "string"
+          },
+          "not_after": "2000-01-01T00:11:11Z",
+          "not_before": "2000-01-01T00:11:11Z",
+          "public_key_algorithm": "string",
+          "public_key_curve": "string",
+          "public_key_exponent": 123456,
+          "public_key_size": 123456,
+          "serial_number": "string",
+          "signature_algorithm": "string",
+          "subject": {
+            "common_name": "string",
+            "country": "Iran",
+            "distinguished_name": "string",
+            "locality": "string",
+            "organization": "string",
+            "organizational_unit": "string",
+            "state_or_province": "string"
+          },
+          "version_number": "123456"
+        }
+      },
+      "geo": {
+        "city_name": "Tehran",
+        "continent_code": "string",
+        "continent_name": "string",
+        "country_iso_code": "ir",
+        "country_name": "Iran",
+        "location": {
+          "lat": 12345678.9,
+          "lon": 98765432.099999994
+        },
+        "name": "string",
+        "postal_code": "1010 AA",
+        "region_iso_code": "ir",
+        "region_name": "Iran",
+        "timezone": "Asia\/Tehran"
+      },
+      "registry": {
+        "data": {
+          "bytes": "string",
+          "strings": [
+            "string"
+          ],
+          "type": "string"
+        },
+        "hive": "string",
+        "key": "string",
+        "path": "string",
+        "value": "string"
+      },
+      "url": {
+        "domain": "string",
+        "extension": ".tst",
+        "fragment": "string",
+        "full": "example.test",
+        "original": "example.test",
+        "password": "string",
+        "path": "string",
+        "port": 123456,
+        "query": "string",
+        "registered_domain": "string",
+        "scheme": "string",
+        "subdomain": "string",
+        "top_level_domain": "string",
+        "username": "string"
+      },
+      "x509": {
+        "alternative_name": "string",
+        "issuer": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "not_after": "2000-01-01T00:11:11Z",
+        "not_before": "2000-01-01T00:11:11Z",
+        "public_key_algorithm": "string",
+        "public_key_curve": "string",
+        "public_key_exponent": 123456,
+        "public_key_size": 123456,
+        "serial_number": "string",
+        "signature_algorithm": "string",
+        "subject": {
+          "common_name": "string",
+          "country": "Iran",
+          "distinguished_name": "string",
+          "locality": "string",
+          "organization": "string",
+          "organizational_unit": "string",
+          "state_or_province": "string"
+        },
+        "version_number": "123456"
+      }
+    },
+    "software": {
+      "alias": [
+        "string"
+      ],
+      "id": "string",
+      "name": "string",
+      "platform": [
+        "Linux"
+      ],
+      "reference": "string",
+      "type": "Malware"
+    },
+    "tactic": {
+      "id": "string",
+      "name": "string",
+      "reference": "string"
+    },
+    "technique": {
+      "id": [
+        "string"
+      ],
+      "name": [
+        "string"
+      ],
+      "reference": [
+        "string"
+      ],
+      "subtechnique": {
+        "id": [
+          "string"
+        ],
+        "name": [
+          "string"
+        ],
+        "reference": [
+          "string"
+        ]
+      }
+    }
+  },
+  "source": {
+    "address": "string",
+    "bytes": 123456,
+    "domain": "string",
+    "ip": "string",
+    "mac": "string",
+    "nat": {
+      "ip": "8.8.8.8",
+      "port": 123456
+    },
+    "packets": 123456,
+    "port": 123456,
+    "registered_domain": "string",
+    "subdomain": "string",
+    "top_level_domain": "example.test",
+    "as": {
+      "number": 123456,
+      "organization": {
+        "name": "string"
+      }
+    },
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    }
+  },
+  "service": {
+    "address": "8.8.8.8",
+    "environment": "string",
+    "ephemeral_id": "123-abc",
+    "id": "123-abc",
+    "name": "string",
+    "node": {
+      "name": "string",
+      "role": "string",
+      "roles": [
+        "string"
+      ]
+    },
+    "state": "string",
+    "type": "string",
+    "version": "string",
+    "origin": {
+      "address": "8.8.8.8",
+      "environment": "string",
+      "ephemeral_id": "123-abc",
+      "id": "123-abc",
+      "name": "string",
+      "node": {
+        "name": "string",
+        "role": "string",
+        "roles": [
+          "string"
+        ]
+      },
+      "state": "string",
+      "type": "string",
+      "version": "string"
+    },
+    "target": {
+      "address": "8.8.8.8",
+      "environment": "string",
+      "ephemeral_id": "123-abc",
+      "id": "123-abc",
+      "name": "string",
+      "node": {
+        "name": "string",
+        "role": "string",
+        "roles": [
+          "string"
+        ]
+      },
+      "state": "string",
+      "type": "string",
+      "version": "string"
+    }
+  },
+  "server": {
+    "address": "8.8.8.8",
+    "bytes": 123456,
+    "domain": "string",
+    "ip": "8.8.8.8",
+    "mac": "string",
+    "nat": {
+      "ip": "8.8.8.8",
+      "port": 80
+    },
+    "packets": 80,
+    "port": 80,
+    "registered_domain": "string",
+    "subdomain": "string",
+    "top_level_domain": "string",
+    "as": {
+      "number": 123456,
+      "organization": {
+        "name": "string"
+      }
+    },
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    }
+  },
+  "rule": {
+    "author": [
+      "string"
+    ],
+    "category": "string",
+    "description": "string",
+    "id": "123-abc",
+    "license": "string",
+    "name": "string",
+    "reference": "string",
+    "ruleset": "string",
+    "uuid": "123-abc",
+    "version": "string"
+  },
+  "related": {
+    "hash": [
+      "aa11bb22cc33"
+    ],
+    "hosts": [
+      "string"
+    ],
+    "ip": [
+      "8.8.8.8"
+    ],
+    "user": [
+      "string"
+    ]
+  },
+  "registry": {
+    "data": {
+      "bytes": "123456",
+      "strings": [
+        "string"
+      ],
+      "type": "string"
+    },
+    "hive": "string",
+    "key": "string",
+    "path": "\/file\/path\/",
+    "value": "string"
+  },
+  "process": {
+    "args": [
+      "string"
+    ],
+    "args_count": 123456,
+    "command_line": "string",
+    "end": "2000-01-01T00:11:11Z",
+    "entity_id": "string",
+    "entry_meta": {
+      "type": "string",
+      "source": {
+        "address": "string",
+        "bytes": 123456,
+        "domain": "string",
+        "ip": "string",
+        "mac": "string",
+        "nat": {
+          "ip": "8.8.8.8",
+          "port": 123456
+        },
+        "packets": 123456,
+        "port": 123456,
+        "registered_domain": "string",
+        "subdomain": "string",
+        "top_level_domain": "example.test",
+        "as": {
+          "number": 123456,
+          "organization": {
+            "name": "string"
+          }
+        },
+        "geo": {
+          "city_name": "Tehran",
+          "continent_code": "string",
+          "continent_name": "string",
+          "country_iso_code": "ir",
+          "country_name": "Iran",
+          "location": {
+            "lat": 12345678.9,
+            "lon": 98765432.099999994
+          },
+          "name": "string",
+          "postal_code": "1010 AA",
+          "region_iso_code": "ir",
+          "region_name": "Iran",
+          "timezone": "Asia\/Tehran"
+        },
+        "user": {
+          "domain": "string",
+          "email": "info@example.test",
+          "full_name": "string",
+          "hash": "aa11bb22cc33",
+          "id": "123-abc",
+          "name": "string",
+          "roles": [
+            "string"
+          ]
+        }
+      }
+    },
+    "env_vars": [
+      "string"
+    ],
+    "executable": "string",
+    "exit_code": 123456,
+    "interactive": true,
+    "io": {
+      "bytes_skipped": {
+        "length": 123456,
+        "offset": 123456
+      },
+      "max_bytes_per_process_exceeded": true,
+      "text": "string",
+      "total_bytes_captured": 123456,
+      "total_bytes_skipped": 123456,
+      "type": "string"
+    },
+    "name": "string",
+    "pgid": 123456,
+    "pid": 123456,
+    "same_as_process": true,
+    "start": "2000-01-01T00:11:11Z",
+    "thread": {
+      "id": 123456,
+      "name": "string"
+    },
+    "title": "string",
+    "tty": {
+      "char_device": {
+        "major": 123456,
+        "minor": 123456
+      },
+      "columns": 123456,
+      "rows": 123456
+    },
+    "uptime": 123456,
+    "working_directory": "string",
+    "attested_groups": [
+      {
+        "group": {
+          "domain": "string",
+          "id": "string",
+          "name": "string"
+        }
+      }
+    ],
+    "attested_user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    },
+    "code_signature": {
+      "digest_algorithm": "string",
+      "exists": true,
+      "signing_id": "string",
+      "status": "string",
+      "subject_name": "string",
+      "team_id": "string",
+      "timestamp": "2000-01-01T00:11:11Z",
+      "trusted": true,
+      "valid": true
+    },
+    "elf": {
+      "architecture": "string",
+      "byte_order": "string",
+      "cpu_type": "string",
+      "creation_date": "2000-01-01T00:11:11Z",
+      "exports": [
+        "string"
+      ],
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "header": {
+        "abi_version": "string",
+        "class": "string",
+        "data": "string",
+        "entrypoint": 123456,
+        "object_version": "string",
+        "os_abi": "string"
+      },
+      "import_hash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "sections": [
+        {
+          "chi2": 123456,
+          "entropy": 123456,
+          "flags": "string",
+          "name": "string",
+          "physical_offset": "123456",
+          "physical_size": 123456,
+          "type": "string",
+          "var_entropy": 123456,
+          "virtual_address": 123456,
+          "virtual_size": 123456
+        }
+      ],
+      "segments": [
+        {
+          "sections": "string",
+          "type": "string"
+        }
+      ],
+      "shared_libraries": [
+        "string"
+      ],
+      "telfhash": "string"
+    },
+    "entry_leader": {
+      "args": [
+        "string"
+      ],
+      "args_count": 123456,
+      "command_line": "string",
+      "end": "2000-01-01T00:11:11Z",
+      "entity_id": "string",
+      "entry_meta": {
+        "type": "string"
+      },
+      "env_vars": [
+        "string"
+      ],
+      "executable": "string",
+      "exit_code": 123456,
+      "interactive": true,
+      "io": {
+        "bytes_skipped": {
+          "length": 123456,
+          "offset": 123456
+        },
+        "max_bytes_per_process_exceeded": true,
+        "text": "string",
+        "total_bytes_captured": 123456,
+        "total_bytes_skipped": 123456,
+        "type": "string"
+      },
+      "name": "string",
+      "pgid": 123456,
+      "pid": 123456,
+      "same_as_process": true,
+      "start": "2000-01-01T00:11:11Z",
+      "thread": {
+        "id": 123456,
+        "name": "string"
+      },
+      "title": "string",
+      "tty": {
+        "char_device": {
+          "major": 123456,
+          "minor": 123456
+        },
+        "columns": 123456,
+        "rows": 123456
+      },
+      "uptime": 123456,
+      "working_directory": "string",
+      "parent": {
+        "args": [
+          "string"
+        ],
+        "args_count": 123456,
+        "command_line": "string",
+        "end": "2000-01-01T00:11:11Z",
+        "entity_id": "string",
+        "entry_meta": {
+          "type": "string"
+        },
+        "env_vars": [
+          "string"
+        ],
+        "executable": "string",
+        "exit_code": 123456,
+        "interactive": true,
+        "io": {
+          "bytes_skipped": {
+            "length": 123456,
+            "offset": 123456
+          },
+          "max_bytes_per_process_exceeded": true,
+          "text": "string",
+          "total_bytes_captured": 123456,
+          "total_bytes_skipped": 123456,
+          "type": "string"
+        },
+        "name": "string",
+        "pgid": 123456,
+        "pid": 123456,
+        "same_as_process": true,
+        "start": "2000-01-01T00:11:11Z",
+        "thread": {
+          "id": 123456,
+          "name": "string"
+        },
+        "title": "string",
+        "tty": {
+          "char_device": {
+            "major": 123456,
+            "minor": 123456
+          },
+          "columns": 123456,
+          "rows": 123456
+        },
+        "uptime": 123456,
+        "working_directory": "string",
+        "session_leader": {
+          "args": [
+            "string"
+          ],
+          "args_count": 123456,
+          "command_line": "string",
+          "end": "2000-01-01T00:11:11Z",
+          "entity_id": "string",
+          "entry_meta": {
+            "type": "string"
+          },
+          "env_vars": [
+            "string"
+          ],
+          "executable": "string",
+          "exit_code": 123456,
+          "interactive": true,
+          "io": {
+            "bytes_skipped": {
+              "length": 123456,
+              "offset": 123456
+            },
+            "max_bytes_per_process_exceeded": true,
+            "text": "string",
+            "total_bytes_captured": 123456,
+            "total_bytes_skipped": 123456,
+            "type": "string"
+          },
+          "name": "string",
+          "pgid": 123456,
+          "pid": 123456,
+          "same_as_process": true,
+          "start": "2000-01-01T00:11:11Z",
+          "thread": {
+            "id": 123456,
+            "name": "string"
+          },
+          "title": "string",
+          "tty": {
+            "char_device": {
+              "major": 123456,
+              "minor": 123456
+            },
+            "columns": 123456,
+            "rows": 123456
+          },
+          "uptime": 123456,
+          "working_directory": "string"
+        }
+      }
+    },
+    "group": {
+      "domain": "string",
+      "id": "123-abc",
+      "name": "string"
+    },
+    "group_leader": {
+      "args": [
+        "string"
+      ],
+      "args_count": 123456,
+      "command_line": "string",
+      "end": "2000-01-01T00:11:11Z",
+      "entity_id": "string",
+      "entry_meta": {
+        "type": "string"
+      },
+      "env_vars": [
+        "string"
+      ],
+      "executable": "string",
+      "exit_code": 123456,
+      "interactive": true,
+      "io": {
+        "bytes_skipped": {
+          "length": 123456,
+          "offset": 123456
+        },
+        "max_bytes_per_process_exceeded": true,
+        "text": "string",
+        "total_bytes_captured": 123456,
+        "total_bytes_skipped": 123456,
+        "type": "string"
+      },
+      "name": "string",
+      "pgid": 123456,
+      "pid": 123456,
+      "same_as_process": true,
+      "start": "2000-01-01T00:11:11Z",
+      "thread": {
+        "id": 123456,
+        "name": "string"
+      },
+      "title": "string",
+      "tty": {
+        "char_device": {
+          "major": 123456,
+          "minor": 123456
+        },
+        "columns": 123456,
+        "rows": 123456
+      },
+      "uptime": 123456,
+      "working_directory": "string"
+    },
+    "hash": {
+      "md5": "aa11bb22cc33",
+      "sha1": "11aa22bb33cc",
+      "sha256": "aa11bb22cc33dd44ee55",
+      "sha512": "string",
+      "ssdeep": "string",
+      "tlsh": "string"
+    },
+    "macho": {
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "import_hash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "sections": [
+        {
+          "entropy": 123456,
+          "name": "string",
+          "physical_size": 123456,
+          "var_entropy": 123456,
+          "virtual_size": 123456
+        }
+      ],
+      "symhash": "string"
+    },
+    "parent": {
+      "args": [
+        "string"
+      ],
+      "args_count": 123456,
+      "command_line": "string",
+      "end": "2000-01-01T00:11:11Z",
+      "entity_id": "string",
+      "entry_meta": {
+        "type": "string"
+      },
+      "env_vars": [
+        "string"
+      ],
+      "executable": "string",
+      "exit_code": 123456,
+      "interactive": true,
+      "io": {
+        "bytes_skipped": {
+          "length": 123456,
+          "offset": 123456
+        },
+        "max_bytes_per_process_exceeded": true,
+        "text": "string",
+        "total_bytes_captured": 123456,
+        "total_bytes_skipped": 123456,
+        "type": "string"
+      },
+      "name": "string",
+      "pgid": 123456,
+      "pid": 123456,
+      "same_as_process": true,
+      "start": "2000-01-01T00:11:11Z",
+      "thread": {
+        "id": 123456,
+        "name": "string"
+      },
+      "title": "string",
+      "tty": {
+        "char_device": {
+          "major": 123456,
+          "minor": 123456
+        },
+        "columns": 123456,
+        "rows": 123456
+      },
+      "uptime": 123456,
+      "working_directory": "string",
+      "group_leader": {
+        "args": [
+          "string"
+        ],
+        "args_count": 123456,
+        "command_line": "string",
+        "end": "2000-01-01T00:11:11Z",
+        "entity_id": "string",
+        "entry_meta": {
+          "type": "string"
+        },
+        "env_vars": [
+          "string"
+        ],
+        "executable": "string",
+        "exit_code": 123456,
+        "interactive": true,
+        "io": {
+          "bytes_skipped": {
+            "length": 123456,
+            "offset": 123456
+          },
+          "max_bytes_per_process_exceeded": true,
+          "text": "string",
+          "total_bytes_captured": 123456,
+          "total_bytes_skipped": 123456,
+          "type": "string"
+        },
+        "name": "string",
+        "pgid": 123456,
+        "pid": 123456,
+        "same_as_process": true,
+        "start": "2000-01-01T00:11:11Z",
+        "thread": {
+          "id": 123456,
+          "name": "string"
+        },
+        "title": "string",
+        "tty": {
+          "char_device": {
+            "major": 123456,
+            "minor": 123456
+          },
+          "columns": 123456,
+          "rows": 123456
+        },
+        "uptime": 123456,
+        "working_directory": "string"
+      }
+    },
+    "pe": {
+      "architecture": "string",
+      "company": "string",
+      "description": "string",
+      "file_version": "string",
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "imphash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "original_file_name": "string",
+      "pehash": "string",
+      "product": "string",
+      "sections": [
+        {
+          "entropy": 1,
+          "name": "string",
+          "physical_size": 123456,
+          "var_entropy": 1,
+          "virtual_size": 123456
+        }
+      ]
+    },
+    "previous": [
+      {
+        "process": {
+          "args": [
+            "string"
+          ],
+          "args_count": 123456,
+          "command_line": "string",
+          "end": "2000-01-01T00:11:11Z",
+          "entity_id": "string",
+          "entry_meta": {
+            "type": "string"
+          },
+          "env_vars": [
+            "string"
+          ],
+          "executable": "string",
+          "exit_code": 123456,
+          "interactive": true,
+          "io": {
+            "bytes_skipped": {
+              "length": 123456,
+              "offset": 123456
+            },
+            "max_bytes_per_process_exceeded": true,
+            "text": "string",
+            "total_bytes_captured": 123456,
+            "total_bytes_skipped": 123456,
+            "type": "string"
+          },
+          "name": "string",
+          "pgid": 123456,
+          "pid": 123456,
+          "same_as_process": true,
+          "start": "2000-01-01T00:11:11Z",
+          "thread": {
+            "id": 123456,
+            "name": "string"
+          },
+          "title": "string",
+          "tty": {
+            "char_device": {
+              "major": 123456,
+              "minor": 123456
+            },
+            "columns": 123456,
+            "rows": 123456
+          },
+          "uptime": 123456,
+          "working_directory": "string"
+        }
+      }
+    ],
+    "real_group": {
+      "domain": "string",
+      "id": "string",
+      "name": "string"
+    },
+    "real_user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    },
+    "saved_group": {
+      "domain": "string",
+      "id": "string",
+      "name": "string"
+    },
+    "saved_user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    },
+    "session_leader": {
+      "args": [
+        "string"
+      ],
+      "args_count": 123456,
+      "command_line": "string",
+      "end": "2000-01-01T00:11:11Z",
+      "entity_id": "string",
+      "entry_meta": {
+        "type": "string"
+      },
+      "env_vars": [
+        "string"
+      ],
+      "executable": "string",
+      "exit_code": 123456,
+      "interactive": true,
+      "io": {
+        "bytes_skipped": {
+          "length": 123456,
+          "offset": 123456
+        },
+        "max_bytes_per_process_exceeded": true,
+        "text": "string",
+        "total_bytes_captured": 123456,
+        "total_bytes_skipped": 123456,
+        "type": "string"
+      },
+      "name": "string",
+      "pgid": 123456,
+      "pid": 123456,
+      "same_as_process": true,
+      "start": "2000-01-01T00:11:11Z",
+      "thread": {
+        "id": 123456,
+        "name": "string"
+      },
+      "title": "string",
+      "tty": {
+        "char_device": {
+          "major": 123456,
+          "minor": 123456
+        },
+        "columns": 123456,
+        "rows": 123456
+      },
+      "uptime": 123456,
+      "working_directory": "string",
+      "parent": {
+        "args": [
+          "string"
+        ],
+        "args_count": 123456,
+        "command_line": "string",
+        "end": "2000-01-01T00:11:11Z",
+        "entity_id": "string",
+        "entry_meta": {
+          "type": "string"
+        },
+        "env_vars": [
+          "string"
+        ],
+        "executable": "string",
+        "exit_code": 123456,
+        "interactive": true,
+        "io": {
+          "bytes_skipped": {
+            "length": 123456,
+            "offset": 123456
+          },
+          "max_bytes_per_process_exceeded": true,
+          "text": "string",
+          "total_bytes_captured": 123456,
+          "total_bytes_skipped": 123456,
+          "type": "string"
+        },
+        "name": "string",
+        "pgid": 123456,
+        "pid": 123456,
+        "same_as_process": true,
+        "start": "2000-01-01T00:11:11Z",
+        "thread": {
+          "id": 123456,
+          "name": "string"
+        },
+        "title": "string",
+        "tty": {
+          "char_device": {
+            "major": 123456,
+            "minor": 123456
+          },
+          "columns": 123456,
+          "rows": 123456
+        },
+        "uptime": 123456,
+        "working_directory": "string",
+        "session_leader": {
+          "args": [
+            "string"
+          ],
+          "args_count": 123456,
+          "command_line": "string",
+          "end": "2000-01-01T00:11:11Z",
+          "entity_id": "string",
+          "entry_meta": {
+            "type": "string"
+          },
+          "env_vars": [
+            "string"
+          ],
+          "executable": "string",
+          "exit_code": 123456,
+          "interactive": true,
+          "io": {
+            "bytes_skipped": {
+              "length": 123456,
+              "offset": 123456
+            },
+            "max_bytes_per_process_exceeded": true,
+            "text": "string",
+            "total_bytes_captured": 123456,
+            "total_bytes_skipped": 123456,
+            "type": "string"
+          },
+          "name": "string",
+          "pgid": 123456,
+          "pid": 123456,
+          "same_as_process": true,
+          "start": "2000-01-01T00:11:11Z",
+          "thread": {
+            "id": 123456,
+            "name": "string"
+          },
+          "title": "string",
+          "tty": {
+            "char_device": {
+              "major": 123456,
+              "minor": 123456
+            },
+            "columns": 123456,
+            "rows": 123456
+          },
+          "uptime": 123456,
+          "working_directory": "string"
+        }
+      }
+    },
+    "supplemental_groups": [
+      {
+        "group": {
+          "id": "123456",
+          "name": "string"
+        }
+      }
+    ],
+    "user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    }
+  },
+  "package": {
+    "architecture": "string",
+    "build_version": "string",
+    "checksum": "string",
+    "description": "string",
+    "install_scope": "string",
+    "installed": "2000-01-01T00:11:11Z",
+    "license": "string",
+    "name": "string",
+    "path": "\/file\/path\/",
+    "size": 123456,
+    "type": "string",
+    "version": "string"
+  },
+  "organization": {
+    "id": "string",
+    "name": "string"
+  },
+  "orchestrator": {
+    "api_version": "string",
+    "cluster": {
+      "id": "string",
+      "name": "string",
+      "url": "example.test",
+      "version": "string"
+    },
+    "namespace": "string",
+    "organization": "string",
+    "resource": {
+      "id": "string",
+      "ip": "8.8.8.8",
+      "name": "string",
+      "parent": {
+        "type": "string"
+      },
+      "type": "string"
+    },
+    "type": "string"
+  },
+  "observer": {
+    "egress": {
+      "zone": "string",
+      "interface": {
+        "alias": "string",
+        "id": "string",
+        "name": "string"
+      },
+      "vlan": {
+        "id": "123456",
+        "name": "string"
+      }
+    },
+    "hostname": "string",
+    "ingress": {
+      "zone": "string",
+      "interface": {
+        "alias": "string",
+        "id": "string",
+        "name": "string"
+      },
+      "vlan": {
+        "id": "123456",
+        "name": "string"
+      }
+    },
+    "ip": "8.8.8.8",
+    "mac": [
+      "string"
+    ],
+    "name": "string",
+    "product": "string",
+    "serial_number": "string",
+    "type": "string",
+    "vendor": "string",
+    "version": "string",
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "os": {
+      "family": "string",
+      "full": "string",
+      "kernel": "string",
+      "name": "string",
+      "platform": "string",
+      "type": "macos",
+      "version": "string"
+    }
+  },
+  "network": {
+    "application": "string",
+    "bytes": 123456,
+    "community_id": "string",
+    "direction": "inbound",
+    "forwarded_ip": "8.8.8.8",
+    "iana_number": "123456",
+    "inner": {
+      "vlan": {
+        "id": "123456",
+        "name": "string"
+      }
+    },
+    "vlan": {
+      "id": "123456",
+      "name": "string"
+    },
+    "name": "string",
+    "packets": 123456,
+    "protocol": "string",
+    "transport": "string",
+    "type": "string"
+  },
+  "log": {
+    "file": {
+      "path": "\/file\/path\/"
+    },
+    "level": "string",
+    "logger": "string",
+    "origin": {
+      "file": {
+        "line": 123456,
+        "name": "string"
+      },
+      "function": "string"
+    },
+    "syslog": {
+      "facility": {
+        "code": 123456,
+        "name": "string"
+      },
+      "priority": 123456,
+      "severity": {
+        "code": 123456,
+        "name": "string"
+      }
+    }
+  },
+  "http": {
+    "request": {
+      "body": {
+        "bytes": 123456,
+        "content": "string"
+      },
+      "bytes": 123456,
+      "id": "string",
+      "method": "GET",
+      "meme_type": "string",
+      "referer": "string"
+    },
+    "response": {
+      "body": {
+        "bytes": 123456,
+        "content": "string"
+      },
+      "bytes": 123456,
+      "meme_type": "string",
+      "status_code": 123456
+    },
+    "version": "string"
+  },
+  "host": {
+    "architecture": "string",
+    "boot": {
+      "id": "string"
+    },
+    "cpu": {
+      "usage": 0.55500000000000005
+    },
+    "disk": {
+      "read": {
+        "bytes": 123456
+      },
+      "write": {
+        "bytes": 123456
+      }
+    },
+    "domain": "string",
+    "hostname": "string",
+    "id": "string",
+    "ip": "8.8.8.8",
+    "mac": [
+      "string"
+    ],
+    "name": "string",
+    "network": {
+      "egress": {
+        "bytes": 123456,
+        "packets": 123456
+      },
+      "ingress": {
+        "bytes": 123456,
+        "packets": 123456
+      }
+    },
+    "pid_ns_ino": "123456",
+    "type": "string",
+    "uptime": 123456,
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "os": {
+      "family": "string",
+      "full": "string",
+      "kernel": "string",
+      "name": "string",
+      "platform": "string",
+      "type": "linux",
+      "version": "string"
+    },
+    "risk": {
+      "calculated_level": "123456",
+      "calculated_score": 1.23,
+      "calculated_score_norm": 55.5,
+      "static_level": "123456",
+      "static_score": 1.23,
+      "static_score_norm": 55.5
+    }
+  },
+  "group": {
+    "domain": "string",
+    "id": "string",
+    "name": "string"
+  },
+  "file": {
+    "accessed": "2000-01-01T00:11:11Z",
+    "attributes": [
+      "archive"
+    ],
+    "created": "2000-01-01T00:11:11Z",
+    "ctime": "2000-01-01T00:11:11Z",
+    "device": "string",
+    "drive_letter": "string",
+    "extension": "string",
+    "fork_name": "string",
+    "gid": "string",
+    "group": "string",
+    "inode": "string",
+    "mime_type": "string",
+    "mode": "string",
+    "mtime": "2000-01-01T00:11:11Z",
+    "name": "string",
+    "owner": "string",
+    "path": "string",
+    "size": 123456,
+    "target_path": "string",
+    "type": "string",
+    "uid": "string",
+    "code_signature": {
+      "digest_algorithm": "string",
+      "exists": true,
+      "signing_id": "string",
+      "status": "string",
+      "subject_name": "string",
+      "team_id": "string",
+      "timestamp": "2000-01-01T00:11:11Z",
+      "trusted": true,
+      "valid": true
+    },
+    "elf": {
+      "architecture": "string",
+      "byte_order": "string",
+      "cpu_type": "string",
+      "creation_date": "2000-01-01T00:11:11Z",
+      "exports": [
+        "string"
+      ],
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "header": {
+        "abi_version": "string",
+        "class": "string",
+        "data": "string",
+        "entrypoint": 123456,
+        "object_version": "string",
+        "os_abi": "string"
+      },
+      "import_hash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "sections": [
+        {
+          "chi2": 123456,
+          "entropy": 123456,
+          "flags": "string",
+          "name": "string",
+          "physical_offset": "123456",
+          "physical_size": 123456,
+          "type": "string",
+          "var_entropy": 123456,
+          "virtual_address": 123456,
+          "virtual_size": 123456
+        }
+      ],
+      "segments": [
+        {
+          "sections": "string",
+          "type": "string"
+        }
+      ],
+      "shared_libraries": [
+        "string"
+      ],
+      "telfhash": "string"
+    },
+    "hash": {
+      "md5": "aa11bb22cc33",
+      "sha1": "11aa22bb33cc",
+      "sha256": "aa11bb22cc33dd44ee55",
+      "sha512": "string",
+      "ssdeep": "string",
+      "tlsh": "string"
+    },
+    "macho": {
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "import_hash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "sections": [
+        {
+          "entropy": 123456,
+          "name": "string",
+          "physical_size": 123456,
+          "var_entropy": 123456,
+          "virtual_size": 123456
+        }
+      ],
+      "symhash": "string"
+    },
+    "pe": {
+      "architecture": "string",
+      "company": "string",
+      "description": "string",
+      "file_version": "string",
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "imphash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "original_file_name": "string",
+      "pehash": "string",
+      "product": "string",
+      "sections": [
+        {
+          "entropy": 1,
+          "name": "string",
+          "physical_size": 123456,
+          "var_entropy": 1,
+          "virtual_size": 123456
+        }
+      ]
+    },
+    "x509": {
+      "alternative_name": "string",
+      "issuer": {
+        "common_name": "string",
+        "country": "Iran",
+        "distinguished_name": "string",
+        "locality": "string",
+        "organization": "string",
+        "organizational_unit": "string",
+        "state_or_province": "string"
+      },
+      "not_after": "2000-01-01T00:11:11Z",
+      "not_before": "2000-01-01T00:11:11Z",
+      "public_key_algorithm": "string",
+      "public_key_curve": "string",
+      "public_key_exponent": 123456,
+      "public_key_size": 123456,
+      "serial_number": "string",
+      "signature_algorithm": "string",
+      "subject": {
+        "common_name": "string",
+        "country": "Iran",
+        "distinguished_name": "string",
+        "locality": "string",
+        "organization": "string",
+        "organizational_unit": "string",
+        "state_or_province": "string"
+      },
+      "version_number": "123456"
+    }
+  },
+  "faas": {
+    "coldstart": true,
+    "execution": "string",
+    "id": "string",
+    "name": "string",
+    "trigger": {
+      "request_id": "string",
+      "type": "http"
+    },
+    "version": "string"
+  },
+  "event": {
+    "action": "string",
+    "status": "verified",
+    "category": "file",
+    "code": "string",
+    "created": "2000-01-01T01:11:11+01:00",
+    "dataset": "string",
+    "duration": 123456,
+    "end": "2000-01-01T01:11:11+01:00",
+    "hash": "string",
+    "id": "string",
+    "ingested": "2000-01-01T01:11:11+01:00",
+    "kind": "alert",
+    "module": "string",
+    "original": "string",
+    "outcome": "failure",
+    "provider": "string",
+    "reason": "string",
+    "reference": "string",
+    "risk_score": 1.23,
+    "risk_score_norm": 55,
+    "sequence": 123456,
+    "severity": 123456,
+    "start": "2000-01-01T01:11:11+01:00",
+    "timezone": "Asia\/Tehran",
+    "type": "access",
+    "url": "example.test"
+  },
+  "error": {
+    "code": "string",
+    "id": "string",
+    "message": "string",
+    "stack_trace": "string",
+    "type": "string"
+  },
+  "email": {
+    "attachments": [
+      {
+        "file": {
+          "extension": "string",
+          "meme_type": "string",
+          "name": "123456",
+          "hash": {
+            "md5": "aa11bb22cc33",
+            "sha1": "11aa22bb33cc",
+            "sha256": "aa11bb22cc33dd44ee55",
+            "sha512": "string",
+            "ssdeep": "string",
+            "tlsh": "string"
+          }
+        }
+      }
+    ],
+    "bcc": {
+      "address": "info@example.test"
+    },
+    "cc": {
+      "address": "info@example.test"
+    },
+    "content_type": "string",
+    "delivery_timestamp": "2000-01-01T00:11:11Z",
+    "direction": "string",
+    "from": {
+      "address": [
+        "info@example.test"
+      ]
+    },
+    "local_id": "string",
+    "message_id": "string",
+    "origination_timestamp": "2000-01-01T00:11:11Z",
+    "reply_to": {
+      "address": [
+        "info@example.test"
+      ]
+    },
+    "sender": {
+      "address": "info@example.test"
+    },
+    "subject": "string",
+    "to": {
+      "address": [
+        "info@example.test"
+      ]
+    },
+    "x_mailer": "string"
+  },
+  "elf": {
+    "architecture": "string",
+    "byte_order": "string",
+    "cpu_type": "string",
+    "creation_date": "2000-01-01T00:11:11Z",
+    "exports": [
+      "string"
+    ],
+    "go_import_hash": "string",
+    "go_imports": [
+      "string"
+    ],
+    "go_imports_names_entropy": 1,
+    "go_imports_names_var_entropy": 1,
+    "go_stripped": true,
+    "header": {
+      "abi_version": "string",
+      "class": "string",
+      "data": "string",
+      "entrypoint": 123456,
+      "object_version": "string",
+      "os_abi": "string"
+    },
+    "import_hash": "string",
+    "imports": [
+      "string"
+    ],
+    "imports_names_entropy": 1,
+    "imports_names_var_entropy": 1,
+    "sections": [
+      {
+        "chi2": 123456,
+        "entropy": 123456,
+        "flags": "string",
+        "name": "string",
+        "physical_offset": "123456",
+        "physical_size": 123456,
+        "type": "string",
+        "var_entropy": 123456,
+        "virtual_address": 123456,
+        "virtual_size": 123456
+      }
+    ],
+    "segments": [
+      {
+        "sections": "string",
+        "type": "string"
+      }
+    ],
+    "shared_libraries": [
+      "string"
+    ],
+    "telfhash": "string"
+  },
+  "ecs": {
+    "version": "string"
+  },
+  "dns": {
+    "answers": [
+      {
+        "class": "string",
+        "data": "string",
+        "name": "string",
+        "ttl": 123456,
+        "type": "string"
+      }
+    ],
+    "header_flags": [
+      "AA"
+    ],
+    "id": "aa11bb22cc33",
+    "op_code": "string",
+    "question": {
+      "class": "string",
+      "name": "string",
+      "registered_domain": "string",
+      "subdomain": "string",
+      "top_level_domain": "string",
+      "type": "string"
+    },
+    "resolved_ip": [
+      "8.8.8.8"
+    ],
+    "response_code": "string",
+    "type": "string"
+  },
+  "dll": {
+    "name": "string",
+    "path": "string",
+    "code_signature": {
+      "digest_algorithm": "string",
+      "exists": true,
+      "signing_id": "string",
+      "status": "string",
+      "subject_name": "string",
+      "team_id": "string",
+      "timestamp": "2000-01-01T00:11:11Z",
+      "trusted": true,
+      "valid": true
+    },
+    "hash": {
+      "md5": "aa11bb22cc33",
+      "sha1": "11aa22bb33cc",
+      "sha256": "aa11bb22cc33dd44ee55",
+      "sha512": "string",
+      "ssdeep": "string",
+      "tlsh": "string"
+    },
+    "pe": {
+      "architecture": "string",
+      "company": "string",
+      "description": "string",
+      "file_version": "string",
+      "go_import_hash": "string",
+      "go_imports": [
+        "string"
+      ],
+      "go_imports_names_entropy": 1,
+      "go_imports_names_var_entropy": 1,
+      "go_stripped": true,
+      "imphash": "string",
+      "imports": [
+        "string"
+      ],
+      "imports_names_entropy": 1,
+      "imports_names_var_entropy": 1,
+      "original_file_name": "string",
+      "pehash": "string",
+      "product": "string",
+      "sections": [
+        {
+          "entropy": 1,
+          "name": "string",
+          "physical_size": 123456,
+          "var_entropy": 1,
+          "virtual_size": 123456
+        }
+      ]
+    }
+  },
+  "device": {
+    "id": "123-abc",
+    "manufacturer": "string",
+    "model": {
+      "identifier": "string",
+      "name": "string"
+    }
+  },
+  "destination": {
+    "address": "8.8.8.8",
+    "bytes": 123456,
+    "domain": "string",
+    "ip": "8.8.8.8",
+    "mac": "string",
+    "nat": {
+      "ip": "8.8.8.8",
+      "port": 80
+    },
+    "packets": 80,
+    "port": 80,
+    "registered_domain": "string",
+    "subdomain": "string",
+    "top_level_domain": "string",
+    "as": {
+      "number": 123456,
+      "organization": {
+        "name": "string"
+      }
+    },
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    }
+  },
+  "data_stream": {
+    "dataset": "string",
+    "namespace": "string",
+    "type": "logs"
+  },
+  "container": {
+    "cpu": {
+      "usage": 0.55000000000000004
+    },
+    "disk": {
+      "read": {
+        "bytes": 123456
+      },
+      "write": {
+        "bytes": 123456
+      }
+    },
+    "id": "123-abc",
+    "image": {
+      "hash": {
+        "all": [
+          "string"
+        ]
+      },
+      "name": "string",
+      "tag": [
+        "string"
+      ]
+    },
+    "labels": {
+      "string": "string"
+    },
+    "memory": {
+      "usage": 0.55000000000000004
+    },
+    "name": "string",
+    "network": {
+      "egress": {
+        "bytes": 123456
+      },
+      "ingress": {
+        "bytes": 123456
+      }
+    },
+    "runtime": "string"
+  },
+  "cloud": {
+    "account": {
+      "id": "123-abc",
+      "name": "string"
+    },
+    "availability_zone": "string",
+    "instance": {
+      "id": "123-abc",
+      "name": "string"
+    },
+    "machine": {
+      "type": "string"
+    },
+    "project": {
+      "id": "123-abc",
+      "name": "string"
+    },
+    "provider": "string",
+    "region": "string",
+    "service": {
+      "name": "string"
+    },
+    "origin": {
+      "account": {
+        "id": "123-abc",
+        "name": "string"
+      },
+      "availability_zone": "string",
+      "instance": {
+        "id": "123-abc",
+        "name": "string"
+      },
+      "machine": {
+        "type": "string"
+      },
+      "project": {
+        "id": "123-abc"
+      },
+      "provider": "string",
+      "region": "string",
+      "service": {
+        "name": "string"
+      }
+    },
+    "target": {
+      "account": {
+        "id": "123-abc",
+        "name": "string"
+      },
+      "availability_zone": "string",
+      "instance": {
+        "id": "123-abc",
+        "name": "string"
+      },
+      "machine": {
+        "type": "string"
+      },
+      "project": {
+        "id": "123-abc"
+      },
+      "provider": "string",
+      "region": "string",
+      "service": {
+        "name": "string"
+      }
+    }
+  },
+  "client": {
+    "address": "8.8.8.8",
+    "bytes": 123456,
+    "domain": "string",
+    "ip": "8.8.8.8",
+    "mac": "string",
+    "nat": {
+      "ip": "8.8.8.8",
+      "port": 80
+    },
+    "packets": 80,
+    "port": 80,
+    "registered_domain": "string",
+    "subdomain": "string",
+    "top_level_domain": "string",
+    "as": {
+      "number": 123456,
+      "organization": {
+        "name": "string"
+      }
+    },
+    "geo": {
+      "city_name": "Tehran",
+      "continent_code": "string",
+      "continent_name": "string",
+      "country_iso_code": "ir",
+      "country_name": "Iran",
+      "location": {
+        "lat": 12345678.9,
+        "lon": 98765432.099999994
+      },
+      "name": "string",
+      "postal_code": "1010 AA",
+      "region_iso_code": "ir",
+      "region_name": "Iran",
+      "timezone": "Asia\/Tehran"
+    },
+    "user": {
+      "domain": "string",
+      "email": "info@example.test",
+      "full_name": "string",
+      "hash": "aa11bb22cc33",
+      "id": "123-abc",
+      "name": "string",
+      "roles": [
+        "string"
+      ]
+    }
+  },
+  "@timestamp": "2000-01-01T00:11:11Z",
+  "labels": {
+    "string": "string"
+  },
+  "message": "this is string",
+  "tags": [
+    "string"
+  ],
+  "agent": {
+    "build": {
+      "original": "this is string"
+    },
+    "ephemeral_id": "123-abc",
+    "id": "123-abc",
+    "name": "string",
+    "type": "string",
+    "version": "1.2.3"
+  },
+  "vulnerability": {
+    "category": [
+      "string"
+    ],
+    "classification": "string",
+    "description": "string",
+    "enumeration": "string",
+    "id": "123-abc",
+    "reference": "string",
+    "report_id": "123-abc",
+    "scanner": {
+      "vendor": "string"
+    },
+    "score": {
+      "base": 5,
+      "environmental": 5,
+      "temporal": 5,
+      "version": "string"
+    },
+    "severity": "string"
+  }
+}
