@@ -154,7 +154,8 @@
       "types": [
         "nullable",
         "Carbon\\CarbonTimeZone"
-      ]
+      ],
+      "cast": "toRegionName"
     },
     "type": {
       "types": [

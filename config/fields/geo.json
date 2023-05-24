@@ -69,7 +69,8 @@
       "types": [
         "nullable",
         "Carbon\\CarbonTimeZone"
-      ]
+      ],
+      "cast": "toRegionName"
     }
   }
 }
