@@ -3,13 +3,13 @@
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 
 use Hamidrezaniazi\Pecs\Properties\FileAttribute;
-use Hamidrezaniazi\Pecs\Properties\FileAttributeList;
+use Hamidrezaniazi\Pecs\Properties\Listables\FileAttributeList;
 use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Properties\FileAttributeList
+ * @covers \Hamidrezaniazi\Pecs\Properties\Listables\FileAttributeList
  */
 class FileAttributeListTest extends TestCase
 {

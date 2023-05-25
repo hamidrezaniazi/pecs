@@ -1,11 +1,12 @@
 <?php
 
-namespace Hamidrezaniazi\Pecs\Properties;
+namespace Hamidrezaniazi\Pecs\Properties\Listables;
 
+use Hamidrezaniazi\Pecs\Properties\SoftwarePlatform;
 use Illuminate\Support\Collection;
 
-/** @link https://www.elastic.co/guide/en/ecs/current/ecs-dns.html#field-dns-header-flags */
-class DnsHeaderFlagList
+/** @link https://www.elastic.co/guide/en/ecs/current/ecs-threat.html#field-threat-software-platforms */
+class SoftwarePlatformList
 {
     /** @var Collection<int, string> */
     private Collection $list;
@@ -20,7 +21,7 @@ class DnsHeaderFlagList
         return $this->list->toArray();
     }
 
-    public function push(DnsHeaderFlag $value): self
+    public function push(SoftwarePlatform $value): self
     {
         $this->list->push($value->value);
 

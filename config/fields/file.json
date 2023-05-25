@@ -13,7 +13,7 @@
     "attributes": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\FileAttributeList"
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\FileAttributeList"
       ],
       "cast": "toArray"
     },

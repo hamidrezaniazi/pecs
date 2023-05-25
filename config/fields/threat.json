@@ -189,7 +189,7 @@
     "software.platform": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\SoftwarePlatformList"
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\SoftwarePlatformList"
       ],
       "cast": "toArray"
     },

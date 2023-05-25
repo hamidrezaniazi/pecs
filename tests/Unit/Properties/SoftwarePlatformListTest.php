@@ -2,14 +2,14 @@
 
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 
+use Hamidrezaniazi\Pecs\Properties\Listables\SoftwarePlatformList;
 use Hamidrezaniazi\Pecs\Properties\SoftwarePlatform;
-use Hamidrezaniazi\Pecs\Properties\SoftwarePlatformList;
 use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Properties\SoftwarePlatformList
+ * @covers \Hamidrezaniazi\Pecs\Properties\Listables\SoftwarePlatformList
  */
 class SoftwarePlatformListTest extends TestCase
 {

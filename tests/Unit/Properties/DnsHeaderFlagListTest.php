@@ -3,13 +3,13 @@
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 
 use Hamidrezaniazi\Pecs\Properties\DnsHeaderFlag;
-use Hamidrezaniazi\Pecs\Properties\DnsHeaderFlagList;
+use Hamidrezaniazi\Pecs\Properties\Listables\DnsHeaderFlagList;
 use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 use stdClass;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Properties\DnsHeaderFlagList
+ * @covers \Hamidrezaniazi\Pecs\Properties\Listables\DnsHeaderFlagList
  */
 class DnsHeaderFlagListTest extends TestCase
 {

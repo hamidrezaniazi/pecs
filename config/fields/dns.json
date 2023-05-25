@@ -13,7 +13,7 @@
     "header_flags": {
       "types": [
         "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\DnsHeaderFlagList"
+        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\DnsHeaderFlagList"
       ],
       "cast": "toArray"
     },

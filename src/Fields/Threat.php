@@ -3,8 +3,8 @@
 namespace Hamidrezaniazi\Pecs\Fields;
 
 use Carbon\Carbon;
+use Hamidrezaniazi\Pecs\Properties\Listables\SoftwarePlatformList;
 use Hamidrezaniazi\Pecs\Properties\Listables\ThreatEnrichmentList;
-use Hamidrezaniazi\Pecs\Properties\SoftwarePlatformList;
 use Hamidrezaniazi\Pecs\Properties\SoftwareType;
 use Hamidrezaniazi\Pecs\Properties\ThreatConfidence;
 use Hamidrezaniazi\Pecs\Properties\ThreatIndicatorType;

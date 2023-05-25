@@ -3,7 +3,7 @@
 namespace Hamidrezaniazi\Pecs\Fields;
 
 use Carbon\Carbon;
-use Hamidrezaniazi\Pecs\Properties\FileAttributeList;
+use Hamidrezaniazi\Pecs\Properties\Listables\FileAttributeList;
 use Illuminate\Support\Collection;
 
 /** @link https://www.elastic.co/guide/en/ecs/current/ecs-file.html */

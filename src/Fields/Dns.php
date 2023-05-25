@@ -2,8 +2,8 @@
 
 namespace Hamidrezaniazi\Pecs\Fields;
 
-use Hamidrezaniazi\Pecs\Properties\DnsHeaderFlagList;
 use Hamidrezaniazi\Pecs\Properties\Listables\DnsAnswerList;
+use Hamidrezaniazi\Pecs\Properties\Listables\DnsHeaderFlagList;
 use Hamidrezaniazi\Pecs\Properties\ValueList;
 use Illuminate\Support\Collection;
 
