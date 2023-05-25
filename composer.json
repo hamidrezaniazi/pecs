@@ -41,11 +41,7 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": ["bin/generate"],
-        "test": [
-            "bin/generate",
-            "vendor/bin/phpunit"
-        ],
+        "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=1G",
         "generate": "bin/generate",
