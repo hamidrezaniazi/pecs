@@ -18,7 +18,7 @@ class ThreatEnrichmentList
 
     public function toArray(): array
     {
-        return $this->list->map(fn(ThreatEnrichment $item) => $item->toArray())->toArray();
+        return $this->list->map(fn (ThreatEnrichment $item) => $item->toArray())->toArray();
     }
 
     public function push(ThreatEnrichment $value): self

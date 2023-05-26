@@ -25,7 +25,8 @@ class LogRecord
         public readonly ?string $message = null,
         /** @var array<int, AbstractEcsField> $context */
         public readonly array $context = [],
-    ) {}
+    ) {
+    }
 
     public static function parse(array $record): self
     {

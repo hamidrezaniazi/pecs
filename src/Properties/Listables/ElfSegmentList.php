@@ -18,7 +18,7 @@ class ElfSegmentList
 
     public function toArray(): array
     {
-        return $this->list->map(fn(ElfSegment $item) => $item->toArray())->toArray();
+        return $this->list->map(fn (ElfSegment $item) => $item->toArray())->toArray();
     }
 
     public function push(ElfSegment $value): self

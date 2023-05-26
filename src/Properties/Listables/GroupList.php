@@ -18,7 +18,7 @@ class GroupList
 
     public function toArray(): array
     {
-        return $this->list->map(fn(Group $item) => $item->toArray())->toArray();
+        return $this->list->map(fn (Group $item) => $item->toArray())->toArray();
     }
 
     public function push(Group $value): self

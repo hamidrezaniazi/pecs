@@ -33,8 +33,8 @@ class EcsFieldsCollectionTest extends TestCase
         $collection = (new EcsFieldsCollection())
             ->loadInitialFields(new LogRecord(Carbon::parse($datetime), $channel, $level, $message));
 
-        $this->assertNotEmpty($collection->filter(fn(AbstractEcsField $field) => $field instanceof Base));
-        $this->assertNotEmpty($collection->filter(fn(AbstractEcsField $field) => $field instanceof Log));
+        $this->assertNotEmpty($collection->filter(fn (AbstractEcsField $field) => $field instanceof Base));
+        $this->assertNotEmpty($collection->filter(fn (AbstractEcsField $field) => $field instanceof Log));
         $collection->each(function (AbstractEcsField $field) use ($message, $level, $channel, $datetime) {
             if ($field instanceof Base) {
                 $this->assertEquals($message, $field->message);
@@ -53,7 +53,7 @@ class EcsFieldsCollectionTest extends TestCase
         $data = ['foo' => 'bar'];
         $wrapper = EcsFieldFactory::create($this->faker->unique()->word(), $data, []);
 
-        $field = new class($this->faker->unique()->word(), $wrapper) extends AbstractEcsField {
+        $field = new class ($this->faker->unique()->word(), $wrapper) extends AbstractEcsField {
             public function __construct(
                 public readonly ?string $key,
                 public readonly AbstractEcsField $wrapper,

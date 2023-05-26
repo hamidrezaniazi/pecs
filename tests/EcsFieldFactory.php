@@ -15,7 +15,7 @@ class EcsFieldFactory
         array $wrapper = [],
         bool $rootable = true,
     ): AbstractEcsField {
-        return new class($key, $body, $custom, $wrapper, $rootable) extends AbstractEcsField {
+        return new class ($key, $body, $custom, $wrapper, $rootable) extends AbstractEcsField {
             public function __construct(
                 public readonly ?string $key,
                 public readonly array $body,

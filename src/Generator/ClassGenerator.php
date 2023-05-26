@@ -30,7 +30,8 @@ class ClassGenerator
         private readonly string $fieldsNamespace = 'Hamidrezaniazi\Pecs\Fields',
         private readonly string $listablesStoringPath = __DIR__ . '/../../src/Properties/Listables',
         private readonly string $listablesNamespace = 'Hamidrezaniazi\Pecs\Properties\Listables',
-    ) {}
+    ) {
+    }
 
     /**
      * @throws JsonException
@@ -81,7 +82,7 @@ class ClassGenerator
         $constructor = [];
 
         foreach ($field->properties as $property) {
-            $castTypes = array_map(fn(string $type) => basename(str_replace('\\', '/', $type)), $property->types);
+            $castTypes = array_map(fn (string $type) => basename(str_replace('\\', '/', $type)), $property->types);
             $cast = implode('|', array_diff($castTypes, ['nullable']));
             $nullable = $property->isNullable() ? '?' : '';
             $default = $property->default ? " = '{$property->default}'" : ($nullable ? ' = null' : '');

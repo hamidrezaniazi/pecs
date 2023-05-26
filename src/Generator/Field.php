@@ -25,7 +25,8 @@ class Field
         public readonly ?string $key = null,
         public readonly bool $rootable = false,
         public readonly bool $listable = false,
-    ) {}
+    ) {
+    }
 
     /**
      * @param FieldSchema $field
@@ -36,7 +37,7 @@ class Field
         return new self(
             $field['class'],
             array_map(
-                fn(string $name, array $properties) => Property::parse($properties, $name),
+                fn (string $name, array $properties) => Property::parse($properties, $name),
                 array_keys($field['properties']),
                 $field['properties']
             ),

@@ -8,7 +8,8 @@ class GeoPoint
     public function __construct(
         public readonly float $lat,
         public readonly float $lon,
-    ) {}
+    ) {
+    }
 
     public function toArray(): array
     {

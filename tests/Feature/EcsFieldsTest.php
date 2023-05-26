@@ -1557,7 +1557,8 @@ class EcsFieldsTest extends TestCase
         );
 
         $threat = new Threat(
-            enrichments: (new ThreatEnrichmentList())->push(new ThreatEnrichment(
+            enrichments: (new ThreatEnrichmentList())->push(
+                new ThreatEnrichment(
                     indicatorConfidence: ThreatConfidence::NOT_SPECIFIED,
                     indicatorDescription: 'this is string',
                     indicatorEmailAddress: 'info@example.test',

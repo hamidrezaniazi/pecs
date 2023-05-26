@@ -18,7 +18,7 @@ class MachoSectionList
 
     public function toArray(): array
     {
-        return $this->list->map(fn(MachoSection $item) => $item->toArray())->toArray();
+        return $this->list->map(fn (MachoSection $item) => $item->toArray())->toArray();
     }
 
     public function push(MachoSection $value): self

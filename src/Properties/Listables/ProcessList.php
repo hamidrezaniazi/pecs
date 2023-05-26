@@ -18,7 +18,7 @@ class ProcessList
 
     public function toArray(): array
     {
-        return $this->list->map(fn(Process $item) => $item->toArray())->toArray();
+        return $this->list->map(fn (Process $item) => $item->toArray())->toArray();
     }
 
     public function push(Process $value): self

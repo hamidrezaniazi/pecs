@@ -15,7 +15,7 @@ class EcsFieldsCollection extends Collection
     {
         $items = parent::getArrayableItems($items);
 
-        return array_filter($items, fn($item) => $item instanceof AbstractEcsField && $item->rootable);
+        return array_filter($items, fn ($item) => $item instanceof AbstractEcsField && $item->rootable);
     }
 
     public function loadInitialFields(LogRecord $records): self

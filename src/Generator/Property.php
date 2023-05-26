@@ -25,7 +25,8 @@ class Property
         public readonly ?string $cast = null,
         public readonly ?string $default = null,
         public readonly ?string $extract = null,
-    ) {}
+    ) {
+    }
 
     /**
      * @param PropertySchema $property
