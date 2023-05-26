@@ -5,19 +5,35 @@ namespace Hamidrezaniazi\Pecs\Tests\Feature;
 use Carbon\Carbon;
 use DateTime;
 use Faker\Factory;
-use Hamidrezaniazi\Pecs\EcsInitialData;
+use Hamidrezaniazi\Pecs\Monolog\LogRecord;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
 
-class EcsInitialDataTest extends TestCase
+class LogRecordsTest extends TestCase
 {
+    public function testItShouldNotBreakWithEmptyArray(): void
+    {
+        $record = LogRecord::parse([]);
+
+        $this->assertNull($record->channel);
+        $this->assertNull($record->level);
+        $this->assertNull($record->message);
+        $this->assertEmpty($record->context);
+        $this->assertNotNull($record->datetime);
+    }
+
     /** @dataProvider ecsInitialDataProvider */
-    public function testItShouldReturnNullSafeTimestamp(?DateTime $dateTime): void
+    public function testItShouldSetNullSafeTimestamp(?DateTime $dateTime): void
     {
         $timestamp = $this->getNullSafeDatetime($dateTime);
 
         $this->assertEquals(
             $timestamp,
-            (new EcsInitialData($dateTime, $this->faker->word, $this->faker->word, $this->faker->word))->getTimestamp()
+            LogRecord::parse([
+                'datetime' => $dateTime,
+                'message' => $this->faker->word,
+                'level_name' => $this->faker->word,
+                'channel' => $this->faker->word,
+            ])->datetime
         );
     }
 

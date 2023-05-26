@@ -2,11 +2,12 @@
 
 namespace Hamidrezaniazi\Pecs\Tests\Feature;
 
+use Carbon\Carbon;
 use Hamidrezaniazi\Pecs\EcsFieldsCollection;
-use Hamidrezaniazi\Pecs\EcsInitialData;
 use Hamidrezaniazi\Pecs\Fields\AbstractEcsField;
 use Hamidrezaniazi\Pecs\Fields\Base;
 use Hamidrezaniazi\Pecs\Fields\Log;
+use Hamidrezaniazi\Pecs\Monolog\LogRecord;
 use Hamidrezaniazi\Pecs\Tests\EcsFieldFactory;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
 use Illuminate\Support\Collection;
@@ -30,7 +31,7 @@ class EcsFieldsCollectionTest extends TestCase
         $datetime = $this->faker->dateTime();
 
         $collection = (new EcsFieldsCollection())
-            ->loadInitialFields(new EcsInitialData($datetime, $message, $level, $channel));
+            ->loadInitialFields(new LogRecord(Carbon::parse($datetime), $channel, $level, $message));
 
         $this->assertNotEmpty($collection->filter(fn(AbstractEcsField $field) => $field instanceof Base));
         $this->assertNotEmpty($collection->filter(fn(AbstractEcsField $field) => $field instanceof Log));

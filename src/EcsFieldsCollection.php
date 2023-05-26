@@ -5,6 +5,7 @@ namespace Hamidrezaniazi\Pecs;
 use Hamidrezaniazi\Pecs\Fields\AbstractEcsField;
 use Hamidrezaniazi\Pecs\Fields\Base;
 use Hamidrezaniazi\Pecs\Fields\Log;
+use Hamidrezaniazi\Pecs\Monolog\LogRecord;
 use Illuminate\Support\Collection;
 
 /** @extends Collection<int, AbstractEcsField> */
@@ -17,19 +18,19 @@ class EcsFieldsCollection extends Collection
         return array_filter($items, fn($item) => $item instanceof AbstractEcsField && $item->rootable);
     }
 
-    public function loadInitialFields(EcsInitialData $data): self
+    public function loadInitialFields(LogRecord $records): self
     {
         $this
             ->prepend(
                 new Base(
-                    timestamp: $data->getTimestamp(),
-                    message: $data->message,
+                    timestamp: $records->datetime,
+                    message: $records->message,
                 ),
             )
             ->prepend(
                 new Log(
-                    level: $data->levelName,
-                    logger: $data->channel,
+                    level: $records->level,
+                    logger: $records->channel,
                 ),
             );
 
