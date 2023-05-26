@@ -148,12 +148,20 @@ class ClassGenerator
      */
     private function getConfig(string $path): array
     {
-        $json = file_get_contents($path);
-        if ($json === false) {
-            throw new RuntimeException('Could not read base.json');
+        try {
+            $file = file_get_contents($path);
+
+            if ($file === false) {
+                throw new RuntimeException("Could not read {$path}");
+            }
+
+            /** @var FieldSchema $json */
+            $json = json_decode($file, true, 512, JSON_THROW_ON_ERROR);
+        } catch (JsonException) {
+            throw new JsonException("Could not parse {$path}");
         }
 
-        return json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+        return $json;
     }
 
     private function getFieldStub(): string
