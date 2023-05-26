@@ -129,6 +129,46 @@ class AbstractFieldTest extends TestCase
                 ['foo' => ['bar' => null]],
                 [],
             ],
+            [
+                null,
+                ['foo' => ['bar' => collect()]],
+                [],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => collect([])]],
+                [],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => 0]],
+                ['foo' => ['bar' => 0]],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => '0']],
+                ['foo' => ['bar' => '0']],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => 0.0]],
+                ['foo' => ['bar' => 0.0]],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => '0.0']],
+                ['foo' => ['bar' => '0.0']],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => false]],
+                ['foo' => ['bar' => false]],
+            ],
+            [
+                null,
+                ['foo' => ['bar' => 'false']],
+                ['foo' => ['bar' => 'false']],
+            ],
         ];
     }
 

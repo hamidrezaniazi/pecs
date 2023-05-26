@@ -11,6 +11,8 @@ abstract class AbstractEcsField
     /** @var Collection<int|string, string|int|bool> */
     protected Collection $log;
 
+    protected array $validEmpty = [0, 0.0, '0', '0.0', false, 'false'];
+
     public function __construct(public readonly bool $rootable = true)
     {
         $this->log = collect([]);
@@ -32,7 +34,7 @@ abstract class AbstractEcsField
         $this->log = $this->log->merge(
             collect(Arr::dot($next->toArray()))
                 ->reject(function (mixed $item) {
-                    return collect($item)->isEmpty(); //@phpstan-ignore-line
+                    return empty($item) && !in_array($item, $this->validEmpty, true);
                 })
         );
 
