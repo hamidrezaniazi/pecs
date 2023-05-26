@@ -16,6 +16,5 @@ return (new PhpCsFixer\Config())
         'blank_line_after_namespace' => true,
         'clean_namespace' => true,
         'compact_nullable_typehint' => true,
-        'logical_operators' => true,
     ])
     ->setFinder($finder);
