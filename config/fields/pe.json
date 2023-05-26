@@ -1,119 +1,119 @@
 {
-  "class": "Pe",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-pe.html",
-  "key": "pe",
-  "rootable": false,
-  "properties": {
-    "architecture": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "company": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "description": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "file_version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "go_import_hash": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "go_imports": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "go_imports_names_entropy": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "go_imports_names_var_entropy": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "go_stripped": {
-      "types": [
-        "nullable",
-        "bool"
-      ]
-    },
-    "imphash": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "import_hash": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "imports": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "imports_names_entropy": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "imports_names_var_entropy": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "original_file_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "pehash": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "product": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "sections": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\PeSectionList"
-      ],
-      "cast": "toArray"
+    "class": "Pe",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-pe.html",
+    "key": "pe",
+    "rootable": false,
+    "properties": {
+        "architecture": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "company": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "description": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "file_version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "go_import_hash": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "go_imports": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "go_imports_names_entropy": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "go_imports_names_var_entropy": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "go_stripped": {
+            "types": [
+                "nullable",
+                "bool"
+            ]
+        },
+        "imphash": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "import_hash": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "imports": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "imports_names_entropy": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "imports_names_var_entropy": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "original_file_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "pehash": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "product": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "sections": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Listables\\PeSectionList"
+            ],
+            "cast": "toArray"
+        }
     }
-  }
 }

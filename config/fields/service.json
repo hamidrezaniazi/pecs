@@ -1,88 +1,88 @@
 {
-  "class": "Service",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html",
-  "key": "service",
-  "properties": {
-    "address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "environment": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ephemeral_id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "node.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "node.role": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "node.roles": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "state": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origin": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Service"
-      ],
-      "cast": "getBody"
-    },
-    "target": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Service"
-      ],
-      "cast": "getBody"
+    "class": "Service",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-service.html",
+    "key": "service",
+    "properties": {
+        "address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "environment": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ephemeral_id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "node.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "node.role": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "node.roles": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "state": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "origin": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Service"
+            ],
+            "cast": "getBody"
+        },
+        "target": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Service"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

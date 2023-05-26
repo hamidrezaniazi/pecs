@@ -1,100 +1,100 @@
 {
-  "class": "Server",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-server.html",
-  "key": "server",
-  "properties": {
-    "address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "bytes": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "domain": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ip": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "mac": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "nat.ip": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "nat.port": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "packets": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "port": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "registered_domain": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subdomain": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "top_level_domain": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "as": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
-      ],
-      "cast": "getBody"
-    },
-    "geo": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
-      ],
-      "cast": "getBody"
-    },
-    "user": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\User"
-      ],
-      "cast": "getBody"
+    "class": "Server",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-server.html",
+    "key": "server",
+    "properties": {
+        "address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "bytes": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "domain": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ip": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "mac": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "nat.ip": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "nat.port": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "packets": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "port": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "registered_domain": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subdomain": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "top_level_domain": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "as": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
+            ],
+            "cast": "getBody"
+        },
+        "geo": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+            ],
+            "cast": "getBody"
+        },
+        "user": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\User"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

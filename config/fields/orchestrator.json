@@ -1,85 +1,85 @@
 {
-  "class": "Orchestrator",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-orchestrator.html",
-  "key": "orchestrator",
-  "properties": {
-    "api_version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "cluster.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "cluster.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "cluster.url": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "cluster.version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "namespace": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "organization": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "resource.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "resource.ip": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "resource.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "resource.parent.type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "resource.type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Orchestrator",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-orchestrator.html",
+    "key": "orchestrator",
+    "properties": {
+        "api_version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "cluster.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "cluster.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "cluster.url": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "cluster.version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "namespace": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "organization": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "resource.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "resource.ip": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "resource.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "resource.parent.type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "resource.type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

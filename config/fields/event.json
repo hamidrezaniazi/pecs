@@ -1,174 +1,174 @@
 {
-  "class": "Event",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-event.html",
-  "key": "event",
-  "properties": {
-    "action": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "status": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\AgentIdStatus"
-      ],
-      "extract": "value"
-    },
-    "category": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\EventCategory"
-      ],
-      "extract": "value"
-    },
-    "code": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "created": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601String"
-    },
-    "dataset": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "duration": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "end": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601String"
-    },
-    "hash": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ingested": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601String"
-    },
-    "kind": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\EventKind"
-      ],
-      "extract": "value"
-    },
-    "module": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "original": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "outcome": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\EventOutcome"
-      ],
-      "extract": "value"
-    },
-    "provider": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "reason": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "risk_score": {
-      "types": [
-        "nullable",
-        "float"
-      ]
-    },
-    "risk_score_norm": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\Percent"
-      ],
-      "extract": "value"
-    },
-    "sequence": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "severity": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "start": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601String"
-    },
-    "timezone": {
-      "types": [
-        "nullable",
-        "Carbon\\CarbonTimeZone"
-      ],
-      "cast": "toRegionName"
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\EventType"
-      ],
-      "extract": "value"
-    },
-    "url": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Event",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-event.html",
+    "key": "event",
+    "properties": {
+        "action": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "status": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\AgentIdStatus"
+            ],
+            "extract": "value"
+        },
+        "category": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\EventCategory"
+            ],
+            "extract": "value"
+        },
+        "code": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "created": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601String"
+        },
+        "dataset": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "duration": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "end": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601String"
+        },
+        "hash": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ingested": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601String"
+        },
+        "kind": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\EventKind"
+            ],
+            "extract": "value"
+        },
+        "module": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "original": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "outcome": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\EventOutcome"
+            ],
+            "extract": "value"
+        },
+        "provider": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "reason": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "risk_score": {
+            "types": [
+                "nullable",
+                "float"
+            ]
+        },
+        "risk_score_norm": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Percent"
+            ],
+            "extract": "value"
+        },
+        "sequence": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "severity": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "start": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601String"
+        },
+        "timezone": {
+            "types": [
+                "nullable",
+                "Carbon\\CarbonTimeZone"
+            ],
+            "cast": "toRegionName"
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\EventType"
+            ],
+            "extract": "value"
+        },
+        "url": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

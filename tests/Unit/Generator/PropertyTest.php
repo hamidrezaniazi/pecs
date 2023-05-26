@@ -74,7 +74,7 @@ class PropertyTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->expectExceptionMessage('Property types can not be empty.');
 
-       Property::parse([
+        Property::parse([
             'types' => [],
         ], 'field_name');
     }

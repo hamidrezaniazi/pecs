@@ -18,7 +18,7 @@ class DnsAnswerList
 
     public function toArray(): array
     {
-        return $this->list->map(fn (DnsAnswer $item) => $item->toArray())->toArray();
+        return $this->list->map(fn(DnsAnswer $item) => $item->toArray())->toArray();
     }
 
     public function push(DnsAnswer $value): self

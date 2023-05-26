@@ -1,154 +1,154 @@
 {
-  "class": "X509",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-x509.html",
-  "key": "x509",
-  "rootable": false,
-  "properties": {
-    "alternative_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.common_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.country": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.distinguished_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.locality": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.organization": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.organizational_unit": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "issuer.state_or_province": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "not_after": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "not_before": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "public_key_algorithm": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "public_key_curve": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "public_key_exponent": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "public_key_size": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "serial_number": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "signature_algorithm": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.common_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.country": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.distinguished_name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.locality": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.organization": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.organizational_unit": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject.state_or_province": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "version_number": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "X509",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-x509.html",
+    "key": "x509",
+    "rootable": false,
+    "properties": {
+        "alternative_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.common_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.country": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.distinguished_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.locality": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.organization": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.organizational_unit": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "issuer.state_or_province": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "not_after": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "not_before": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "public_key_algorithm": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "public_key_curve": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "public_key_exponent": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "public_key_size": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "serial_number": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "signature_algorithm": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.common_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.country": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.distinguished_name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.locality": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.organization": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.organizational_unit": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject.state_or_province": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "version_number": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

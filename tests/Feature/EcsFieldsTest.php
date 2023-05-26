@@ -2159,7 +2159,7 @@ class EcsFieldsTest extends TestCase
             transactionId: 'string',
         );
 
-        $url =  new Url(
+        $url = new Url(
             domain: 'string',
             extension: '.tst',
             fragment: 'string',

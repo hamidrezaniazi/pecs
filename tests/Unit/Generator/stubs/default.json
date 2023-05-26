@@ -1,79 +1,79 @@
 {
-  "class": "DefaultClass",
-  "document_link": "https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html",
-  "key": "default",
-  "properties": {
-    "simple": {
-      "types": [
-        "string"
-      ]
-    },
-    "simple_nullable": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "with_name": {
-      "types": [
-        "array"
-      ],
-      "name": "different_name"
-    },
-    "class_type": {
-      "types": [
-        "NameSpaces\\ClassType"
-      ]
-    },
-    "duplicate_class_type": {
-      "types": [
-        "NameSpaces\\ClassType"
-      ]
-    },
-    "class_type_with_cast": {
-      "types": [
-        "NameSpaces\\ClassTypeWithCast"
-      ],
-      "cast": "toSomething"
-    },
-    "multiple_types": {
-      "types": [
-        "string",
-        "int",
-        "OtherNameSpaces\\NewClassType"
-      ]
-    },
-    "multi.dimension": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "with_default": {
-      "types": [
-        "nullable",
-        "string"
-      ],
-      "default": "default_value"
-    },
-    "is_enum": {
-      "types": [
-        "Namespaces\\EnumType"
-      ],
-      "extract": "value"
-    },
-    "is_enum_with_cast": {
-      "types": [
-        "Namespaces\\EnumTypeWithCast"
-      ],
-      "extract": "value",
-      "cast": "toSomething"
-    },
-    "required_but_cast": {
-      "types": [
-        "Namespaces\\RequiredButCast"
-      ],
-      "cast": "toSomething"
+    "class": "DefaultClass",
+    "document_link": "https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html",
+    "key": "default",
+    "properties": {
+        "simple": {
+            "types": [
+                "string"
+            ]
+        },
+        "simple_nullable": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "with_name": {
+            "types": [
+                "array"
+            ],
+            "name": "different_name"
+        },
+        "class_type": {
+            "types": [
+                "NameSpaces\\ClassType"
+            ]
+        },
+        "duplicate_class_type": {
+            "types": [
+                "NameSpaces\\ClassType"
+            ]
+        },
+        "class_type_with_cast": {
+            "types": [
+                "NameSpaces\\ClassTypeWithCast"
+            ],
+            "cast": "toSomething"
+        },
+        "multiple_types": {
+            "types": [
+                "string",
+                "int",
+                "OtherNameSpaces\\NewClassType"
+            ]
+        },
+        "multi.dimension": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "with_default": {
+            "types": [
+                "nullable",
+                "string"
+            ],
+            "default": "default_value"
+        },
+        "is_enum": {
+            "types": [
+                "Namespaces\\EnumType"
+            ],
+            "extract": "value"
+        },
+        "is_enum_with_cast": {
+            "types": [
+                "Namespaces\\EnumTypeWithCast"
+            ],
+            "extract": "value",
+            "cast": "toSomething"
+        },
+        "required_but_cast": {
+            "types": [
+                "Namespaces\\RequiredButCast"
+            ],
+            "cast": "toSomething"
+        }
     }
-  }
 }

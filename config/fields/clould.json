@@ -1,87 +1,87 @@
 {
-  "class": "Cloud",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
-  "key": "cloud",
-  "properties": {
-    "account.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "account.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "availability_zone": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "instance.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "instance.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "machine.type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "project.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "project.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "provider": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "region": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "service.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origin": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
-    },
-    "target": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
-      ],
-      "cast": "getBody"
+    "class": "Cloud",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-cloud.html",
+    "key": "cloud",
+    "properties": {
+        "account.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "account.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "availability_zone": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "instance.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "instance.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "machine.type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "project.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "project.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "provider": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "region": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "service.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "origin": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+            ],
+            "cast": "getBody"
+        },
+        "target": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Cloud"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

@@ -1,35 +1,35 @@
 {
-  "class": "Related",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-related.html",
-  "key": "related",
-  "properties": {
-    "hash": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "hosts": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "ip": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "user": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
+    "class": "Related",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-related.html",
+    "key": "related",
+    "properties": {
+        "hash": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "hosts": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "ip": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "user": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        }
     }
-  }
 }

@@ -1,312 +1,312 @@
 {
-  "class": "Threat",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-threat.html",
-  "key": "threat",
-  "properties": {
-    "enrichments": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\ThreatEnrichmentList"
-      ],
-      "cast": "toArray"
-    },
-    "feed.dashboard_id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "feed.description": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "feed.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "feed.reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "framework": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "group.alias": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "group.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "group.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "group.reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.confidence": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ThreatConfidence"
-      ],
-      "extract": "value"
-    },
-    "indicator.description": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.email.address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.first_seen": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "indicator.ip": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.last_seen": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "indicator.marking.tlp": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ThreatMarkingTLP"
-      ],
-      "extract": "value"
-    },
-    "indicator.marking.tlp_version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.marking.modified_at": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "indicator.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.port": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "indicator.provider": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "indicator.scanner_stats": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "indicator.sightings": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "indicator.type": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ThreatIndicatorType"
-      ],
-      "extract": "value"
-    },
-    "software.alias": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "software.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "software.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "software.platform": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\SoftwarePlatformList"
-      ],
-      "cast": "toArray"
-    },
-    "software.reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "software.type": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\SoftwareType"
-      ],
-      "extract": "value"
-    },
-    "tactic.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "tactic.name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "tactic.reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "technique.id": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "technique.name": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "technique.reference": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "technique.subtechnique.id": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "technique.subtechnique.name": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "technique.subtechnique.reference": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "indicator.as": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
-      ],
-      "cast": "getBody"
-    },
-    "indicator.file": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\File"
-      ],
-      "cast": "getBody"
-    },
-    "indicator.geo": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
-      ],
-      "cast": "getBody"
-    },
-    "indicator.registry": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Registry"
-      ],
-      "cast": "getBody"
-    },
-    "indicator.url": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Url"
-      ],
-      "cast": "getBody"
-    },
-    "indicator.x509": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\X509"
-      ],
-      "cast": "getBody"
+    "class": "Threat",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-threat.html",
+    "key": "threat",
+    "properties": {
+        "enrichments": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Listables\\ThreatEnrichmentList"
+            ],
+            "cast": "toArray"
+        },
+        "feed.dashboard_id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "feed.description": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "feed.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "feed.reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "framework": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "group.alias": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "group.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "group.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "group.reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.confidence": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ThreatConfidence"
+            ],
+            "extract": "value"
+        },
+        "indicator.description": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.email.address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.first_seen": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "indicator.ip": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.last_seen": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "indicator.marking.tlp": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ThreatMarkingTLP"
+            ],
+            "extract": "value"
+        },
+        "indicator.marking.tlp_version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.marking.modified_at": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "indicator.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.port": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "indicator.provider": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "indicator.scanner_stats": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "indicator.sightings": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "indicator.type": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ThreatIndicatorType"
+            ],
+            "extract": "value"
+        },
+        "software.alias": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "software.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "software.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "software.platform": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Listables\\SoftwarePlatformList"
+            ],
+            "cast": "toArray"
+        },
+        "software.reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "software.type": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\SoftwareType"
+            ],
+            "extract": "value"
+        },
+        "tactic.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "tactic.name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "tactic.reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "technique.id": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "technique.name": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "technique.reference": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "technique.subtechnique.id": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "technique.subtechnique.name": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "technique.subtechnique.reference": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "indicator.as": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\AutonomousSystem"
+            ],
+            "cast": "getBody"
+        },
+        "indicator.file": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\File"
+            ],
+            "cast": "getBody"
+        },
+        "indicator.geo": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+            ],
+            "cast": "getBody"
+        },
+        "indicator.registry": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Registry"
+            ],
+            "cast": "getBody"
+        },
+        "indicator.url": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Url"
+            ],
+            "cast": "getBody"
+        },
+        "indicator.x509": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\X509"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

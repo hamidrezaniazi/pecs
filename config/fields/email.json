@@ -1,103 +1,103 @@
 {
-  "class": "Email",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-email.html",
-  "key": "email",
-  "properties": {
-    "attachments": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\Listables\\EmailAttachmentList"
-      ],
-      "cast": "toArray"
-    },
-    "bcc.address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "cc.address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "content_type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "delivery_timestamp": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "direction": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "from.address": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "local_id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "message_id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "origination_timestamp": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "reply_to.address": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "sender.address": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "subject": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "to.address": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "x_mailer": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Email",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-email.html",
+    "key": "email",
+    "properties": {
+        "attachments": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Listables\\EmailAttachmentList"
+            ],
+            "cast": "toArray"
+        },
+        "bcc.address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "cc.address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "content_type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "delivery_timestamp": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "direction": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "from.address": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "local_id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "message_id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "origination_timestamp": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "reply_to.address": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "sender.address": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "subject": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "to.address": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "x_mailer": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

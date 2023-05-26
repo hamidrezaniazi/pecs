@@ -1,37 +1,37 @@
 {
-  "class": "Error",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
-  "key": "error",
-  "properties": {
-    "code": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "message": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "stack_trace": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Error",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-error.html",
+    "key": "error",
+    "properties": {
+        "code": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "message": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "stack_trace": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

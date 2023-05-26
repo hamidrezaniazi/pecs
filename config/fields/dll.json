@@ -1,40 +1,40 @@
 {
-  "class": "Dll",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-dll.html",
-  "key": "dll",
-  "properties": {
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "path": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "code_signature": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\CodeSignature"
-      ],
-      "cast": "getBody"
-    },
-    "hash": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Hash"
-      ],
-      "cast": "getBody"
-    },
-    "pe": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Pe"
-      ],
-      "cast": "getBody"
+    "class": "Dll",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-dll.html",
+    "key": "dll",
+    "properties": {
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "path": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "code_signature": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\CodeSignature"
+            ],
+            "cast": "getBody"
+        },
+        "hash": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Hash"
+            ],
+            "cast": "getBody"
+        },
+        "pe": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Pe"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

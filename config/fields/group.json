@@ -1,26 +1,26 @@
 {
-  "class": "Group",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-group.html",
-  "key": "group",
-  "listable": true,
-  "properties": {
-    "domain": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Group",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-group.html",
+    "key": "group",
+    "listable": true,
+    "properties": {
+        "domain": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

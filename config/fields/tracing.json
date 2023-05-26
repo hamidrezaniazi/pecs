@@ -1,25 +1,25 @@
 {
-  "class": "Tracing",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
-  "key": null,
-  "properties": {
-    "span.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "trace.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "transaction.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Tracing",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-tracing.html",
+    "key": null,
+    "properties": {
+        "span.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "trace.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "transaction.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

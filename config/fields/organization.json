@@ -1,19 +1,19 @@
 {
-  "class": "Organization",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-organization.html",
-  "key": "organization",
-  "properties": {
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Organization",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-organization.html",
+    "key": "organization",
+    "properties": {
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

@@ -18,7 +18,7 @@ class EmailAttachmentList
 
     public function toArray(): array
     {
-        return $this->list->map(fn (EmailAttachment $item) => $item->toArray())->toArray();
+        return $this->list->map(fn(EmailAttachment $item) => $item->toArray())->toArray();
     }
 
     public function push(EmailAttachment $value): self

@@ -1,116 +1,116 @@
 {
-  "class": "Observer",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-observer.html",
-  "key": "observer",
-  "properties": {
-    "egress.zone": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "egress.interface": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
-      ],
-      "cast": "getBody"
-    },
-    "egress.vlan": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Vlan"
-      ],
-      "cast": "getBody"
-    },
-    "hostname": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ingress.zone": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ingress.interface": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
-      ],
-      "cast": "getBody"
-    },
-    "ingress.vlan": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Vlan"
-      ],
-      "cast": "getBody"
-    },
-    "ip": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "mac": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "product": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "serial_number": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "vendor": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "geo": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Geo"
-      ],
-      "cast": "getBody"
-    },
-    "os": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Fields\\Os"
-      ],
-      "cast": "getBody"
+    "class": "Observer",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-observer.html",
+    "key": "observer",
+    "properties": {
+        "egress.zone": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "egress.interface": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
+            ],
+            "cast": "getBody"
+        },
+        "egress.vlan": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Vlan"
+            ],
+            "cast": "getBody"
+        },
+        "hostname": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ingress.zone": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ingress.interface": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\InterfaceField"
+            ],
+            "cast": "getBody"
+        },
+        "ingress.vlan": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Vlan"
+            ],
+            "cast": "getBody"
+        },
+        "ip": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "mac": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "product": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "serial_number": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "vendor": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "geo": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Geo"
+            ],
+            "cast": "getBody"
+        },
+        "os": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Fields\\Os"
+            ],
+            "cast": "getBody"
+        }
     }
-  }
 }

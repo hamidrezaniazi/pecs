@@ -1,80 +1,80 @@
 {
-  "class": "Package",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-package.html",
-  "key": "package",
-  "properties": {
-    "architecture": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "build_version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "checksum": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "description": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "install_scope": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "installed": {
-      "types": [
-        "nullable",
-        "Carbon\\Carbon"
-      ],
-      "cast": "toIso8601ZuluString"
-    },
-    "license": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "path": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "size": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Package",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-package.html",
+    "key": "package",
+    "properties": {
+        "architecture": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "build_version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "checksum": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "description": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "install_scope": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "installed": {
+            "types": [
+                "nullable",
+                "Carbon\\Carbon"
+            ],
+            "cast": "toIso8601ZuluString"
+        },
+        "license": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "path": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "size": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

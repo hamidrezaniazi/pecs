@@ -32,8 +32,8 @@ class FieldTest extends TestCase
                 'cast' => 'array',
             ]
         ];
-        $rootable = (bool) random_int(0, 1);
-        $listable = (bool) random_int(0, 1);
+        $rootable = (bool)random_int(0, 1);
+        $listable = (bool)random_int(0, 1);
 
         $field = Field::parse([
             'document_link' => $link,

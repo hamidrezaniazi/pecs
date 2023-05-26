@@ -1,86 +1,86 @@
 {
-  "class": "Http",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-http.html",
-  "key": "http",
-  "properties": {
-    "request.body.bytes": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "request.body.content": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "request.bytes": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "request.id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "request.method": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\HttpMethod"
-      ],
-      "extract": "value"
-    },
-    "request.meme_type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "request.referer": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "response.body.bytes": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "response.body.content": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "response.bytes": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "response.meme_type": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "response.status_code": {
-      "types": [
-        "nullable",
-        "int"
-      ]
-    },
-    "version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Http",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-http.html",
+    "key": "http",
+    "properties": {
+        "request.body.bytes": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "request.body.content": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "request.bytes": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "request.id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "request.method": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\HttpMethod"
+            ],
+            "extract": "value"
+        },
+        "request.meme_type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "request.referer": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "response.body.bytes": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "response.body.content": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "response.bytes": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "response.meme_type": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "response.status_code": {
+            "types": [
+                "nullable",
+                "int"
+            ]
+        },
+        "version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

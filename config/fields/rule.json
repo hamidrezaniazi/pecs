@@ -1,68 +1,68 @@
 {
-  "class": "Rule",
-  "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-rule.html",
-  "key": "rule",
-  "properties": {
-    "author": {
-      "types": [
-        "nullable",
-        "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
-      ],
-      "cast": "toArray"
-    },
-    "category": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "description": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "id": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "license": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "name": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "reference": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "ruleset": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "uuid": {
-      "types": [
-        "nullable",
-        "string"
-      ]
-    },
-    "version": {
-      "types": [
-        "nullable",
-        "string"
-      ]
+    "class": "Rule",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/ecs-rule.html",
+    "key": "rule",
+    "properties": {
+        "author": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\ValueList"
+            ],
+            "cast": "toArray"
+        },
+        "category": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "description": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "id": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "license": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "name": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "reference": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "ruleset": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "uuid": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        },
+        "version": {
+            "types": [
+                "nullable",
+                "string"
+            ]
+        }
     }
-  }
 }

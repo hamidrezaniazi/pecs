@@ -18,7 +18,7 @@ class PeSectionList
 
     public function toArray(): array
     {
-        return $this->list->map(fn (PeSection $item) => $item->toArray())->toArray();
+        return $this->list->map(fn(PeSection $item) => $item->toArray())->toArray();
     }
 
     public function push(PeSection $value): self
