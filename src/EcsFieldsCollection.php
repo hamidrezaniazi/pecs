@@ -40,20 +40,22 @@ class EcsFieldsCollection extends Collection
     public function loadWrappers(): self
     {
         $this
-            ->reduce(function (?EcsFieldsCollection $carry, AbstractEcsField $item) {
-                return is_null($carry) ? $item->wrapper() : $carry->merge($item->wrapper());
-            })
-            ->each(function (AbstractEcsField $item) {
-                $this->push($item);
-            });
+            ->reduce(
+                fn (?EcsFieldsCollection $carry, AbstractEcsField $item) => is_null($carry)
+                    ? $item->wrapper()
+                    : $carry->merge($item->wrapper())
+            )
+            ->each(fn (AbstractEcsField $item) => $this->push($item));
 
         return $this;
     }
 
     public function render(): AbstractEcsField
     {
-        return $this->reverse()->reduce(function (?AbstractEcsField $carry, AbstractEcsField $item) {
-            return is_null($carry) ? $item : $carry->append($item);
-        });
+        return $this->reverse()->reduce(
+            fn (?AbstractEcsField $carry, AbstractEcsField $item) => is_null($carry)
+                ? $item
+                : $carry->append($item)
+        );
     }
 }

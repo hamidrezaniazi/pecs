@@ -33,9 +33,7 @@ abstract class AbstractEcsField
 
         $this->log = $this->log->merge(
             collect(Arr::dot($next->toArray()))
-                ->reject(function (mixed $item) {
-                    return empty($item) && !in_array($item, $this->validEmpty, true);
-                })
+                ->reject(fn (mixed $item) => empty($item) && !in_array($item, $this->validEmpty, true))
         );
 
         return $this;
