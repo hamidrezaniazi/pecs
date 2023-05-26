@@ -5,6 +5,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 use Hamidrezaniazi\Pecs\Properties\PairList;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
 use stdClass;
+use TypeError;
 
 /**
  * @covers \Hamidrezaniazi\Pecs\Properties\PairList
@@ -24,7 +25,7 @@ class PairListTest extends TestCase
     /** @dataProvider wrongValueDataProvider */
     public function testItShouldNotAcceptWrongValues(mixed $key, mixed $value): void
     {
-        $this->expectError();
+        $this->expectException(TypeError::class);
         $list = new PairList();
         $list->put($key, $value);
     }

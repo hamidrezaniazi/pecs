@@ -7,6 +7,7 @@ use Hamidrezaniazi\Pecs\Properties\Listables\FileAttributeList;
 use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 use stdClass;
+use TypeError;
 
 /**
  * @covers \Hamidrezaniazi\Pecs\Properties\Listables\FileAttributeList
@@ -28,7 +29,7 @@ class FileAttributeListTest extends TestCase
     /** @dataProvider wrongValueDataProvider */
     public function testItShouldNotAcceptWrongValues(mixed $value): void
     {
-        $this->expectError();
+        $this->expectException(TypeError::class);
         $list = new FileAttributeList();
         $list->push($value);
     }

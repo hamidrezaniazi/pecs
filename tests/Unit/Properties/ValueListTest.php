@@ -5,6 +5,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Properties;
 use Hamidrezaniazi\Pecs\Properties\ValueList;
 use PHPUnit\Framework\TestCase;
 use stdClass;
+use TypeError;
 
 /**
  * @covers \Hamidrezaniazi\Pecs\Properties\ValueList
@@ -24,7 +25,7 @@ class ValueListTest extends TestCase
     /** @dataProvider wrongValueDataProvider */
     public function testItShouldNotAcceptWrongValues(mixed $value): void
     {
-        $this->expectError();
+        $this->expectException(TypeError::class);
         $list = new ValueList();
         $list->push($value);
     }

@@ -7,6 +7,7 @@ use Hamidrezaniazi\Pecs\Properties\SoftwarePlatform;
 use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use PHPUnit\Framework\TestCase;
 use stdClass;
+use TypeError;
 
 /**
  * @covers \Hamidrezaniazi\Pecs\Properties\Listables\SoftwarePlatformList
@@ -28,7 +29,7 @@ class SoftwarePlatformListTest extends TestCase
     /** @dataProvider wrongValueDataProvider */
     public function testItShouldNotAcceptWrongValues(mixed $value): void
     {
-        $this->expectError();
+        $this->expectException(TypeError::class);
         $list = new SoftwarePlatformList();
         $list->push($value);
     }
