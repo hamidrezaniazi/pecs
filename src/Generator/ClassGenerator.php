@@ -4,6 +4,7 @@ namespace Hamidrezaniazi\Pecs\Generator;
 
 use JsonException;
 use RuntimeException;
+use Throwable;
 
 /**
  * @phpstan-import-type FieldSchema from Field
@@ -37,7 +38,7 @@ class ClassGenerator
      */
     public function clean(): void
     {
-        $paths = $this->getPaths();
+        $paths = $this->getSchemaPaths();
         foreach ($paths as $path) {
             $config = $this->getConfig($path);
             $field = Field::parse($config);
@@ -54,7 +55,7 @@ class ClassGenerator
      */
     public function generate(): void
     {
-        $paths = $this->getPaths();
+        $paths = $this->getSchemaPaths();
         foreach ($paths as $path) {
             $config = $this->getConfig($path);
             $field = Field::parse($config);
@@ -150,7 +151,7 @@ class ClassGenerator
 
             /** @var FieldSchema $json */
             $json = json_decode($file, true, 512, JSON_THROW_ON_ERROR);
-        } catch (JsonException) {
+        } catch (Throwable) {
             throw new JsonException("Could not parse {$path}");
         }
 
@@ -182,7 +183,7 @@ class ClassGenerator
     /**
      * @return array<int, string>
      */
-    private function getPaths(): array
+    private function getSchemaPaths(): array
     {
         $paths = [];
         $files = scandir($this->configPath);
