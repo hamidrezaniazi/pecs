@@ -35,23 +35,16 @@ class ClassGenerator
     /**
      * @throws JsonException
      */
-    public static function exec(): void
+    public function clean(): void
     {
-        $generator = new self();
-        $generator->generate();
-    }
-
-    public static function clean(): void
-    {
-        $generator = new self();
-        $paths = $generator->getPaths();
+        $paths = $this->getPaths();
         foreach ($paths as $path) {
-            $config = $generator->getConfig($path);
+            $config = $this->getConfig($path);
             $field = Field::parse($config);
-            $generator->deleteClass($field->class);
+            $this->deleteClass($field->class);
 
             if ($field->listable) {
-                $generator->deleteListableClass($field->class);
+                $this->deleteListableClass($field->class);
             }
         }
     }

@@ -15,10 +15,30 @@ class ClassGeneratorTest extends TestCase
 
     private string $listableStoringPath = __DIR__ . '/Properties/Listables';
 
+    private string $fieldsNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator';
+
+    private string $listablesNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator\Properties\Listables';
+
+    private ClassGenerator $generator;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->generator = new ClassGenerator(
+            __DIR__ . '/stubs',
+            $this->fieldsStoringPath,
+            $this->fieldsNamespace,
+            $this->listableStoringPath,
+            $this->listablesNamespace,
+        );
+    }
+
+    /**
+     * @throws JsonException
+     */
     protected function tearDown(): void
     {
-        $this->removeDirectoryRecursive($this->fieldsStoringPath);
-        $this->removeDirectoryRecursive($this->listableStoringPath);
+        $this->generator->clean();
     }
 
     /**
@@ -26,17 +46,7 @@ class ClassGeneratorTest extends TestCase
      */
     public function testItCanGenerateClasses(): void
     {
-        $fieldsNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator';
-        $listablesNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator\Properties\Listables';
-        $generator = new ClassGenerator(
-            __DIR__ . '/stubs',
-            $this->fieldsStoringPath,
-            $fieldsNamespace,
-            $this->listableStoringPath,
-            $listablesNamespace,
-        );
-
-        $generator->generate();
+        $this->generator->generate();
 
         $this->assertEquals(
             file_get_contents(__DIR__ . '/stubs/default.stub.php'),
@@ -57,28 +67,5 @@ class ClassGeneratorTest extends TestCase
             file_get_contents(__DIR__ . '/stubs/listable_list.stub.php'),
             file_get_contents($this->listableStoringPath . '/ListableClassList.php'),
         );
-    }
-
-    private function removeDirectoryRecursive(string $storingPath): void
-    {
-        $files = glob($storingPath . '/*');
-        if ($files !== false) {
-            foreach ($files as $file) {
-                if (is_dir($file)) {
-                    $this->removeDirectoryRecursive($file);
-                } else {
-                    unlink($file);
-                }
-            }
-        }
-        rmdir($storingPath);
-
-        $parentDir = dirname($storingPath);
-        if ($parentDir !== '.') {
-            $parentFiles = glob($parentDir . '/*');
-            if ($parentFiles !== false && is_array($parentFiles) && count($parentFiles) === 0) {
-                rmdir($parentDir);
-            }
-        }
     }
 }
