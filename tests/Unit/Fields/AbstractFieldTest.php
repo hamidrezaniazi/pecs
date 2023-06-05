@@ -136,7 +136,7 @@ class AbstractFieldTest extends TestCase
             ],
             [
                 null,
-                ['foo' => ['bar' => collect([])]],
+                ['foo' => ['bar' => collect()]],
                 [],
             ],
             [

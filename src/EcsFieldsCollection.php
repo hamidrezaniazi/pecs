@@ -21,18 +21,14 @@ class EcsFieldsCollection extends Collection
     public function loadInitialFields(LogRecord $records): self
     {
         $this
-            ->prepend(
-                new Base(
-                    timestamp: $records->datetime,
-                    message: $records->message,
-                ),
-            )
-            ->prepend(
-                new Log(
-                    level: $records->level,
-                    logger: $records->channel,
-                ),
-            );
+            ->prepend(new Base(
+                timestamp: $records->datetime,
+                message: $records->message,
+            ))
+            ->prepend(new Log(
+                level: $records->level,
+                logger: $records->channel,
+            ));
 
         return $this;
     }

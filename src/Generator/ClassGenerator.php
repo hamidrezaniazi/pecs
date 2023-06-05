@@ -20,7 +20,6 @@ class ClassGenerator
         'iterable',
         'object',
         'mixed',
-        'resource',
         'null',
     ];
 

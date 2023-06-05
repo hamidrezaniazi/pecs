@@ -51,7 +51,7 @@ class EcsFieldsCollectionTest extends TestCase
     public function testItCanLoadWrappers(): void
     {
         $data = ['foo' => 'bar'];
-        $wrapper = EcsFieldFactory::create($this->faker->unique()->word(), $data, []);
+        $wrapper = EcsFieldFactory::create($this->faker->unique()->word(), $data);
 
         $field = new class ($this->faker->unique()->word(), $wrapper) extends AbstractEcsField {
             public function __construct(

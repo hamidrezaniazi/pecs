@@ -15,7 +15,7 @@ abstract class AbstractEcsField
 
     public function __construct(public readonly bool $rootable = true)
     {
-        $this->log = collect([]);
+        $this->log = collect();
     }
 
     abstract protected function key(): ?string;
@@ -28,7 +28,7 @@ abstract class AbstractEcsField
         if (is_null($ecsField->key())) {
             $next = $ecsField->getBody();
         } else {
-            $next = collect([])->put($ecsField->key(), $ecsField->getBody());
+            $next = collect()->put($ecsField->key(), $ecsField->getBody());
         }
 
         $this->log = $this->log->merge(
@@ -55,7 +55,7 @@ abstract class AbstractEcsField
     /** @return Collection<int|string, mixed> */
     protected function custom(): Collection
     {
-        return collect([]);
+        return collect();
     }
 
     public function wrapper(): EcsFieldsCollection
