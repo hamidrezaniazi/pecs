@@ -5,9 +5,20 @@
 use Hamidrezaniazi\Pecs\Generator\ClassGenerator;
 
 require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../src/helpers.php';
+
+std_out_write(<<<LOGO
+
+_________________________________
+___  __ \__  ____/_  ____/_  ___/
+__  /_/ /_  __/  _  /    _____ \
+_  ____/_  /___  / /___  ____/ /
+/_/     /_____/  \____/  /____/
+
+LOGO. PHP_EOL . 'PHP Elastic Common Schema');
 
 try {
     (new ClassGenerator())->generate();
 } catch (Exception $e) {
-    echo $e->getMessage();
+    std_err_write($e->getMessage());
 }

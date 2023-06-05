@@ -6,6 +6,8 @@ use JsonException;
 use RuntimeException;
 use Throwable;
 
+require_once __DIR__ . '/../helpers.php';
+
 /**
  * @phpstan-import-type FieldSchema from Field
  */
@@ -56,9 +58,15 @@ class ClassGenerator
     public function generate(): void
     {
         $paths = $this->getSchemaPaths();
+
+        std_out_write(count($paths) . ' schemas have been found to generate the classes...');
+
         foreach ($paths as $path) {
             $config = $this->getConfig($path);
             $field = Field::parse($config);
+
+            std_out_write($field->class);
+
             $classCode = $this->createClass($field);
             $this->storeClass($field->class, $classCode);
 
