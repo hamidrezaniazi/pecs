@@ -44,12 +44,12 @@
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=1G",
-        "generate": "bin/generate",
+        "generate": "bin/pecs",
         "clean": "bin/clean",
         "phpcs": "./vendor/bin/php-cs-fixer fix ."
     },
     "bin": [
-        "bin/generate"
+        "bin/pecs"
     ],
     "config": {
         "sort-packages": true
