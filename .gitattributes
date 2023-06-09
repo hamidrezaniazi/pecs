@@ -4,6 +4,7 @@
 /phpunit.xml.dist   export-ignore
 /tests              export-ignore
 /bin                export-ignore
+/config             export-ignore
 /.editorconfig      export-ignore
 /.php_cs.dist.php   export-ignore
 /phpstan*           export-ignore
