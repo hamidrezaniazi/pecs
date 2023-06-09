@@ -1,5 +1,7 @@
 <?php
 
+namespace Hamidrezaniazi\Pecs;
+
 function std_out_write(string $data): void
 {
     if (getenv('APP_ENV') === 'testing') {

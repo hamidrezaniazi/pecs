@@ -3,9 +3,10 @@
 <?php
 
 use Hamidrezaniazi\Pecs\Generator\ClassGenerator;
+use function Hamidrezaniazi\Pecs\std_err_write;
+use function Hamidrezaniazi\Pecs\std_out_write;
 
 require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/../src/helpers.php';
 
 std_out_write(<<<LOGO
 

@@ -6,7 +6,7 @@ use JsonException;
 use RuntimeException;
 use Throwable;
 
-require_once __DIR__ . '/../helpers.php';
+use function Hamidrezaniazi\Pecs\std_out_write;
 
 /**
  * @phpstan-import-type FieldSchema from Field
