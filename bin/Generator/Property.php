@@ -1,6 +1,6 @@
 <?php
 
-namespace Hamidrezaniazi\Pecs\Generator;
+namespace Hamidrezaniazi\Pecs\Bin\Generator;
 
 use InvalidArgumentException;
 

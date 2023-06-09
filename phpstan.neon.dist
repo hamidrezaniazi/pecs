@@ -2,6 +2,7 @@ parameters:
 
     paths:
         - src
+        - bin
 
     # The level 9 is the highest level
     level: 9

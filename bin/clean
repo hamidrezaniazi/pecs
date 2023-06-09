@@ -2,12 +2,11 @@
 
 <?php
 
-use Hamidrezaniazi\Pecs\Generator\ClassGenerator;
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
-try {
-    (new ClassGenerator())->clean();
-} catch (Exception $e) {
-    echo $e->getMessage();
-}
+use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
+use function Hamidrezaniazi\Pecs\std_err_write;
+
+set_exception_handler(fn (Throwable $e) => std_err_write($e->getMessage()));
+
+(new ClassGenerator())->clean();

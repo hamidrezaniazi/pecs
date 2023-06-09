@@ -3,12 +3,12 @@
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
 use Exception;
-use Hamidrezaniazi\Pecs\Generator\Field;
-use Hamidrezaniazi\Pecs\Generator\Property;
+use Hamidrezaniazi\Pecs\Bin\Generator\Field;
+use Hamidrezaniazi\Pecs\Bin\Generator\Property;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Generator\Field
+ * @covers \Hamidrezaniazi\Pecs\Bin\Generator\Field
  */
 class FieldTest extends TestCase
 {

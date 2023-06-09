@@ -1,6 +1,6 @@
 <?php
 
-namespace Hamidrezaniazi\Pecs\Generator;
+namespace Hamidrezaniazi\Pecs\Bin\Generator;
 
 /**
  * @phpstan-import-type PropertySchema from Property

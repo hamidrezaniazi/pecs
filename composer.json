@@ -40,20 +40,18 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Hamidrezaniazi\\Pecs\\Tests\\": "tests"
+            "Hamidrezaniazi\\Pecs\\Tests\\": "tests",
+            "Hamidrezaniazi\\Pecs\\Bin\\": "bin"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=1G",
-        "generate": "bin/pecs",
+        "generate": "bin/generate",
         "clean": "bin/clean",
         "phpcs": "./vendor/bin/php-cs-fixer fix ."
     },
-    "bin": [
-        "bin/pecs"
-    ],
     "config": {
         "sort-packages": true
     }

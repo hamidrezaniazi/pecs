@@ -2,12 +2,12 @@
 
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
-use Hamidrezaniazi\Pecs\Generator\Property;
+use Hamidrezaniazi\Pecs\Bin\Generator\Property;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Generator\Property
+ * @covers \Hamidrezaniazi\Pecs\Bin\Generator\Property
  */
 class PropertyTest extends TestCase
 {

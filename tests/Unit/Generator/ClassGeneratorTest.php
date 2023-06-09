@@ -3,13 +3,13 @@
 namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
 use Closure;
-use Hamidrezaniazi\Pecs\Generator\ClassGenerator;
+use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
 use JsonException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
 /**
- * @covers \Hamidrezaniazi\Pecs\Generator\ClassGenerator
+ * @covers \Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator
  */
 class ClassGeneratorTest extends TestCase
 {
