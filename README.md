@@ -18,6 +18,7 @@ PECS offers a practical approach for integrating ECS into PHP applications. By u
    1. [Custom Fields](#custom-fields)
       1. [Wrapper](#wrapper)
       1. [Empty Values](#empty-values)
+   1. [Custom Formatter](#custom-formatter)
    1. [Collection](#collection)
 1. [Testing](#testing)
 1. [Security](#security)
@@ -263,6 +264,26 @@ class FooFields extends AbstractEcsField
     protected array $validEmpty = [0, 0.0];
 ````
 Now only `0` and `0.0` are whitelisted and will appear in the logs. The rest of the empty values such as `null`, `[]`, `false`, `'0'`, etc., will be eliminated.
+
+### Custom Formatter
+The default formatter is the `EcsFormatter` class as mentioned in the [integration](#integration) section. However, you can load more default fields by overriding the `prepare` method:
+
+```php
+<?php
+
+use Hamidrezaniazi\Pecs\Fields\Ecs;
+use Hamidrezaniazi\Pecs\Monolog\EcsFormatter;
+
+class CustomEcsFormatter extends EcsFormatter
+{
+    protected function prepare(array $record): EcsFieldsCollection
+    {
+        return parent::prepare($record)->push(new Ecs(version: '1.0.0'));
+    }
+}
+```
+
+By registering the above formatter, the rendered array will contain the `ecs.version` in addition to the default fields.
 
 ### Collection
 However, here's an example showcasing the usage of the EcsFieldsCollection to render an array of ECS fields:
