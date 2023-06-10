@@ -2252,7 +2252,7 @@
                 "file": {
                     "extension": "string",
                     "meme_type": "string",
-                    "name": "123456",
+                    "name": "string",
                     "hash": {
                         "md5": "aa11bb22cc33",
                         "sha1": "11aa22bb33cc",
