@@ -1,12 +1,15 @@
 {
     "name": "hamidrezaniazi/pecs",
-    "description": "PHP ECS (Elastic Common Schema)",
+    "description": "PHP ECS (Elastic Common Schema): Simplify logging with the power of elastic common schema.",
     "keywords": [
-        "hamidrezaniazi",
-        "pecs",
+        "log",
+        "logging",
         "ecs",
         "elastic",
-        "Elastic Common Schema"
+        "filebeat",
+        "Elastic Common Schema",
+        "pecs",
+        "hamidrezaniazi"
     ],
     "homepage": "https://github.com/hamidrezaniazi/pecs",
     "license": "MIT",
