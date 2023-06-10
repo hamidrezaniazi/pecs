@@ -40,7 +40,7 @@ Before submitting a pull request:
 
 If the project maintainer has any additional requirements, you will find them listed here.
 
-- **[PSR-2 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)** - The easiest way to apply the conventions is to install [PHP Code Sniffer](https://pear.php.net/package/PHP_CodeSniffer).
+- **[PSR-12 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md)** - The easiest way to apply the conventions is to install [PHP Code Sniffer](http://pear.php.net/package/PHP_CodeSniffer).
 
 - **Add tests!** - Your patch won't be accepted if it doesn't have tests.
 
@@ -51,5 +51,80 @@ If the project maintainer has any additional requirements, you will find them li
 - **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
 
 - **Send coherent history** - Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please [squash them](https://www.git-scm.com/book/en/v2/Git-Tools-Rewriting-History#Changing-Multiple-Commit-Messages) before submitting.
+
+## Development Tools
+To contribute to the package, please keep the following tools and guidelines in mind:
+
+### Generator
+Any changes to modify the ECS fields' schema or adding a new one should be applied to the configuration files as well, located in [`config/fields/[name].json`](./src/Fields).
+<br>After making modifications, you can simply run the following command to update the field classes accordingly:
+```bash
+composer generate
+```
+
+>Ensure that the test `tests/Feature/EcsFieldsTest` is also updated to reflect the usage of all the fields.
+
+Here is a helper for the fields schema in JSON format:
+
+| Property      | Description                                                    | Type                                                                                                                       |
+|---------------|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| class         | PHP class name                                                 | required                                                                                                                   |
+| document_link | Link to the official document                                  | optional                                                                                                                   |
+| key           | Key of the ECS field that appears in the log body              | required, can be `string` or `null`<br/> - *null means that the properties should located directly in the root of the log* |
+| rootable      | Specifies if the field can appear in the root of the ECS log   | optional, default is `true`                                                                                                |
+| listable      | Specifies if another class can have a list of this field class | optional, default is `false`                                                                                               |
+| properties    | Configurations of the properties                               | required, array of objects                                                                                                 |
+
+Property Object:
+
+| Property | Description                                                                             | Type                       |
+|----------|-----------------------------------------------------------------------------------------|----------------------------|
+| types    | PHP type hints                                                                          | required, array of strings |
+| cast     | Method name, if the final value needs to be fetched from a method of the class/enum     | optional                   |
+| extract  | Property name, if the final value needs to be fetched from a property of the class/enum | optional                   |
+
+Example:
+```json
+{
+    "class": "Foo",
+    "document_link": "https://www.elastic.co/guide/en/ecs/current/foo.html",
+    "key": "foo",
+    "rootable": false,
+    "listable": true,
+    "properties": {
+        "list": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\Listables\\FooAnswerList"
+            ],
+            "cast": "toArray"
+        },
+        "multi.level": {
+            "types": [
+                "string"
+            ]
+        },
+        "extract_sample": {
+            "types": [
+                "nullable",
+                "Hamidrezaniazi\\Pecs\\Properties\\EnumClass"
+            ],
+            "extract": "value"
+        }
+    }
+}
+```
+
+### PHPStan
+The package uses [PHPStan](https://github.com/phpstan/phpstan) on level 9 to ensure the code quality.
+```bash
+composer phpstan
+```
+
+### PHP CS Fixer
+The package uses [PHP CS Fixer](https://github.com/PHP-CS-Fixer/PHP-CS-Fixer) to ensure the code style.
+```bash
+composer phpcs
+```
 
 **Happy coding**!

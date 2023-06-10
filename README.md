@@ -318,18 +318,6 @@ The above code will output:
 composer test
 ```
 
-### PHPStan
-
-``` bash
-composer phpstan
-```
-
-### PHP CS Fixer
-
-``` bash
-composer phpcs
-```
-
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
