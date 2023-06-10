@@ -185,7 +185,7 @@ class ClassGenerator
         $dir = $this->getStoringDir($class);
         file_put_contents($dir, $classCode);
         $phpcsConfig = __DIR__ . '/../../.php_cs.dist.php';
-        exec("../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
+        exec(__DIR__ . "/../../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
     }
 
     /**
@@ -264,7 +264,7 @@ class ClassGenerator
         $dir = $this->listablesStoringPath . "/{$class}List.php";
         file_put_contents($dir, $listableClassCode);
         $phpcsConfig = __DIR__ . '/../../.php_cs.dist.php';
-        exec("../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
+        exec(__DIR__ . "/../../vendor/bin/php-cs-fixer fix --config={$phpcsConfig} --quiet {$dir}");
     }
 
     private function deleteListableClass(string $class): void
