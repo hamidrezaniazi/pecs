@@ -7,6 +7,7 @@ use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
 use JsonException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
+use Throwable;
 
 /**
  * @covers \Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator
@@ -136,24 +137,29 @@ class ClassGeneratorTest extends TestCase
 
     private function removeDirectoryRecursive(string $storingPath): void
     {
-        $files = glob($storingPath . '/*');
-        if ($files !== false) {
-            foreach ($files as $file) {
-                if (is_dir($file)) {
-                    $this->removeDirectoryRecursive($file);
-                } else {
-                    unlink($file);
+        try {
+            $files = glob($storingPath . '/*');
+            if ($files !== false) {
+                foreach ($files as $file) {
+                    if (is_dir($file)) {
+                        $this->removeDirectoryRecursive($file);
+                    } else {
+                        unlink($file);
+                    }
                 }
             }
-        }
-        rmdir($storingPath);
 
-        $parentDir = dirname($storingPath);
-        if ($parentDir !== '.') {
-            $parentFiles = glob($parentDir . '/*');
-            if ($parentFiles !== false && is_array($parentFiles) && count($parentFiles) === 0) {
-                rmdir($parentDir);
+            rmdir($storingPath);
+
+            $parentDir = dirname($storingPath);
+            if ($parentDir !== '.') {
+                $parentFiles = glob($parentDir . '/*');
+                if ($parentFiles !== false && is_array($parentFiles) && count($parentFiles) === 0) {
+                    rmdir($parentDir);
+                }
             }
+        } catch (Throwable) {
+            // Do nothing
         }
     }
 }
