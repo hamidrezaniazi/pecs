@@ -193,9 +193,13 @@ class ClassGenerator
      */
     private function getSchemaPaths(): array
     {
-        $paths = [];
-        $files = scandir($this->configPath);
-        if ($files === false) {
+        try {
+            $paths = [];
+            $files = scandir($this->configPath);
+            if ($files === false) {
+                throw new RuntimeException('Could not read config directory');
+            }
+        } catch (Throwable) {
             throw new RuntimeException('Could not read config directory');
         }
 
