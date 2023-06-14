@@ -36,16 +36,16 @@
     "autoload": {
         "psr-4": {
             "Hamidrezaniazi\\Pecs\\": "src"
-        },
-        "files": [
-            "bin/helpers.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
             "Hamidrezaniazi\\Pecs\\Tests\\": "tests",
             "Hamidrezaniazi\\Pecs\\Bin\\": "bin"
-        }
+        },
+        "files": [
+            "bin/helpers.php"
+        ]
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
