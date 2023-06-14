@@ -3,10 +3,9 @@
 namespace Hamidrezaniazi\Pecs\Bin\Generator;
 
 use JsonException;
+use Monolog\Logger;
 use RuntimeException;
 use Throwable;
-
-use function Hamidrezaniazi\Pecs\std_out_write;
 
 /**
  * @phpstan-import-type FieldSchema from Field
@@ -27,6 +26,7 @@ class ClassGenerator
     ];
 
     public function __construct(
+        private readonly Logger $logger,
         private readonly string $configPath = __DIR__ . '/../../config/fields',
         private readonly string $fieldsStoringPath = __DIR__ . '/../../src/Fields',
         private readonly string $fieldsNamespace = 'Hamidrezaniazi\Pecs\Fields',
@@ -41,12 +41,20 @@ class ClassGenerator
     public function clean(): void
     {
         $paths = $this->getSchemaPaths();
+
+        $this->logger->info(count($paths) . ' schemas have been found to remove the classes...');
+
         foreach ($paths as $path) {
             $config = $this->getConfig($path);
             $field = Field::parse($config);
+
+            $this->logger->info($field->class);
+
             $this->deleteClass($field->class);
 
             if ($field->listable) {
+                $this->logger->info("{$field->class}List");
+
                 $this->deleteListableClass($field->class);
             }
         }
@@ -59,18 +67,20 @@ class ClassGenerator
     {
         $paths = $this->getSchemaPaths();
 
-        std_out_write(count($paths) . ' schemas have been found to generate the classes...');
+        $this->logger->info(count($paths) . ' schemas have been found to generate the classes...');
 
         foreach ($paths as $path) {
             $config = $this->getConfig($path);
             $field = Field::parse($config);
 
-            std_out_write($field->class);
+            $this->logger->info($field->class);
 
             $classCode = $this->createClass($field);
             $this->storeClass($field->class, $classCode);
 
             if ($field->listable) {
+                $this->logger->info("{$field->class}List");
+
                 $listableClassCode = $this->createListableClass($field);
                 $this->storeListableClass($field->class, $listableClassCode);
             }

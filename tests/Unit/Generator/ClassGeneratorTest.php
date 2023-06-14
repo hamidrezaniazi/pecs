@@ -5,6 +5,9 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 use Closure;
 use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
 use JsonException;
+use Monolog\Handler\AbstractProcessingHandler;
+use Monolog\Logger;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 use Throwable;
@@ -14,6 +17,8 @@ use Throwable;
  */
 class ClassGeneratorTest extends TestCase
 {
+    private Logger $logger;
+
     private string $fieldsStoringPath = __DIR__ . '/Fields';
 
     private string $listableStoringPath = __DIR__ . '/Properties/Listables';
@@ -23,6 +28,20 @@ class ClassGeneratorTest extends TestCase
     private string $listablesNamespace = 'Hamidrezaniazi\Pecs\Tests\Unit\Generator\Properties\Listables';
 
     private ?Closure $cleanup = null;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->logger = new Logger(name: 'test', handlers: [new class () extends AbstractProcessingHandler {
+            public array $messages = [];
+
+            protected function write(array $record): void
+            {
+                $this->messages[] = $record['message'];
+            }
+        }]);
+    }
 
     protected function tearDown(): void
     {
@@ -42,6 +61,7 @@ class ClassGeneratorTest extends TestCase
     public function testItCanGenerateClasses(): void
     {
         $generator = new ClassGenerator(
+            $this->logger,
             __DIR__ . '/stubs',
             $this->fieldsStoringPath,
             $this->fieldsNamespace,
@@ -70,6 +90,14 @@ class ClassGeneratorTest extends TestCase
             file_get_contents(__DIR__ . '/stubs/listable_list.stub.php'),
             file_get_contents($this->listableStoringPath . '/ListableClassList.php'),
         );
+
+        $this->assertEquals([
+            '3 schemas have been found to generate the classes...',
+            'DefaultClass',
+            'ListableClass',
+            'ListableClassList',
+            'NestedClass',
+        ], $this->getCliMessages());
     }
 
     /**
@@ -78,6 +106,7 @@ class ClassGeneratorTest extends TestCase
     public function testItCanCleanTheGeneratedClasses(): void
     {
         $generator = new ClassGenerator(
+            $this->logger,
             __DIR__ . '/stubs',
             $this->fieldsStoringPath,
             $this->fieldsNamespace,
@@ -90,6 +119,19 @@ class ClassGeneratorTest extends TestCase
 
         $this->assertEmpty(array_diff(scandir($this->fieldsStoringPath), ['.', '..']));
         $this->assertEmpty(array_diff(scandir($this->listableStoringPath), ['.', '..']));
+
+        $this->assertEquals([
+            '3 schemas have been found to generate the classes...',
+            'DefaultClass',
+            'ListableClass',
+            'ListableClassList',
+            'NestedClass',
+            '3 schemas have been found to remove the classes...',
+            'DefaultClass',
+            'ListableClass',
+            'ListableClassList',
+            'NestedClass',
+        ], $this->getCliMessages());
     }
 
     /**
@@ -98,6 +140,7 @@ class ClassGeneratorTest extends TestCase
     public function testItThrowsExceptionWhenConfigPathIsWrong(): void
     {
         $generator = new ClassGenerator(
+            $this->logger,
             __DIR__ . '/wrong-path',
             $this->fieldsStoringPath,
             $this->fieldsNamespace,
@@ -122,6 +165,7 @@ class ClassGeneratorTest extends TestCase
         $this->cleanup = fn () => unlink($wrongFile);
 
         $generator = new ClassGenerator(
+            $this->logger,
             __DIR__ . '/stubs',
             $this->fieldsStoringPath,
             $this->fieldsNamespace,
@@ -161,5 +205,12 @@ class ClassGeneratorTest extends TestCase
         } catch (Throwable) {
             // Do nothing
         }
+    }
+
+    private function getCliMessages(): array
+    {
+        $handler = $this->logger->getHandlers()[0];
+
+        return $handler->messages;
     }
 }

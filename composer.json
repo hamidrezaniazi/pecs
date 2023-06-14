@@ -38,7 +38,7 @@
             "Hamidrezaniazi\\Pecs\\": "src"
         },
         "files": [
-            "src/helpers.php"
+            "bin/helpers.php"
         ]
     },
     "autoload-dev": {

@@ -4,12 +4,13 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
-use function Hamidrezaniazi\Pecs\std_err_write;
-use function Hamidrezaniazi\Pecs\std_out_write;
+use function Hamidrezaniazi\Pecs\Bin\get_logger;
 
-set_exception_handler(fn (Throwable $e) => std_err_write($e->getMessage()));
+$logger = get_logger();
 
-std_out_write(<<<LOGO
+set_exception_handler(fn (Throwable $e) => $logger->error($e->getMessage()));
+
+$logger->info(<<<LOGO
 _________________________________
 ___  __ \__  ____/_  ____/_  ___/
 __  /_/ /_  __/  _  /    _____ \
@@ -18,4 +19,4 @@ _  ____/_  /___  / /___  ____/ /
 
 LOGO. PHP_EOL . 'PHP Elastic Common Schema');
 
-(new ClassGenerator())->generate();
+(new ClassGenerator($logger))->generate();

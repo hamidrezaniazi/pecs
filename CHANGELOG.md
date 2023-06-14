@@ -2,6 +2,9 @@
 
 All notable changes to `pecs` will be documented in this file
 
+## 0.2.1 - 2023-06-14
+- enhance cli messages
+
 ## 0.2.0 - 2023-06-11
 
 - add GitHub action
