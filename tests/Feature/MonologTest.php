@@ -27,12 +27,12 @@ class MonologTest extends TestCase
         $log->pushHandler($handler->setFormatter(new EcsFormatter()));
 
         $wrapper = EcsFieldFactory::create(
-            $this->faker->word(),
+            $this->faker->unique()->word(),
             [$this->faker->word() => $this->faker->word()],
             [$this->faker->word() => $this->faker->word()],
         );
         $field = EcsFieldFactory::create(
-            $this->faker->word(),
+            $this->faker->unique()->word(),
             [$this->faker->word() => $this->faker->word()],
             [$this->faker->word() => $this->faker->word()],
             [$wrapper]
@@ -51,12 +51,13 @@ class MonologTest extends TestCase
 
         $log->info($message, [$field]);
 
-        $file = file_get_contents($this->log);
+        $file = file_get_contents($this->log) ?: '';
 
         $this->assertStringEndsWith(PHP_EOL, $file);
 
         $array = json_decode($file, true);
 
+        $this->assertIsArray($array);
         $this->assertArrayHasKey('@timestamp', $array);
 
         unset($array['@timestamp']);
