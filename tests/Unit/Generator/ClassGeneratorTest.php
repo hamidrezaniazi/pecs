@@ -4,6 +4,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit\Generator;
 
 use Closure;
 use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
+use Hamidrezaniazi\Pecs\Tests\Unit\UnitTestHelper;
 use JsonException;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
@@ -17,7 +18,7 @@ use Throwable;
  */
 class ClassGeneratorTest extends TestCase
 {
-    private Logger $logger;
+    use UnitTestHelper;
 
     private string $fieldsStoringPath = __DIR__ . '/Fields';
 
@@ -33,14 +34,7 @@ class ClassGeneratorTest extends TestCase
     {
         parent::setUp();
 
-        $this->logger = new Logger(name: 'test', handlers: [new class () extends AbstractProcessingHandler {
-            public array $messages = [];
-
-            protected function write(array $record): void
-            {
-                $this->messages[] = $record['message'];
-            }
-        }]);
+        $this->setLogger();
     }
 
     protected function tearDown(): void
@@ -177,40 +171,5 @@ class ClassGeneratorTest extends TestCase
         $this->expectExceptionMessage("Could not parse {$wrongFile}");
 
         $generator->generate();
-    }
-
-    private function removeDirectoryRecursive(string $storingPath): void
-    {
-        try {
-            $files = glob($storingPath . '/*');
-            if ($files !== false) {
-                foreach ($files as $file) {
-                    if (is_dir($file)) {
-                        $this->removeDirectoryRecursive($file);
-                    } else {
-                        unlink($file);
-                    }
-                }
-            }
-
-            rmdir($storingPath);
-
-            $parentDir = dirname($storingPath);
-            if ($parentDir !== '.') {
-                $parentFiles = glob($parentDir . '/*');
-                if ($parentFiles !== false && is_array($parentFiles) && count($parentFiles) === 0) {
-                    rmdir($parentDir);
-                }
-            }
-        } catch (Throwable) {
-            // Do nothing
-        }
-    }
-
-    private function getCliMessages(): array
-    {
-        $handler = $this->logger->getHandlers()[0];
-
-        return $handler->messages;
     }
 }

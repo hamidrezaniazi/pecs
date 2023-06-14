@@ -4,6 +4,7 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use Hamidrezaniazi\Pecs\Bin\Commands\CleanCommand;
 use Hamidrezaniazi\Pecs\Bin\Generator\ClassGenerator;
 use function Hamidrezaniazi\Pecs\Bin\get_logger;
 
@@ -11,4 +12,4 @@ $logger = get_logger();
 
 set_exception_handler(fn (Throwable $e) => $logger->error($e->getMessage()));
 
-(new ClassGenerator($logger))->clean();
+CleanCommand::execute($logger, new ClassGenerator($logger));
