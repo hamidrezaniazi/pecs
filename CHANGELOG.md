@@ -3,7 +3,10 @@
 All notable changes to `pecs` will be documented in this file
 
 ## 0.2.1 - 2023-06-14
-- enhance cli messages
+- add Symfony's integration to docs
+- enhance cli commands' messages
+- enhance cli commands' structure
+- fix minor issues in test cases
 
 ## 0.2.0 - 2023-06-11
 
