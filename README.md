@@ -246,11 +246,11 @@ class FooField extends AbstractEcsField
 }
 ```
 
-> Check the [ECS custom fields documentation](https://www.elastic.co/guide/en/ecs/master/ecs-custom-fields-in-ecs.html) for naming conventions and use cases.It is important to note that custom field key and property names must be in PascalCase not to conflict with the ECS fields.
+> Check the [ECS custom fields documentation](https://www.elastic.co/guide/en/ecs/master/ecs-custom-fields-in-ecs.html) for naming conventions and use cases. It is important to note that custom field key and property names must be in PascalCase not to conflict with the ECS fields.
 
 #### Wrapper
 
-You may need to combine your custom fields with one the exited ECS field classes. It's feasible by overwriting the `wrapper` in your class:
+You may need to combine your custom fields with the existed ECS field classes. It's feasible by overwriting the `wrapper` in your class:
 
 ```php
 use Hamidrezaniazi\Pecs\Fields\AbstractEcsField;
@@ -322,7 +322,7 @@ class CustomEcsFormatter extends EcsFormatter
 By registering the above formatter, the rendered array will contain the `ecs.version` in addition to the default fields.
 
 ### Collection
-However, here's an example showcasing the usage of the EcsFieldsCollection to render an array of ECS fields:
+Here's the usage example of the `EcsFieldsCollection` to render an array of ECS fields:
 
 ```php
 use Hamidrezaniazi\Pecs\EcsFieldsCollection;
