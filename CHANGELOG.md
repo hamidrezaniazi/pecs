@@ -2,6 +2,9 @@
 
 All notable changes to `pecs` will be documented in this file
 
+## 1.0.0 - 2023-07-17
+- add compatibility with Monolog version 3.*
+
 ## 0.2.1 - 2023-06-14
 - add Symfony's integration to docs
 - enhance cli commands' messages

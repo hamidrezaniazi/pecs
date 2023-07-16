@@ -5,7 +5,6 @@ namespace Hamidrezaniazi\Pecs;
 use Hamidrezaniazi\Pecs\Fields\AbstractEcsField;
 use Hamidrezaniazi\Pecs\Fields\Base;
 use Hamidrezaniazi\Pecs\Fields\Log;
-use Hamidrezaniazi\Pecs\Monolog\LogRecord;
 use Illuminate\Support\Collection;
 
 /** @extends Collection<int, AbstractEcsField> */

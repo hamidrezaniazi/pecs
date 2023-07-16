@@ -4,6 +4,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Unit;
 
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
+use Monolog\LogRecord;
 use Throwable;
 
 trait UnitTestHelper
@@ -20,9 +21,9 @@ trait UnitTestHelper
         $this->logger = new Logger(name: 'test', handlers: [new class () extends AbstractProcessingHandler {
             public array $messages = [];
 
-            protected function write(array $record): void
+            protected function write(LogRecord $record): void
             {
-                $this->messages[] = $record['message'];
+                $this->messages[] = $record->message;
             }
         }]);
     }

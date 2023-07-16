@@ -24,7 +24,7 @@
     "require": {
         "php": "^8.1",
         "illuminate/collections": ">=8",
-        "monolog/monolog": "^2.0",
+        "monolog/monolog": "^3.0",
         "nesbot/carbon": "^2.0"
     },
     "require-dev": {

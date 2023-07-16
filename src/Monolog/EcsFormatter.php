@@ -2,16 +2,14 @@
 
 namespace Hamidrezaniazi\Pecs\Monolog;
 
+use Hamidrezaniazi\Pecs\LogRecord;
 use Hamidrezaniazi\Pecs\EcsFieldsCollection;
 use Monolog\Formatter\NormalizerFormatter;
+use Monolog\LogRecord as MonologRecord;
 
-/** @phpstan-import-type LogRecordSchema from LogRecord */
 class EcsFormatter extends NormalizerFormatter
 {
-    /**
-     * @param LogRecordSchema $record
-     */
-    public function format(array $record): string
+    public function format(MonologRecord $record): string
     {
         $log = $this
             ->prepare($record)
@@ -21,14 +19,11 @@ class EcsFormatter extends NormalizerFormatter
         return $this->toJson($log) . PHP_EOL;
     }
 
-    /**
-     * @param LogRecordSchema $record
-     */
-    protected function prepare(array $record): EcsFieldsCollection
+    protected function prepare(MonologRecord $record): EcsFieldsCollection
     {
-        $record = LogRecord::parse($record);
-        $fields = new EcsFieldsCollection($record->context);
-        return $fields
+        $record = LogRecord::parse($record->toArray());
+
+        return (new EcsFieldsCollection($record->context))
             ->loadInitialFields($record)
             ->loadWrappers();
     }

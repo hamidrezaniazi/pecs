@@ -5,7 +5,7 @@ namespace Hamidrezaniazi\Pecs\Tests\Feature;
 use Carbon\Carbon;
 use DateTime;
 use Faker\Factory;
-use Hamidrezaniazi\Pecs\Monolog\LogRecord;
+use Hamidrezaniazi\Pecs\LogRecord;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
 
 class LogRecordsTest extends TestCase

@@ -22,7 +22,7 @@ class MonologTest extends TestCase
     {
         $loggerName = $this->faker->word();
         $log = new Logger($loggerName);
-        $handler = new StreamHandler($this->log, Logger::DEBUG);
+        $handler = new StreamHandler($this->log);
 
         $log->pushHandler($handler->setFormatter(new EcsFormatter()));
 

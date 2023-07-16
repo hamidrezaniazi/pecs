@@ -1,12 +1,14 @@
 <?php
 
-namespace Hamidrezaniazi\Pecs\Tests\Feature;
+namespace Hamidrezaniazi\Pecs\Tests\Feature\Monolog;
 
 use Carbon\Carbon;
 use DateTimeImmutable;
 use Hamidrezaniazi\Pecs\Monolog\EcsFormatter;
 use Hamidrezaniazi\Pecs\Tests\EcsFieldFactory;
 use Hamidrezaniazi\Pecs\Tests\TestCase;
+use Monolog\Level;
+use Monolog\LogRecord;
 
 class EcsFormatterTest extends TestCase
 {
@@ -18,36 +20,26 @@ class EcsFormatterTest extends TestCase
         $this->formatter = new EcsFormatter();
     }
 
-    public function testItShouldFormatWithEmptyData(): void
-    {
-        $log = $this->formatter->format([]);
-        $array = json_decode($log, true);
-
-        $this->assertJson($log);
-        $this->assertArrayHasKey('@timestamp', $array);
-        $this->assertCount(1, $array);
-    }
-
     public function testItShouldFormatWithNoContext(): void
     {
         $message = $this->faker->sentence();
-        $level = $this->faker->word();
+        $level = Level::fromValue($this->faker->randomElement(Level::VALUES));
         $channel = $this->faker->word();
-        $datetime = new DateTimeImmutable($this->faker->dateTime()->format('Y-m-d H:i:s.u'));
+        $datetime = $this->faker->dateTime();
 
-        $log = $this->formatter->format([
-            'message' => $message,
-            'datetime' => $datetime,
-            'level_name' => $level,
-            'channel' => $channel,
-        ]);
+        $log = $this->formatter->format(new LogRecord(
+            datetime: DateTimeImmutable::createFromMutable($datetime),
+            channel: $channel,
+            level: $level,
+            message: $message,
+        ));
         $array = json_decode($log, true);
 
         $this->assertJson($log);
         $this->assertEquals([
             '@timestamp' => Carbon::parse($datetime)->toIso8601ZuluString(),
             'log' => [
-                'level' => $level,
+                'level' => $level->getName(),
                 'logger' => $channel,
             ],
             'message' => $message,
@@ -57,9 +49,9 @@ class EcsFormatterTest extends TestCase
     public function testItShouldFormatWithContext(): void
     {
         $message = $this->faker->sentence();
-        $level = $this->faker->word();
+        $level = Level::fromValue($this->faker->randomElement(Level::VALUES));
         $channel = $this->faker->word();
-        $datetime = new DateTimeImmutable($this->faker->dateTime()->format('Y-m-d H:i:s.u'));
+        $datetime = $this->faker->dateTime();
         $field = EcsFieldFactory::create(
             $this->faker->word(),
             [$this->faker->word() => $this->faker->word()],
@@ -67,13 +59,13 @@ class EcsFormatterTest extends TestCase
             [$this->faker->word() => $this->faker->word()],
         );
 
-        $log = $this->formatter->format([
-            'message' => $message,
-            'datetime' => $datetime,
-            'level_name' => $level,
-            'channel' => $channel,
-            'context' => [$field],
-        ]);
+        $log = $this->formatter->format(new LogRecord(
+            datetime: DateTimeImmutable::createFromMutable($datetime),
+            channel: $channel,
+            level: $level,
+            message: $message,
+            context: [$field],
+        ));
         $array = json_decode($log, true);
 
         $this->assertJson($log);

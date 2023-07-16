@@ -1,21 +1,11 @@
 <?php
 
-namespace Hamidrezaniazi\Pecs\Monolog;
+namespace Hamidrezaniazi\Pecs;
 
 use Carbon\Carbon;
 use DateTimeImmutable;
 use Hamidrezaniazi\Pecs\Fields\AbstractEcsField;
 
-/**
- * @link https://github.com/Seldaek/monolog/blob/main/doc/message-structure.md
- * @phpstan-type LogRecordSchema = array{
- *     "message": string,
- *     "level_name": string,
- *     "channel": string,
- *     "context"?: array<int, AbstractEcsField>,
- *     "datetime"?: DateTimeImmutable
- * }
- */
 class LogRecord
 {
     public function __construct(
