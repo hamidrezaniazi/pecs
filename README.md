@@ -47,7 +47,7 @@ use Hamidrezaniazi\Pecs\Monolog\EcsFormatter;
 use Hamidrezaniazi\Pecs\Fields\Event;
 
 $log = new Logger('logger name');
-$handler = new StreamHandler('ecs.logs', Logger::DEBUG);
+$handler = new StreamHandler('ecs.logs');
 
 $log->pushHandler($handler->setFormatter(new EcsFormatter()));
 
@@ -346,7 +346,7 @@ The above code will output:
 ]
 ```
 
-> It's important to mention that while using the `EcsFieldsCollection` in this manner is possible, it is not a commonly used feature. It is primarily intended for infrastructure usage under the hood. The main practical use cases involve [integrations](#integrations).
+> The `EcsFieldsCollection` is adaptable and can be used with various logging drivers, not just limited to Monolog. Practical use cases for Monolog are mentioned in the [integrations](#integrations) section.
 
 ### Testing
 
