@@ -97,9 +97,9 @@ monolog:
 Now, you can use the `ecs` channel in your Symfony application by autowring the logger channel:
 
 ```php
-public function __construct(LoggerInterface $ecaLogger)
+public function __construct(LoggerInterface $ecsLogger)
 {
-    $ecaLogger->info('sample message', [
+    $ecsLogger->info('sample message', [
         new Event(kind: EventKind::METRIC),
     ]);
 }
@@ -232,12 +232,12 @@ class FooField extends AbstractEcsField
         parent::__construct();
     }
 
-    protected function getKey(): ?string
+    protected function key(): ?string
     {
         return 'Foo';
     }
 
-    protected function generateBody(): Collection
+    protected function custom(): Collection
     {
         return collect([
             'Input' => $this->input
@@ -259,12 +259,12 @@ use Hamidrezaniazi\Pecs\Properties\EventKind;
 
 class BarField extends AbstractEcsField
 {
-    protected function getKey(): ?string
+    protected function key(): ?string
     {
         return 'Bar';
     }
 
-    protected function generateBody(): Collection
+    protected function custom(): Collection
     {
         return collect([
             'Bleep' => 'bloop'
