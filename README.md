@@ -215,7 +215,7 @@ use Hamidrezaniazi\Pecs\Properties\ValueList;
 ]
 ```
 
-You can find the available classes for defining ECS fields in the [this](./src/Fields) directory.
+You can find the available classes for defining ECS fields in the [this](https://github.com/hamidrezaniazi/pecs/tree/master/src/Fields) directory.
 
 ### Custom Fields
 
@@ -365,7 +365,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 ## Credits
 
 - [Hamidreza Niazi](https://github.com/hamidrezaniazi)
-- [All Contributors](../../contributors)
+- [All Contributors](https://github.com/hamidrezaniazi/pecs/contributors)
 
 ## License
 
