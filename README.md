@@ -3,6 +3,7 @@ PHP ECS (Elastic Common Schema)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/hamidrezaniazi/pecs.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/pecs)
 [![License](https://poser.pugx.org/hamidrezaniazi/pecs/license)](https://packagist.org/packages/hamidrezaniazi/pecs)
+[![Total Downloads](https://img.shields.io/packagist/dt/hamidrezaniazi/pecs.svg?style=flat-square)](https://packagist.org/packages/hamidrezaniazi/pecs)
 
 PECS is a PHP package that facilitates the usage of [ECS (Elastic Common Schema)](https://www.elastic.co/guide/en/ecs/current/ecs-reference.html) within PHP applications. ECS is a specification that helps structure and standardize log events.
 
