@@ -2,6 +2,9 @@
 
 All notable changes to `pecs` will be documented in this file
 
+## 1.1.0 - 2025-01-20
+- add compatibility with Carbon version 3.*
+
 ## 1.0.0 - 2023-07-17
 - add compatibility with Monolog version 3.*
 
