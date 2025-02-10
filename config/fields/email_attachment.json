@@ -11,7 +11,7 @@
                 "string"
             ]
         },
-        "file.meme_type": {
+        "file.mime_type": {
             "types": [
                 "nullable",
                 "string"

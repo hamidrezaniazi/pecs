@@ -1926,7 +1926,7 @@
             "bytes": 123456,
             "id": "string",
             "method": "GET",
-            "meme_type": "string",
+            "mime_type": "string",
             "referer": "string"
         },
         "response": {
@@ -1935,7 +1935,7 @@
                 "content": "string"
             },
             "bytes": 123456,
-            "meme_type": "string",
+            "mime_type": "string",
             "status_code": 123456
         },
         "version": "string"
@@ -2251,7 +2251,7 @@
             {
                 "file": {
                     "extension": "string",
-                    "meme_type": "string",
+                    "mime_type": "string",
                     "name": "string",
                     "hash": {
                         "md5": "aa11bb22cc33",

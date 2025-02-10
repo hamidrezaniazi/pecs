@@ -395,7 +395,7 @@ class EcsFieldsTest extends TestCase
         $email = new Email(
             attachments: (new EmailAttachmentList())->push(new EmailAttachment(
                 fileExtension: 'string',
-                fileMemeType: 'string',
+                fileMimeType: 'string',
                 fileName: 'string',
                 fileHash: new Hash(
                     md5: 'aa11bb22cc33',
@@ -692,12 +692,12 @@ class EcsFieldsTest extends TestCase
             requestBytes: 123456,
             requestId: 'string',
             requestMethod: HttpMethod::GET,
-            requestMemeType: 'string',
+            requestMimeType: 'string',
             requestReferer: 'string',
             responseBodyBytes: 123456,
             responseBodyContent: 'string',
             responseBytes: 123456,
-            responseMemeType: 'string',
+            responseMimeType: 'string',
             responseStatusCode: 123456,
             version: 'string',
         );
