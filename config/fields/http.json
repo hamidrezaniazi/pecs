@@ -34,7 +34,7 @@
             ],
             "extract": "value"
         },
-        "request.meme_type": {
+        "request.mime_type": {
             "types": [
                 "nullable",
                 "string"
@@ -64,7 +64,7 @@
                 "int"
             ]
         },
-        "response.meme_type": {
+        "response.mime_type": {
             "types": [
                 "nullable",
                 "string"

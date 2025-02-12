@@ -9,7 +9,7 @@ class EmailAttachment extends AbstractEcsField
 {
     public function __construct(
         public readonly ?string $fileExtension = null,
-        public readonly ?string $fileMemeType = null,
+        public readonly ?string $fileMimeType = null,
         public readonly ?string $fileName = null,
         public readonly ?int $fileSize = null,
         public readonly ?Hash $fileHash = null,
@@ -26,7 +26,7 @@ class EmailAttachment extends AbstractEcsField
     {
         return collect([
             'file.extension' => $this->fileExtension,
-            'file.meme_type' => $this->fileMemeType,
+            'file.mime_type' => $this->fileMimeType,
             'file.name' => $this->fileName,
             'file.size' => $this->fileSize,
             'file.hash' => $this->fileHash?->getBody(),
