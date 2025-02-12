@@ -2,8 +2,11 @@
 
 All notable changes to `pecs` will be documented in this file
 
+## 2.0.0 - 2025-02-12
+- fix misspellings of 'mime_type' by [@amnuts](https://github.com/amnuts) in https://github.com/hamidrezaniazi/pecs/pull/3
+
 ## 1.1.0 - 2025-01-20
-- add compatibility with Carbon version 3.*
+- add compatibility with Carbon version 3.* by [@loekvangool](https://github.com/loekvangool) in https://github.com/hamidrezaniazi/pecs/pull/2
 
 ## 1.0.0 - 2023-07-17
 - add compatibility with Monolog version 3.*
